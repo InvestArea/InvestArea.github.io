@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qarabağ Aqro-İnvest | Startup Pitch Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+:root{--g:#10b981;--gd:#059669;--ge:#064e3b;--gold:#f59e0b;--bl:#38bdf8;--pu:#a855f7;--bg:#060d17;--card:rgba(15,23,42,.85);--gl:rgba(255,255,255,.04);--br:rgba(255,255,255,.10);--brg:rgba(16,185,129,.30);--tx:#f1f5f9;--mu:#94a3b8;--di:#64748b;--hf:'Outfit',sans-serif;--bf:'Space Grotesk','Inter',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:var(--bf);overflow:hidden;height:100vh;width:100vw;-webkit-font-smoothing:antialiased;user-select:none}
+.amb{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(130px);opacity:.2;animation:fo 20s infinite alternate ease-in-out}
+.o1{width:600px;height:600px;background:radial-gradient(circle,#10b981,#064e3b);top:-15%;left:-10%}
+.o2{width:500px;height:500px;background:radial-gradient(circle,#f59e0b,#92400e);top:55%;right:-8%;animation-delay:-8s;opacity:.13}
+.o3{width:400px;height:400px;background:radial-gradient(circle,#38bdf8,#1e3a5f);bottom:-10%;left:30%;animation-delay:-14s;opacity:.10}
+@keyframes fo{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.12)}}
+.vp{position:relative;z-index:1;width:100%;height:100vh;overflow:hidden}
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 64px;opacity:0;transform:translateX(60px) scale(.97);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.slide.active{opacity:1;transform:none;pointer-events:all}
+.slide.el{opacity:0;transform:translateX(-60px) scale(.97)}
+.pb{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--g),var(--gold));transition:width .4s ease;z-index:100;border-radius:0 2px 2px 0;box-shadow:0 0 12px rgba(16,185,129,.6)}
+.tb{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:18px 36px;z-index:90}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--hf);font-weight:800;font-size:1.1rem;letter-spacing:-.01em}
+.sc{font-size:.8rem;font-weight:600;color:var(--mu);background:rgba(255,255,255,.06);border:1px solid var(--br);padding:5px 14px;border-radius:20px;letter-spacing:.05em}
+.bb{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:16px;padding:20px 36px;z-index:90}
+.nb{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid var(--br);color:var(--tx);cursor:pointer;transition:all .25s ease;font-size:.95rem}
+.nb:hover{background:var(--g);border-color:var(--g);box-shadow:0 0 18px rgba(16,185,129,.45)}
+.nb:disabled{opacity:.3;cursor:default}
+.dn{display:flex;align-items:center;gap:8px}
+.dot{width:6px;height:6px;border-radius:3px;background:var(--di);cursor:pointer;transition:all .3s ease}
+.dot.active{background:var(--g);width:22px;box-shadow:0 0 8px rgba(16,185,129,.5)}
+.ey{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--g);padding:6px 16px;border-radius:20px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.25);margin-bottom:20px}
+.ey.gld{color:var(--gold);background:rgba(245,158,11,.10);border-color:rgba(245,158,11,.25)}
+.ey.bl{color:var(--bl);background:rgba(56,189,248,.10);border-color:rgba(56,189,248,.25)}
+.ey.pu{color:var(--pu);background:rgba(168,85,247,.10);border-color:rgba(168,85,247,.25)}
+.ey.rd{color:#f87171;background:rgba(239,68,68,.10);border-color:rgba(239,68,68,.25)}
+h1.ht{font-family:var(--hf);font-size:clamp(2.8rem,6vw,4.8rem);font-weight:900;line-height:1.07;letter-spacing:-.03em;text-align:center;background:linear-gradient(135deg,#fff 30%,var(--g) 65%,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:24px}
+h2.st{font-family:var(--hf);font-size:clamp(1.7rem,3vw,2.7rem);font-weight:800;line-height:1.1;letter-spacing:-.025em;margin-bottom:14px;text-align:center}
+.sub{font-size:1rem;color:var(--mu);line-height:1.65;max-width:640px;text-align:center}
+.gc{background:var(--card);border:1px solid var(--br);border-radius:18px;padding:24px 28px;backdrop-filter:blur(12px);transition:transform .3s,box-shadow .3s}
+.gc:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:100%}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;width:100%}
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:36px;width:100%;align-items:start}
+.kp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:20px 14px;background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.18);border-radius:16px;text-align:center}
+.kp .n{font-family:var(--hf);font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--g),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.kp .l{font-size:.7rem;font-weight:600;color:var(--mu);letter-spacing:.05em}
+.fr{display:flex;gap:14px;align-items:flex-start;padding:14px 18px;border-radius:14px;border:1px solid var(--br);background:var(--gl);transition:all .25s}
+.fr:hover{border-color:var(--brg);background:rgba(16,185,129,.06)}
+.fi{width:42px;height:42px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.fi.gn{background:rgba(16,185,129,.15);color:var(--g)}
+.fi.gd{background:rgba(245,158,11,.15);color:var(--gold)}
+.fi.bl{background:rgba(56,189,248,.15);color:var(--bl)}
+.fi.pu{background:rgba(168,85,247,.15);color:var(--pu)}
+.ft h4{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.ft p{font-size:.78rem;color:var(--mu);line-height:1.5}
+.pr{padding:22px 26px;border-radius:16px;border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.06)}
+.pn{width:34px;height:34px;border-radius:50%;background:rgba(239,68,68,.15);color:#f87171;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem;margin-bottom:12px}
+.pr h4{font-size:.92rem;font-weight:700;margin-bottom:6px}
+.pr p{font-size:.78rem;color:var(--mu);line-height:1.55}
+.tm{display:flex;flex-direction:column;align-items:center;text-align:center;padding:28px 18px;border-radius:20px;border:1px solid var(--br);background:var(--card);transition:all .3s;position:relative;overflow:hidden}
+.tm::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.tm.dv::before{background:linear-gradient(90deg,var(--bl),var(--pu))}
+.tm.sc::before{background:linear-gradient(90deg,#ef4444,var(--gold))}
+.tm.ux::before{background:linear-gradient(90deg,var(--pu),#f472b6)}
+.tm.rs::before{background:linear-gradient(90deg,var(--g),var(--bl))}
+.tm:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.av{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:14px;border:2px solid var(--br)}
+.av.dv{background:rgba(56,189,248,.15);border-color:rgba(56,189,248,.3)}
+.av.sc{background:rgba(239,68,68,.15);border-color:rgba(239,68,68,.3)}
+.av.ux{background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.3)}
+.av.rs{background:rgba(16,185,129,.15);border-color:rgba(16,185,129,.3)}
+.tn{font-family:var(--hf);font-size:1.2rem;font-weight:800;margin-bottom:6px}
+.rb{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:12px}
+.rb.dv{background:rgba(56,189,248,.12);color:var(--bl);border:1px solid rgba(56,189,248,.25)}
+.rb.sc{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.25)}
+.rb.ux{background:rgba(168,85,247,.12);color:var(--pu);border:1px solid rgba(168,85,247,.25)}
+.rb.rs{background:rgba(16,185,129,.12);color:var(--g);border:1px solid rgba(16,185,129,.25)}
+.td{font-size:.78rem;color:var(--mu);line-height:1.55}
+.vr{display:flex;gap:10px;align-items:center;padding:12px 16px;border-radius:12px}
+.vr.bd{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.15)}
+.vr.gd{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.20)}
+.vi{font-size:1rem;flex-shrink:0}
+.vr.bd .vi{color:#f87171}
+.vr.gd .vi{color:var(--g)}
+.vt{font-size:.82rem;color:var(--mu);line-height:1.5}
+.ri{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:14px;border:1px solid var(--br);background:var(--gl)}
+.rd{width:12px;height:12px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.rd.dn{background:var(--g);box-shadow:0 0 8px var(--g)}
+.rd.nw{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.rd.sn{background:var(--bl);box-shadow:0 0 8px var(--bl)}
+.rd.lt{background:var(--pu);box-shadow:0 0 8px var(--pu)}
+.rl{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.rl.dn{color:var(--g)}.rl.nw{color:var(--gold)}.rl.sn{color:var(--bl)}.rl.lt{color:var(--pu)}
+.cb{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:14px;background:linear-gradient(135deg,var(--g),var(--gd));color:#fff;font-weight:700;font-size:1rem;cursor:pointer;border:none;box-shadow:0 8px 32px rgba(16,185,129,.35);transition:all .3s;text-decoration:none}
+.cb:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(16,185,129,.5)}
+.lc{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid var(--br);font-size:.83rem;font-weight:600;color:var(--mu);text-decoration:none;transition:all .25s}
+.lc:hover{border-color:var(--g);color:var(--g);background:rgba(16,185,129,.08)}
+.dvd{width:56px;height:3px;background:linear-gradient(90deg,var(--g),var(--gold));border-radius:2px;margin:0 auto 10px}
+.si{width:100%;max-width:1080px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.bg-cover{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(16,185,129,.12),transparent 70%);pointer-events:none}
+.clr{width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:24px;background:radial-gradient(circle,rgba(16,185,129,.2),rgba(6,78,59,.35));border:2px solid rgba(16,185,129,.4);box-shadow:0 0 60px rgba(16,185,129,.3);animation:pl 3s infinite ease-in-out}
+@keyframes pl{0%,100%{box-shadow:0 0 40px rgba(16,185,129,.25)}50%{box-shadow:0 0 80px rgba(16,185,129,.5)}}
+.cm{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.cmi{display:flex;align-items:center;gap:7px;font-size:.82rem;color:var(--mu)}
+.cmi i{color:var(--g)}
+.hsub{font-size:1.05rem;color:var(--mu);line-height:1.7;max-width:620px;text-align:center;margin-bottom:28px}
+.tb2{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.bg-t{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:10px;font-size:.77rem;font-weight:600;background:var(--gl);border:1px solid var(--br);color:var(--mu)}
+.bg-t i{color:var(--g)}
+@media(max-width:900px){.slide{padding:32px 20px}.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}.sp{grid-template-columns:1fr}.g2{grid-template-columns:1fr}}
+
+/* ── SCREENSHOT SHOWCASE ── */
+.ss-wrap{display:flex;gap:20px;width:100%;align-items:stretch}
+.ss-card{flex:1;border-radius:20px;overflow:hidden;border:1px solid var(--br);background:var(--card);display:flex;flex-direction:column;box-shadow:0 16px 48px rgba(0,0,0,.45);transition:transform .3s,box-shadow .3s}
+.ss-card:hover{transform:translateY(-6px);box-shadow:0 28px 70px rgba(0,0,0,.55)}
+.ss-img-wrap{width:100%;overflow:hidden;position:relative}
+.ss-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s ease}
+.ss-card:hover .ss-img-wrap img{transform:scale(1.04)}
+.ss-label{padding:14px 18px;display:flex;flex-direction:column;gap:4px}
+.ss-label-badge{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g)}
+.ss-label-title{font-size:.88rem;font-weight:700;color:var(--tx)}
+.ss-label-desc{font-size:.75rem;color:var(--mu);line-height:1.45}
+/* Split with image */
+.split-img{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;width:100%;align-items:start}
+.phone-frame{background:var(--card);border:1px solid var(--br);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);height:420px;position:relative}
+.phone-frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.phone-frame-overlay{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(transparent,rgba(6,13,23,.95));font-size:.78rem;color:var(--mu)}
+@media(max-width:900px){.ss-wrap{flex-direction:column}.split-img{grid-template-columns:1fr}}
+
+  </style>
+</head>
+<body>
+<div class="amb"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="pb" id="pb"></div>
+<div class="tb">
+  <div class="logo"><span>&#127807;</span>&nbsp;Qarabağ Aqro-İnvest</div>
+  <div class="sc"><span id="cs">1</span> / <span id="ts">9</span></div>
+</div>
+
+<main class="vp" id="vp">
+
+<!-- 1: COVER -->
+<section class="slide active" id="s0">
+  <div class="bg-cover"></div>
+  <div class="si" style="text-align:center">
+    <div class="clr">&#127807;</div>
+    <div class="ey"><i class="fa-solid fa-rocket"></i>&nbsp; Startup Pitch Deck</div>
+    <h1 class="ht">Qarabağ<br>Aqro-Invest</h1>
+    <p class="hsub">Azad edilmiş torpaqlarda investisiyanın rəqəmsal, şəffaf və sürətli platforması -- EKTİS inteqrasiyası, GIS xəritəsi və açıq hərrac sistemi.</p>
+    <div class="cm">
+      <div class="cmi"><i class="fa-solid fa-location-dot"></i> Qarabağ &amp; Şərqi Zəngəzur</div>
+      <div class="cmi"><i class="fa-solid fa-leaf"></i> Aqrar İnvestisiya Platforması</div>
+      <div class="cmi"><i class="fa-solid fa-calendar-days"></i> 2026</div>
+      <div class="cmi"><i class="fa-solid fa-users"></i> Hackathon Prototipi</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2: PROBLEM -->
+<section class="slide" id="s1">
+  <div class="si">
+    <div class="ey rd"><i class="fa-solid fa-triangle-exclamation"></i>&nbsp; Problem</div>
+    <h2 class="st">Hazırki Sistem Nəyi Həll Edə Bilmir?</h2>
+    <div class="dvd"></div>
+    <div class="g3">
+      <div class="pr"><div class="pn">1</div><h4>Kağız Ərizəsi Prosesi</h4><p>İnvestorlar ərazi seçimi və müraciət formalarını analog üsulla aparır — heç bir rəqəmsal interfeys yoxdur.</p></div>
+      <div class="pr"><div class="pn">2</div><h4>Torpaq Məlumatına Çıxış Yoxdur</h4><p>Potensial investorlar torpağın bonitet balı, suvarma vəziyyəti, minalanma statusu haqqında rəsmi məlumat almaq imkanı yoxdur.</p></div>
+      <div class="pr"><div class="pn">3</div><h4>Koordinasiya Problemi</h4><p>KTN, ANAMA, EKTİS, Kadastr — hər qurumda ayrıca proses; vahid rəqəmsal interfeys mövcud deyil.</p></div>
+      <div class="pr"><div class="pn">4</div><h4>Şəffaflıq Çatışmazlığı</h4><p>Müsabiqə nəticələri, komissiyanın qiymətləndirmə balları və müraciətin statusu camaatın nəzərindən uzaqdır.</p></div>
+      <div class="pr"><div class="pn">5</div><h4>İnvestor Məlumat Boşluğu</h4><p>Xarici investorlar Qarabağın aqrar potensialı, infrastrukturu və hüquqi çərçivə haqqında məlumatsızdır.</p></div>
+      <div class="pr"><div class="pn">6</div><h4>Uzun Müsabiqə Müddəti</h4><p>Mövcud prosesdə bir müsabiqənin nəticəsinin açıqlanması 3–6 ayı əhatə edir — investisiya cəlbi üçün çox uzundur.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3: SOLUTION -->
+<section class="slide" id="s2">
+  <div class="si">
+    <div class="ey"><i class="fa-solid fa-lightbulb"></i>&nbsp; Həllimiz</div>
+    <h2 class="st">Qarabağ Aqro-İnvest Portalı</h2>
+    <div class="dvd"></div>
+    <div class="sp">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-size:.92rem;color:var(--mu);line-height:1.7">EKTİS dövlət sistemi ilə tam inteqrasiyalı, GIS xəritəli, açıq hərrac mexanizmli vahid rəqəmsal platforma — investordan müraciətə, komissiyadan nəticəyə qədər bütün prosesi tam rəqəmsal edir.</p>
+        <div class="vr bd"><span class="vi"><i class="fa-solid fa-xmark"></i></span><span class="vt"><strong>Əvvəl:</strong> Kağız ərizə → 3–6 ay proses → Nəticə məlum deyil</span></div>
+        <div class="vr gd"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>İndi:</strong> Online qeydiyyat → Real-time status → Şəffaf nəticə</span></div>
+        <div class="vr bd"><span class="vi"><i class="fa-solid fa-xmark"></i></span><span class="vt"><strong>Əvvəl:</strong> Torpaq məlumatları çox qurumda səpələnib</span></div>
+        <div class="vr gd"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>İndi:</strong> Bir klikdə bonitet, suvarma, kadastr, ANAMA statusu</span></div>
+        <div class="vr bd"><span class="vi"><i class="fa-solid fa-xmark"></i></span><span class="vt"><strong>Əvvəl:</strong> Hərrac qapalı, kriteri şəffaf deyil</span></div>
+        <div class="vr gd"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>İndi:</strong> Canlı açıq hərrac — real vaxtda görmək mümkündür</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="phone-frame" style="height:240px;margin-bottom:4px">
+          <img src="img_asan.jpg" alt="ASAN İmza Giriş Ekranı" style="object-position:top center">
+          <div class="phone-frame-overlay"><i class="fa-solid fa-shield-halved" style="color:var(--g);margin-right:4px"></i>ASAN İmza / SİMA — Real Portal Ekranı</div>
+        </div>
+        <div class="fr"><div class="fi gn"><i class="fa-solid fa-map-location-dot"></i></div><div class="ft"><h4>İnteraktiv GIS Xəritəsi</h4><p>Sahələrin relyef, bonitet, suvarma və kadastr məlumatları xəritə üzərindən</p></div></div>
+        <div class="fr"><div class="fi bl"><i class="fa-solid fa-database"></i></div><div class="ft"><h4>EKTİS İnteqrasiyası</h4><p>VÖEN/FİN əsasında fermerin real-time yoxlanması, subsidiya statusu</p></div></div>
+        <div class="fr"><div class="fi gd"><i class="fa-solid fa-gavel"></i></div><div class="ft"><h4>Açıq Hərrac Sistemi</h4><p>Torpaq lotlarına canlı təklif, 9 ekspertdən ibarət komissiyanın qiymətləndirməsi</p></div></div>
+        <div class="fr"><div class="fi pu"><i class="fa-solid fa-shield-halved"></i></div><div class="ft"><h4>ASAN İmza / SİMA Auth</h4><p>Dövlət e-imzası ilə güvənli giriş, fırıldaqçılığa qarşı qorunma</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4: MODULES -->
+<section class="slide" id="s3">
+  <div class="si">
+    <div class="ey bl"><i class="fa-solid fa-display"></i>&nbsp; Məhsul</div>
+    <h2 class="st">Portal — 6 Əsas Modul</h2>
+    <div class="dvd"></div>
+    <!-- Screenshot cards row -->
+    <div class="ss-wrap">
+      <div class="ss-card">
+        <div class="ss-img-wrap" style="height:200px">
+          <img src="img_kadastr.jpg" alt="Torpaq Kadastr Kartı">
+        </div>
+        <div class="ss-label">
+          <span class="ss-label-badge"><i class="fa-solid fa-map-location-dot"></i>&nbsp; Torpaq Kataloqu</span>
+          <span class="ss-label-title">Kadastr Kart — AGD-2026-0012</span>
+          <span class="ss-label-desc">120 ha · Münbitlik 85/100 · 450.000 ₼ investisiya · Ağdam, Qiyaslı kəndi</span>
+        </div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-img-wrap" style="height:200px">
+          <img src="img_filter.jpg" alt="Filtrlər və Axtarış">
+        </div>
+        <div class="ss-label">
+          <span class="ss-label-badge"><i class="fa-solid fa-sliders"></i>&nbsp; Axtarış Filtrləri</span>
+          <span class="ss-label-title">10 Rayon · 5 Aqrar Sektor · Ölçü Slayderi</span>
+          <span class="ss-label-desc">Ağdam, Füzuli, Cəbrayıl, Zəngilan, Laçın, Şuşa və s. üzrə dinamik filtrasiya</span>
+        </div>
+      </div>
+      <div class="ss-card">
+        <div class="ss-img-wrap" style="height:200px">
+          <img src="img_asan.jpg" alt="ASAN İmza Giriş">
+        </div>
+        <div class="ss-label">
+          <span class="ss-label-badge"><i class="fa-solid fa-shield-halved"></i>&nbsp; Dövlət Auth</span>
+          <span class="ss-label-title">ASAN İmza / SİMA İlə Giriş</span>
+          <span class="ss-label-desc">Hüquqi şəxs, fermer və ya xarici investor olaraq rəsmi qeydiyyat</span>
+        </div>
+      </div>
+    </div>
+    <!-- Features quick list -->
+    <div class="g3" style="margin-top:4px">
+      <div class="fr" style="padding:12px 16px"><div class="fi gn"><i class="fa-solid fa-map"></i></div><div class="ft"><h4>GIS Xəritəsi</h4><p>10 rayon, kadastr poliqonları, DEM relyef</p></div></div>
+      <div class="fr" style="padding:12px 16px"><div class="fi gd"><i class="fa-solid fa-gavel"></i></div><div class="ft"><h4>Açıq Hərrac</h4><p>Canlı artırma, 9 komissiya üzvü, protokol</p></div></div>
+      <div class="fr" style="padding:12px 16px"><div class="fi bl"><i class="fa-solid fa-file-pen"></i></div><div class="ft"><h4>Elektron Müraciət</h4><p>4-addımlı Wizard, EKTİS yoxlama, izləmə</p></div></div>
+      <div class="fr" style="padding:12px 16px"><div class="fi pu"><i class="fa-solid fa-leaf"></i></div><div class="ft"><h4>Operator Paneli</h4><p>Sahə jurnalı, məhsuldarlıq, subsidiya</p></div></div>
+      <div class="fr" style="padding:12px 16px"><div class="fi gn"><i class="fa-solid fa-shield-halved"></i></div><div class="ft"><h4>ASAN / SİMA Auth</h4><p>Dövlət e-imzası, biometrik, JWT</p></div></div>
+      <div class="fr" style="padding:12px 16px"><div class="fi gd"><i class="fa-solid fa-gauge-high"></i></div><div class="ft"><h4>İnzibati Panel</h4><p>SuperAdmin, parsel idarəsi, icazə matrisi</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5: TECH -->
+<section class="slide" id="s4">
+  <div class="si">
+    <div class="ey gld"><i class="fa-solid fa-code"></i>&nbsp; Texniki Həll</div>
+    <h2 class="st">Texnologiya Yığımı</h2>
+    <div class="dvd"></div>
+    <!-- Screenshot proof strip -->
+    <div style="display:flex;gap:14px;width:100%;margin-bottom:4px">
+      <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid rgba(16,185,129,.25);height:110px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.4)">
+        <img src="img_kadastr.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,13,23,.7) 0%,transparent 50%);display:flex;align-items:center;padding:0 18px">
+          <span style="font-size:.8rem;font-weight:700;color:#fff"><i class="fa-solid fa-map-location-dot" style="color:var(--g);margin-right:6px"></i>GIS + Kadastr Məlumatı — Canlı Portal</span>
+        </div>
+      </div>
+      <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid rgba(56,189,248,.25);height:110px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.4)">
+        <img src="img_filter.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 20%">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,13,23,.7) 0%,transparent 50%);display:flex;align-items:center;padding:0 18px">
+          <span style="font-size:.8rem;font-weight:700;color:#fff"><i class="fa-solid fa-sliders" style="color:var(--bl);margin-right:6px"></i>Dinamik Filtrasiya — 10 Rayon, 5 Sektor</span>
+        </div>
+      </div>
+      <div style="flex:1;border-radius:16px;overflow:hidden;border:1px solid rgba(168,85,247,.25);height:110px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.4)">
+        <img src="img_asan.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center 10%">
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,13,23,.7) 0%,transparent 50%);display:flex;align-items:center;padding:0 18px">
+          <span style="font-size:.8rem;font-weight:700;color:#fff"><i class="fa-solid fa-shield-halved" style="color:var(--pu);margin-right:6px"></i>ASAN İmza — Dövlət Auth Sistemi</span>
+        </div>
+      </div>
+    </div>
+    <div class="g2">
+      <div class="gc">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--bl);text-transform:uppercase;margin-bottom:14px">Frontend</div>
+        <div class="tb2">
+          <span class="bg-t"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+          <span class="bg-t"><i class="fa-brands fa-js"></i> Vanilla JavaScript</span>
+          <span class="bg-t"><i class="fa-solid fa-map"></i> Leaflet.js GIS</span>
+          <span class="bg-t"><i class="fa-solid fa-chart-line"></i> Chart.js</span>
+          <span class="bg-t"><i class="fa-solid fa-mobile-screen"></i> PWA + Service Worker</span>
+          <span class="bg-t"><i class="fa-solid fa-palette"></i> Material Design 3</span>
+        </div>
+      </div>
+      <div class="gc">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--g);text-transform:uppercase;margin-bottom:14px">Backend &amp; Data</div>
+        <div class="tb2">
+          <span class="bg-t"><i class="fa-brands fa-node-js"></i> Node.js</span>
+          <span class="bg-t"><i class="fa-brands fa-java"></i> Spring Boot (Java 27)</span>
+          <span class="bg-t"><i class="fa-solid fa-database"></i> H2 In-Memory DB</span>
+          <span class="bg-t"><i class="fa-solid fa-code-branch"></i> REST API / EKTİS mock</span>
+          <span class="bg-t"><i class="fa-solid fa-cloud"></i> Vercel Deploy</span>
+          <span class="bg-t"><i class="fa-brands fa-github"></i> Git / GitHub</span>
+        </div>
+      </div>
+      <div class="gc" style="border-color:rgba(239,68,68,.2)">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.08em;color:#f87171;text-transform:uppercase;margin-bottom:14px">Təhlükəsizlik</div>
+        <div class="tb2">
+          <span class="bg-t"><i class="fa-solid fa-shield-halved"></i> ASAN İmza</span>
+          <span class="bg-t"><i class="fa-solid fa-fingerprint"></i> SİMA Biometrik</span>
+          <span class="bg-t"><i class="fa-solid fa-lock"></i> JWT Auth</span>
+          <span class="bg-t"><i class="fa-solid fa-eye-slash"></i> CORS / CSP Header</span>
+        </div>
+      </div>
+      <div class="gc" style="border-color:rgba(168,85,247,.2)">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--pu);text-transform:uppercase;margin-bottom:14px">GIS &amp; Cosrafi Melumat</div>
+        <div class="tb2">
+          <span class="bg-t"><i class="fa-solid fa-earth-asia"></i> QGIS + Python</span>
+          <span class="bg-t"><i class="fa-solid fa-layer-group"></i> GeoJSON (10 rayon)</span>
+          <span class="bg-t"><i class="fa-solid fa-mountain"></i> ISRIC SoilGrids DEM</span>
+          <span class="bg-t"><i class="fa-solid fa-water"></i> ANAMA Mina xəritəsi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6: MARKET -->
+<section class="slide" id="s5">
+  <div class="si">
+    <div class="ey gld"><i class="fa-solid fa-chart-pie"></i>&nbsp; Bazar və Təsir</div>
+    <h2 class="st">Potensial və Sosial-İqtisadi Təsir</h2>
+    <div class="dvd"></div>
+    <div class="g4">
+      <div class="kp"><div class="n">1.2M+</div><div class="l">ha Azad Edilmiş Torpaq</div></div>
+      <div class="kp"><div class="n">10</div><div class="l">Rayonda GIS Əhatəsi</div></div>
+      <div class="kp"><div class="n">500M+</div><div class="l">AZN Potensial İnvestisiya</div></div>
+      <div class="kp"><div class="n">15K+</div><div class="l">Yeni Aqrar İş Yeri</div></div>
+    </div>
+    <div class="g2">
+      <div class="gc">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;color:var(--g);text-transform:uppercase;margin-bottom:12px"><i class="fa-solid fa-bullseye"></i>&nbsp; Hədəf Qruplar</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;gap:9px;align-items:center"><span style="width:7px;height:7px;border-radius:50%;background:var(--g);flex-shrink:0"></span><span style="font-size:.83rem;color:var(--mu)">Qarabağa qayıdan fermerlər və sahibkarlar</span></div>
+          <div style="display:flex;gap:9px;align-items:center"><span style="width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0"></span><span style="font-size:.83rem;color:var(--mu)">Yerli aqrar biznes mənbəyi axtaran investorlar</span></div>
+          <div style="display:flex;gap:9px;align-items:center"><span style="width:7px;height:7px;border-radius:50%;background:var(--bl);flex-shrink:0"></span><span style="font-size:.83rem;color:var(--mu)">Xarici aqrar fond və institusional investorlar</span></div>
+          <div style="display:flex;gap:9px;align-items:center"><span style="width:7px;height:7px;border-radius:50%;background:var(--pu);flex-shrink:0"></span><span style="font-size:.83rem;color:var(--mu)">Dövlət (KTN, ANAMA, Kadastr) idarəçiləri</span></div>
+        </div>
+      </div>
+      <div class="gc">
+        <div style="font-size:.75rem;font-weight:700;letter-spacing:.06em;color:var(--gold);text-transform:uppercase;margin-bottom:12px"><i class="fa-solid fa-trophy"></i>&nbsp; Açar Faydalar</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="vr gd" style="padding:9px 13px"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>-89%</strong> müsabiqə müddəti — aylardan günlərə</span></div>
+          <div class="vr gd" style="padding:9px 13px"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>100%</strong> şəffaf açıq artırma prosesi</span></div>
+          <div class="vr gd" style="padding:9px 13px"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>0 kağız</strong> sənəd — tam rəqəmsal proses</span></div>
+          <div class="vr gd" style="padding:9px 13px"><span class="vi"><i class="fa-solid fa-check"></i></span><span class="vt"><strong>50K+ ha</strong> dövriyyəyə daxil torpaq potensialı</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7: TEAM -->
+<section class="slide" id="s6">
+  <div class="si">
+    <div class="ey pu"><i class="fa-solid fa-users"></i>&nbsp; Komanda</div>
+    <h2 class="st">Bizim Komanda</h2>
+    <div class="dvd"></div>
+    <div class="g4">
+      <div class="tm dv">
+        <div class="av dv">&#128187;</div>
+        <div class="tn">Süleyman</div>
+        <div class="rb dv"><i class="fa-solid fa-code"></i>&nbsp; Developer</div>
+        <p class="td">Full-stack inkişaf, Node.js / Spring Boot backend arxitekturası, GIS inteqrasiyası və API dizaynı</p>
+      </div>
+      <div class="tm sc">
+        <div class="av sc">&#128737;</div>
+        <div class="tn">Hörmüz</div>
+        <div class="rb sc"><i class="fa-solid fa-shield-halved"></i>&nbsp; Kibertəhlükəsizlik</div>
+        <p class="td">ASAN İmza / SİMA inteqrasiyası, autentifikasiya axışı, CORS/CSP siyasəti, məlumat mühafizəsi</p>
+      </div>
+      <div class="tm ux">
+        <div class="av ux">&#127912;</div>
+        <div class="tn">Banu</div>
+        <div class="rb ux"><i class="fa-solid fa-pen-ruler"></i>&nbsp; UI/UX Dizayner</div>
+        <p class="td">Material Design 3 dizayn sistemi, istifadəçi axışı, komponent kitabxanası, vizual identiklik və prototip</p>
+      </div>
+      <div class="tm rs">
+        <div class="av rs">&#128300;</div>
+        <div class="tn">Emil</div>
+        <div class="rb rs"><i class="fa-solid fa-magnifying-glass-chart"></i>&nbsp; Tədqiqatçı</div>
+        <p class="td">Bazar tədqiqatı, dövlət siyasəti analizi, EKTİS / hüquqi çərçivə, GIS məlumat mənbəyi seçimi</p>
+      </div>
+    </div>
+    <div style="margin-top:18px;padding:14px 24px;border-radius:14px;border:1px solid var(--br);background:var(--gl);text-align:center;max-width:680px">
+      <p style="font-size:.85rem;color:var(--mu);line-height:1.6"><i class="fa-solid fa-handshake" style="color:var(--g);margin-right:6px"></i>Komandamız rəqəmsal inkişaf, kibertəhlükəsizlik, dizayn və araşdırma sahələrini birləşdirərək dövlət-texnologiya sahəsində tam inteqrasiyalı platforma yaradıb.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8: ROADMAP -->
+<section class="slide" id="s7">
+  <div class="si">
+    <div class="ey bl"><i class="fa-solid fa-road"></i>&nbsp; Yol Xəritəsi</div>
+    <h2 class="st">İnkişaf Yol Xəritəsi</h2>
+    <div class="dvd"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;margin-top:6px">
+      <div class="ri"><div class="rd dn"></div><div><div class="rl dn">&#10003; Hazır — Q3 2026</div><h4 style="font-size:.88rem;font-weight:700;margin-bottom:5px">Hackathon Prototipi</h4><p style="font-size:.78rem;color:var(--mu);line-height:1.5">GIS xəritəsi, EKTİS mock API, hərrac sistemi, müraciət modulu, PWA, admin paneli — tam işlək demo</p></div></div>
+      <div class="ri"><div class="rd nw"></div><div><div class="rl nw">&#128260; Cari — Q4 2026</div><h4 style="font-size:.88rem;font-weight:700;margin-bottom:5px">Pilot Mərhələ (KTN ilə)</h4><p style="font-size:.78rem;color:var(--mu);line-height:1.5">Kənd Təsərrüfatı Nazirliyi ilə pilot müqavilə, real EKTİS API inteqrasiyası, 3 rayonda test torpaqları</p></div></div>
+      <div class="ri"><div class="rd sn"></div><div><div class="rl sn">&#128640; Növbəti — Q1 2027</div><h4 style="font-size:.88rem;font-weight:700;margin-bottom:5px">Tam Produksiya Buraxılışı</h4><p style="font-size:.78rem;color:var(--mu);line-height:1.5">Bütün 10 rayonun qoşulması, ASAN İmza real inteqrasiya, blockchain-əsaslı audit trail, mobil app</p></div></div>
+      <div class="ri"><div class="rd lt"></div><div><div class="rl lt">&#127757; Gələcək — Q3 2027</div><h4 style="font-size:.88rem;font-weight:700;margin-bottom:5px">Regional Genişlənmə</h4><p style="font-size:.78rem;color:var(--mu);line-height:1.5">Gürcüstan, Ukrayna kimi ölkələrdə post-konflikt torpaq idarəçiliyinə ixrac; IFC / EBRD tərəfdaşlığı</p></div></div>
+      <div class="ri" style="grid-column:span 2"><div class="rd nw" style="background:var(--gold);color:var(--gold)"></div><div><div class="rl" style="color:var(--gold)">&#128161; AI / Data Qatmanı</div><h4 style="font-size:.88rem;font-weight:700;margin-bottom:5px">Aqrar Süni İntellekt Modulu</h4><p style="font-size:.78rem;color:var(--mu);line-height:1.5">Peyk görüntü analizi ilə məhsuldarlıq proqnozu, torpaq degradasiyası erkən xəbərdarlığı, AI-əsaslı investor uyğunluq skoru</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9: CTA -->
+<section class="slide" id="s8">
+  <div class="bg-cover"></div>
+  <div class="si" style="text-align:center">
+    <div class="ey"><i class="fa-solid fa-star"></i>&nbsp; Əlaqə və Dəstək</div>
+    <h1 class="ht" style="font-size:clamp(2rem,4.5vw,3.8rem)">Qarabağın<br>Aqrar Gələcəyi<br><span style="background:linear-gradient(135deg,var(--gold),#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Sizinlə Başlayır</span></h1>
+    <p class="hsub">Platforma tam işlək prototip kimi hazırdır. Kənd Təsərrüfatı Nazirliyi ilə pilot tərəfdaşlıq üçün dəstəyinizə ehtiyacımız var.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:24px">
+      <a href="http://localhost:8088" target="_blank" class="cb"><i class="fa-solid fa-globe"></i>&nbsp; Portalı Aç</a>
+      <a href="http://localhost:8088/presentation.html" target="_blank" class="cb" style="background:linear-gradient(135deg,rgba(245,158,11,.25),rgba(245,158,11,.1));border:1px solid rgba(245,158,11,.35);box-shadow:0 8px 32px rgba(245,158,11,.2)"><i class="fa-solid fa-presentation-screen"></i>&nbsp; Slayd Deki</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:28px">
+      <a href="https://github.com/SuleimanHajizadeh/InvestAreaBacking" target="_blank" class="lc"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a href="http://localhost:8088/admin" target="_blank" class="lc"><i class="fa-solid fa-shield-halved"></i> Admin Paneli</a>
+      <a href="http://localhost:8088/index.html" target="_blank" class="lc"><i class="fa-solid fa-map-location-dot"></i> GIS Xəritəsi</a>
+      <a href="Qarabağ_Aqro_Invest_Presentation.pptx" class="lc"><i class="fa-solid fa-file-powerpoint"></i> PowerPoint</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center">
+      <div class="cmi"><i class="fa-solid fa-code" style="color:var(--bl)"></i> Süleyman — Developer</div>
+      <div class="cmi"><i class="fa-solid fa-shield" style="color:#f87171"></i> Hörmüz — Kibertəhlükəsizlik</div>
+      <div class="cmi"><i class="fa-solid fa-pen-ruler" style="color:var(--pu)"></i> Banu — UI/UX Dizayner</div>
+      <div class="cmi"><i class="fa-solid fa-flask" style="color:var(--g)"></i> Emil — Tədqiqatçı</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="bb">
+  <button class="nb" id="pv" onclick="go(cur-1)" disabled title="Geri (←)"><i class="fa-solid fa-chevron-left"></i></button>
+  <div class="dn" id="dn"></div>
+  <button class="nb" id="nx" onclick="go(cur+1)" title="İrəli (→)"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<script>
+const sls=document.querySelectorAll('.slide'),tot=sls.length;
+let cur=0;
+document.getElementById('ts').textContent=tot;
+const dn=document.getElementById('dn');
+sls.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.onclick=()=>go(i);dn.appendChild(d);});
+function go(n){if(n<0||n>=tot)return;sls[cur].classList.remove('active');sls[cur].classList.add('el');setTimeout(()=>sls[cur].classList.remove('el'),520);cur=n;sls[cur].classList.add('active');document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));document.getElementById('cs').textContent=cur+1;document.getElementById('pb').style.width=((cur+1)/tot*100)+'%';document.getElementById('pv').disabled=cur===0;document.getElementById('nx').disabled=cur===tot-1;}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1);}if(e.key==='Home')go(0);if(e.key==='End')go(tot-1);});
+let tx=0;document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;});document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)go(dx<0?cur+1:cur-1);});
+go(0);
+</script>
+</body>
+</html>

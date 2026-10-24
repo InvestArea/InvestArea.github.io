@@ -1,0 +1,10 @@
+/* OpenStreetMap Overpass QL Query: Bütün Qarabağ və Şərqi Zəngəzur Kəndləri */
+[out:json][timeout:60];
+(
+  node["place"~"village|hamlet"](39.0, 45.8, 40.5, 47.4);
+  way["place"~"village|hamlet"](39.0, 45.8, 40.5, 47.4);
+  relation["place"~"village|hamlet"](39.0, 45.8, 40.5, 47.4);
+);
+out body;
+>;
+out skel qt;

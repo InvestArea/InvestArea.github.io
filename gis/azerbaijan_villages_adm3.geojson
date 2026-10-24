@@ -1,0 +1,1836 @@
+{
+  "type": "FeatureCollection",
+  "name": "Azerbaijan_Karabakh_Villages_ADM3",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "village-agd-01",
+      "properties": {
+        "id": "village-agd-01",
+        "iebt_code": "0201015",
+        "name": "Sarıcalı",
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 14.8,
+        "population": 1720,
+        "households": 425,
+        "active_workforce": 860,
+        "returnees_current": 240,
+        "returnees_target": 1720,
+        "bonitet_score": 84,
+        "elevation_m": 320,
+        "cropland_pct": 65,
+        "grassland_pct": 20,
+        "tree_cover_pct": 5,
+        "built_up_pct": 8,
+        "water_pct": 2,
+        "recommended_sectors": "Taxılçılıq, İntensiv meyvəçilik, Aqropark emal kompleksi",
+        "linked_parcel_id": "AZ-02-AGD-001",
+        "centroid_lon": 46.985,
+        "centroid_lat": 40.045,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.96,
+              40.03
+            ],
+            [
+              47.01,
+              40.035
+            ],
+            [
+              47.015,
+              40.06
+            ],
+            [
+              46.965,
+              40.055
+            ],
+            [
+              46.96,
+              40.03
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-agd-02",
+      "properties": {
+        "id": "village-agd-02",
+        "iebt_code": "0201022",
+        "name": "Kəngərli",
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 18.2,
+        "population": 2540,
+        "households": 630,
+        "active_workforce": 1250,
+        "returnees_current": 310,
+        "returnees_target": 2540,
+        "bonitet_score": 88,
+        "elevation_m": 345,
+        "cropland_pct": 72,
+        "grassland_pct": 15,
+        "tree_cover_pct": 4,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Aqrar bağçılıq, Üzümçülük, Damla suvarma təsərrüfatı",
+        "linked_parcel_id": "AZ-02-AGD-001",
+        "centroid_lon": 46.942,
+        "centroid_lat": 40.081,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.92,
+              40.065
+            ],
+            [
+              46.965,
+              40.07
+            ],
+            [
+              46.96,
+              40.095
+            ],
+            [
+              46.925,
+              40.09
+            ],
+            [
+              46.92,
+              40.065
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-agd-03",
+      "properties": {
+        "id": "village-agd-03",
+        "iebt_code": "0201031",
+        "name": "Xıdırlı",
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 21,
+        "population": 2950,
+        "households": 710,
+        "active_workforce": 1420,
+        "returnees_current": 280,
+        "returnees_target": 2950,
+        "bonitet_score": 90,
+        "elevation_m": 360,
+        "cropland_pct": 75,
+        "grassland_pct": 12,
+        "tree_cover_pct": 3,
+        "built_up_pct": 8,
+        "water_pct": 2,
+        "recommended_sectors": "Pambıqçılıq, Taxılçılıq, İntensiv tingçilik",
+        "linked_parcel_id": "AZ-02-AGD-001",
+        "centroid_lon": 46.92,
+        "centroid_lat": 40.035,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.9,
+              40.02
+            ],
+            [
+              46.94,
+              40.025
+            ],
+            [
+              46.945,
+              40.05
+            ],
+            [
+              46.905,
+              40.045
+            ],
+            [
+              46.9,
+              40.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-agd-04",
+      "properties": {
+        "id": "village-agd-04",
+        "iebt_code": "0201045",
+        "name": "Baş Qərvənd",
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 25.4,
+        "population": 3200,
+        "households": 780,
+        "active_workforce": 1540,
+        "returnees_current": 450,
+        "returnees_target": 3200,
+        "bonitet_score": 82,
+        "elevation_m": 290,
+        "cropland_pct": 68,
+        "grassland_pct": 18,
+        "tree_cover_pct": 4,
+        "built_up_pct": 7,
+        "water_pct": 3,
+        "recommended_sectors": "Taxıl, Yem bitkiləri, Süd-ət heyvandarlığı",
+        "linked_parcel_id": "AZ-02-AGD-001",
+        "centroid_lon": 47.05,
+        "centroid_lat": 40.09,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.03,
+              40.075
+            ],
+            [
+              47.075,
+              40.08
+            ],
+            [
+              47.07,
+              40.105
+            ],
+            [
+              47.035,
+              40.1
+            ],
+            [
+              47.03,
+              40.075
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-fzl-01",
+      "properties": {
+        "id": "village-fzl-01",
+        "iebt_code": "0202011",
+        "name": "Dövlətyarlı (Ağıllı Kənd)",
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 19.5,
+        "population": 2150,
+        "households": 530,
+        "active_workforce": 1040,
+        "returnees_current": 380,
+        "returnees_target": 2150,
+        "bonitet_score": 92,
+        "elevation_m": 380,
+        "cropland_pct": 70,
+        "grassland_pct": 14,
+        "tree_cover_pct": 6,
+        "built_up_pct": 8,
+        "water_pct": 2,
+        "recommended_sectors": "Ağıllı kənd təsərrüfatı, Akvakultura, Günəş enerjisi ilə suvarma",
+        "linked_parcel_id": "AZ-02-FZL-002",
+        "centroid_lon": 47.11,
+        "centroid_lat": 39.63,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.085,
+              39.615
+            ],
+            [
+              47.135,
+              39.62
+            ],
+            [
+              47.13,
+              39.645
+            ],
+            [
+              47.09,
+              39.64
+            ],
+            [
+              47.085,
+              39.615
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-fzl-02",
+      "properties": {
+        "id": "village-fzl-02",
+        "iebt_code": "0202025",
+        "name": "Qoçəhmədli",
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 16.7,
+        "population": 1980,
+        "households": 490,
+        "active_workforce": 980,
+        "returnees_current": 190,
+        "returnees_target": 1980,
+        "bonitet_score": 87,
+        "elevation_m": 410,
+        "cropland_pct": 64,
+        "grassland_pct": 22,
+        "tree_cover_pct": 5,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "İntensiv badam və püstə bağçılığı, Üzümçülük",
+        "linked_parcel_id": "AZ-02-FZL-002",
+        "centroid_lon": 47.165,
+        "centroid_lat": 39.585,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.14,
+              39.57
+            ],
+            [
+              47.19,
+              39.575
+            ],
+            [
+              47.185,
+              39.6
+            ],
+            [
+              47.145,
+              39.595
+            ],
+            [
+              47.14,
+              39.57
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-fzl-03",
+      "properties": {
+        "id": "village-fzl-03",
+        "iebt_code": "0202038",
+        "name": "Qaraxanbəyli",
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 22.8,
+        "population": 2450,
+        "households": 610,
+        "active_workforce": 1190,
+        "returnees_current": 310,
+        "returnees_target": 2450,
+        "bonitet_score": 89,
+        "elevation_m": 310,
+        "cropland_pct": 74,
+        "grassland_pct": 14,
+        "tree_cover_pct": 3,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Taxılçılıq, Günəbaxan əkini, İstixana kompleksləri",
+        "linked_parcel_id": "AZ-02-FZL-002",
+        "centroid_lon": 47.23,
+        "centroid_lat": 39.645,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.21,
+              39.63
+            ],
+            [
+              47.255,
+              39.635
+            ],
+            [
+              47.25,
+              39.66
+            ],
+            [
+              47.215,
+              39.655
+            ],
+            [
+              47.21,
+              39.63
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-fzl-04",
+      "properties": {
+        "id": "village-fzl-04",
+        "iebt_code": "0202049",
+        "name": "Pirəhmədli",
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 15.3,
+        "population": 1760,
+        "households": 430,
+        "active_workforce": 850,
+        "returnees_current": 160,
+        "returnees_target": 1760,
+        "bonitet_score": 84,
+        "elevation_m": 430,
+        "cropland_pct": 61,
+        "grassland_pct": 25,
+        "tree_cover_pct": 5,
+        "built_up_pct": 6,
+        "water_pct": 3,
+        "recommended_sectors": "Zeytunçuluq, Yemçilik, Xırdabuynuzlu heyvandarlıq",
+        "linked_parcel_id": "AZ-02-FZL-002",
+        "centroid_lon": 47.195,
+        "centroid_lat": 39.545,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.175,
+              39.53
+            ],
+            [
+              47.22,
+              39.535
+            ],
+            [
+              47.215,
+              39.56
+            ],
+            [
+              47.18,
+              39.555
+            ],
+            [
+              47.175,
+              39.53
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-ssa-01",
+      "properties": {
+        "id": "village-ssa-01",
+        "iebt_code": "0203014",
+        "name": "Daşaltı",
+        "district": "Şuşa",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 12.1,
+        "population": 1250,
+        "households": 310,
+        "active_workforce": 610,
+        "returnees_current": 210,
+        "returnees_target": 1250,
+        "bonitet_score": 74,
+        "elevation_m": 1120,
+        "cropland_pct": 22,
+        "grassland_pct": 38,
+        "tree_cover_pct": 32,
+        "built_up_pct": 6,
+        "water_pct": 2,
+        "recommended_sectors": "Aqroturizm, Ekoloji arıçılıq, Dağ dərman bitkiləri",
+        "linked_parcel_id": "AZ-02-SSA-003",
+        "centroid_lon": 46.755,
+        "centroid_lat": 39.742,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.735,
+              39.73
+            ],
+            [
+              46.775,
+              39.735
+            ],
+            [
+              46.77,
+              39.755
+            ],
+            [
+              46.74,
+              39.75
+            ],
+            [
+              46.735,
+              39.73
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-ssa-02",
+      "properties": {
+        "id": "village-ssa-02",
+        "iebt_code": "0203028",
+        "name": "Turşsu",
+        "district": "Şuşa",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 17.6,
+        "population": 1580,
+        "households": 380,
+        "active_workforce": 760,
+        "returnees_current": 290,
+        "returnees_target": 1580,
+        "bonitet_score": 72,
+        "elevation_m": 1380,
+        "cropland_pct": 18,
+        "grassland_pct": 46,
+        "tree_cover_pct": 28,
+        "built_up_pct": 5,
+        "water_pct": 3,
+        "recommended_sectors": "Mineral sular bazasında sağlamlıq turizmi, Arıçılıq, Yaylaq heyvandarlığı",
+        "linked_parcel_id": "AZ-02-SSA-003",
+        "centroid_lon": 46.602,
+        "centroid_lat": 39.715,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.58,
+              39.7
+            ],
+            [
+              46.625,
+              39.705
+            ],
+            [
+              46.62,
+              39.73
+            ],
+            [
+              46.585,
+              39.725
+            ],
+            [
+              46.58,
+              39.7
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-ssa-03",
+      "properties": {
+        "id": "village-ssa-03",
+        "iebt_code": "0203033",
+        "name": "Malıbəyli",
+        "district": "Şuşa",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 13.4,
+        "population": 1840,
+        "households": 440,
+        "active_workforce": 890,
+        "returnees_current": 180,
+        "returnees_target": 1840,
+        "bonitet_score": 76,
+        "elevation_m": 950,
+        "cropland_pct": 35,
+        "grassland_pct": 34,
+        "tree_cover_pct": 22,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Meyvə bağları, Tərəvəzçilik, Xalçaçılıq və el sənətləri",
+        "linked_parcel_id": "AZ-02-SSA-003",
+        "centroid_lon": 46.775,
+        "centroid_lat": 39.805,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.755,
+              39.79
+            ],
+            [
+              46.795,
+              39.795
+            ],
+            [
+              46.79,
+              39.82
+            ],
+            [
+              46.76,
+              39.815
+            ],
+            [
+              46.755,
+              39.79
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-klb-01",
+      "properties": {
+        "id": "village-klb-01",
+        "iebt_code": "0204012",
+        "name": "Zar",
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 28.5,
+        "population": 2200,
+        "households": 540,
+        "active_workforce": 1060,
+        "returnees_current": 190,
+        "returnees_target": 2200,
+        "bonitet_score": 75,
+        "elevation_m": 1980,
+        "cropland_pct": 15,
+        "grassland_pct": 54,
+        "tree_cover_pct": 24,
+        "built_up_pct": 4,
+        "water_pct": 3,
+        "recommended_sectors": "Alp otlaqlarında maldarlıq, Dağ balı istehsalı, Aqroturizm",
+        "linked_parcel_id": "AZ-02-KLB-004",
+        "centroid_lon": 46.035,
+        "centroid_lat": 40.082,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.01,
+              40.065
+            ],
+            [
+              46.06,
+              40.07
+            ],
+            [
+              46.055,
+              40.095
+            ],
+            [
+              46.015,
+              40.09
+            ],
+            [
+              46.01,
+              40.065
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-klb-02",
+      "properties": {
+        "id": "village-klb-02",
+        "iebt_code": "0204026",
+        "name": "Yanşaq",
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 22.1,
+        "population": 1750,
+        "households": 420,
+        "active_workforce": 840,
+        "returnees_current": 240,
+        "returnees_target": 1750,
+        "bonitet_score": 73,
+        "elevation_m": 1820,
+        "cropland_pct": 18,
+        "grassland_pct": 50,
+        "tree_cover_pct": 26,
+        "built_up_pct": 4,
+        "water_pct": 2,
+        "recommended_sectors": "Təbii otlaq təsərrüfatı, Pendir və süd emalı sexi",
+        "linked_parcel_id": "AZ-02-KLB-004",
+        "centroid_lon": 46.21,
+        "centroid_lat": 40.165,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.185,
+              40.15
+            ],
+            [
+              46.235,
+              40.155
+            ],
+            [
+              46.23,
+              40.18
+            ],
+            [
+              46.19,
+              40.175
+            ],
+            [
+              46.185,
+              40.15
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-klb-03",
+      "properties": {
+        "id": "village-klb-03",
+        "iebt_code": "0204044",
+        "name": "Başlıbel",
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 26.8,
+        "population": 1910,
+        "households": 460,
+        "active_workforce": 910,
+        "returnees_current": 170,
+        "returnees_target": 1910,
+        "bonitet_score": 77,
+        "elevation_m": 1750,
+        "cropland_pct": 20,
+        "grassland_pct": 48,
+        "tree_cover_pct": 26,
+        "built_up_pct": 4,
+        "water_pct": 2,
+        "recommended_sectors": "Ekoloji kənd təsərrüfatı, Dağ arıçılığı, Turizm marşrutları",
+        "linked_parcel_id": "AZ-02-KLB-004",
+        "centroid_lon": 46.13,
+        "centroid_lat": 40.035,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.11,
+              40.02
+            ],
+            [
+              46.155,
+              40.025
+            ],
+            [
+              46.15,
+              40.05
+            ],
+            [
+              46.115,
+              40.045
+            ],
+            [
+              46.11,
+              40.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-lcn-01",
+      "properties": {
+        "id": "village-lcn-01",
+        "iebt_code": "0205011",
+        "name": "Zabux",
+        "district": "Laçın",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 14.5,
+        "population": 1820,
+        "households": 440,
+        "active_workforce": 880,
+        "returnees_current": 820,
+        "returnees_target": 1820,
+        "bonitet_score": 79,
+        "elevation_m": 1220,
+        "cropland_pct": 32,
+        "grassland_pct": 36,
+        "tree_cover_pct": 24,
+        "built_up_pct": 6,
+        "water_pct": 2,
+        "recommended_sectors": "Bərpa olunan kənd təsərrüfatı, Aqroemal, Xalçaçılıq mərkəzi",
+        "linked_parcel_id": "AZ-02-LCN-005",
+        "centroid_lon": 46.515,
+        "centroid_lat": 39.695,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.495,
+              39.68
+            ],
+            [
+              46.54,
+              39.685
+            ],
+            [
+              46.535,
+              39.71
+            ],
+            [
+              46.5,
+              39.705
+            ],
+            [
+              46.495,
+              39.68
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-lcn-02",
+      "properties": {
+        "id": "village-lcn-02",
+        "iebt_code": "0205022",
+        "name": "Sus",
+        "district": "Laçın",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 11.8,
+        "population": 1200,
+        "households": 290,
+        "active_workforce": 580,
+        "returnees_current": 310,
+        "returnees_target": 1200,
+        "bonitet_score": 76,
+        "elevation_m": 1310,
+        "cropland_pct": 26,
+        "grassland_pct": 42,
+        "tree_cover_pct": 25,
+        "built_up_pct": 5,
+        "water_pct": 2,
+        "recommended_sectors": "Yüksək dağ arıçılığı, Dərman bitkiləri yığımı və qablaşdırılması",
+        "linked_parcel_id": "AZ-02-LCN-005",
+        "centroid_lon": 46.565,
+        "centroid_lat": 39.675,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.545,
+              39.66
+            ],
+            [
+              46.585,
+              39.665
+            ],
+            [
+              46.58,
+              39.69
+            ],
+            [
+              46.55,
+              39.685
+            ],
+            [
+              46.545,
+              39.66
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-lcn-03",
+      "properties": {
+        "id": "village-lcn-03",
+        "iebt_code": "0205037",
+        "name": "Güləbird",
+        "district": "Laçın",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 18.9,
+        "population": 1980,
+        "households": 480,
+        "active_workforce": 960,
+        "returnees_current": 290,
+        "returnees_target": 1980,
+        "bonitet_score": 82,
+        "elevation_m": 890,
+        "cropland_pct": 48,
+        "grassland_pct": 28,
+        "tree_cover_pct": 16,
+        "built_up_pct": 5,
+        "water_pct": 3,
+        "recommended_sectors": "Həkəri çayı boyu bağçılıq, Qoz-fındıq bağları, SES yaxınlığında balıqçılıq",
+        "linked_parcel_id": "AZ-02-LCN-005",
+        "centroid_lon": 46.685,
+        "centroid_lat": 39.495,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.66,
+              39.48
+            ],
+            [
+              46.71,
+              39.485
+            ],
+            [
+              46.705,
+              39.51
+            ],
+            [
+              46.665,
+              39.505
+            ],
+            [
+              46.66,
+              39.48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-zgl-01",
+      "properties": {
+        "id": "village-zgl-01",
+        "iebt_code": "0206010",
+        "name": "Ağalı (Ağıllı Kənd 1, 2, 3)",
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 15.2,
+        "population": 1520,
+        "households": 360,
+        "active_workforce": 740,
+        "returnees_current": 950,
+        "returnees_target": 1520,
+        "bonitet_score": 91,
+        "elevation_m": 420,
+        "cropland_pct": 68,
+        "grassland_pct": 14,
+        "tree_cover_pct": 8,
+        "built_up_pct": 7,
+        "water_pct": 3,
+        "recommended_sectors": "Ağıllı kənd model təsərrüfatı, Avtomatlaşdırılmış damla suvarma, Günəş enerjisi aqroparkı",
+        "linked_parcel_id": "AZ-02-ZGL-006",
+        "centroid_lon": 46.68,
+        "centroid_lat": 39.11,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.655,
+              39.095
+            ],
+            [
+              46.705,
+              39.1
+            ],
+            [
+              46.7,
+              39.125
+            ],
+            [
+              46.66,
+              39.12
+            ],
+            [
+              46.655,
+              39.095
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-zgl-02",
+      "properties": {
+        "id": "village-zgl-02",
+        "iebt_code": "0206024",
+        "name": "Mincivan",
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 24.1,
+        "population": 3200,
+        "households": 780,
+        "active_workforce": 1550,
+        "returnees_current": 340,
+        "returnees_target": 3200,
+        "bonitet_score": 88,
+        "elevation_m": 380,
+        "cropland_pct": 62,
+        "grassland_pct": 18,
+        "tree_cover_pct": 10,
+        "built_up_pct": 7,
+        "water_pct": 3,
+        "recommended_sectors": "Logistika mərkəzi, Quru liman yanında emal sənayesi, Subtropik bağçılıq (nar, əncir)",
+        "linked_parcel_id": "AZ-02-ZGL-006",
+        "centroid_lon": 46.715,
+        "centroid_lat": 39.03,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.69,
+              39.015
+            ],
+            [
+              46.74,
+              39.02
+            ],
+            [
+              46.735,
+              39.045
+            ],
+            [
+              46.695,
+              39.04
+            ],
+            [
+              46.69,
+              39.015
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-zgl-03",
+      "properties": {
+        "id": "village-zgl-03",
+        "iebt_code": "0206048",
+        "name": "Cahangirbəyli",
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 17.8,
+        "population": 1680,
+        "households": 410,
+        "active_workforce": 810,
+        "returnees_current": 210,
+        "returnees_target": 1680,
+        "bonitet_score": 87,
+        "elevation_m": 450,
+        "cropland_pct": 64,
+        "grassland_pct": 19,
+        "tree_cover_pct": 8,
+        "built_up_pct": 6,
+        "water_pct": 3,
+        "recommended_sectors": "Bostançılıq, İntensiv üzümçülük, Zeytun bağları",
+        "linked_parcel_id": "AZ-02-ZGL-006",
+        "centroid_lon": 46.635,
+        "centroid_lat": 39.085,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.615,
+              39.07
+            ],
+            [
+              46.66,
+              39.075
+            ],
+            [
+              46.655,
+              39.1
+            ],
+            [
+              46.62,
+              39.095
+            ],
+            [
+              46.615,
+              39.07
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-cbr-01",
+      "properties": {
+        "id": "village-cbr-01",
+        "iebt_code": "0207011",
+        "name": "Cocuq Mərcanlı",
+        "district": "Cəbrayıl",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 16.3,
+        "population": 1650,
+        "households": 390,
+        "active_workforce": 800,
+        "returnees_current": 920,
+        "returnees_target": 1650,
+        "bonitet_score": 89,
+        "elevation_m": 230,
+        "cropland_pct": 75,
+        "grassland_pct": 12,
+        "tree_cover_pct": 4,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Taxılçılıq, Baramaçılıq və ipəkçilik, Arıçılıq təsərrüfatları",
+        "linked_parcel_id": "AZ-02-CBR-007",
+        "centroid_lon": 47.285,
+        "centroid_lat": 39.385,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.265,
+              39.37
+            ],
+            [
+              47.31,
+              39.375
+            ],
+            [
+              47.305,
+              39.4
+            ],
+            [
+              47.27,
+              39.395
+            ],
+            [
+              47.265,
+              39.37
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-cbr-02",
+      "properties": {
+        "id": "village-cbr-02",
+        "iebt_code": "0207025",
+        "name": "Şükürbəyli",
+        "district": "Cəbrayıl",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 19.4,
+        "population": 1920,
+        "households": 470,
+        "active_workforce": 930,
+        "returnees_current": 280,
+        "returnees_target": 1920,
+        "bonitet_score": 90,
+        "elevation_m": 290,
+        "cropland_pct": 72,
+        "grassland_pct": 15,
+        "tree_cover_pct": 4,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Araz vadisi iqtisadi zonası logistika və istehsal mərkəzi",
+        "linked_parcel_id": "AZ-02-CBR-007",
+        "centroid_lon": 47.05,
+        "centroid_lat": 39.365,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.025,
+              39.35
+            ],
+            [
+              47.075,
+              39.355
+            ],
+            [
+              47.07,
+              39.38
+            ],
+            [
+              47.03,
+              39.375
+            ],
+            [
+              47.025,
+              39.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-cbr-03",
+      "properties": {
+        "id": "village-cbr-03",
+        "iebt_code": "0207038",
+        "name": "Horovlu",
+        "district": "Cəbrayıl",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 21.7,
+        "population": 2240,
+        "households": 540,
+        "active_workforce": 1080,
+        "returnees_current": 310,
+        "returnees_target": 2240,
+        "bonitet_score": 88,
+        "elevation_m": 330,
+        "cropland_pct": 69,
+        "grassland_pct": 18,
+        "tree_cover_pct": 4,
+        "built_up_pct": 7,
+        "water_pct": 2,
+        "recommended_sectors": "Böyük qayıdış yaşayış massivi, İntensiv üzüm və nar plantasiyaları",
+        "linked_parcel_id": "AZ-02-CBR-007",
+        "centroid_lon": 47.015,
+        "centroid_lat": 39.425,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.99,
+              39.41
+            ],
+            [
+              47.04,
+              39.415
+            ],
+            [
+              47.035,
+              39.44
+            ],
+            [
+              46.995,
+              39.435
+            ],
+            [
+              46.99,
+              39.41
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-qbd-01",
+      "properties": {
+        "id": "village-qbd-01",
+        "iebt_code": "0208012",
+        "name": "Xanlıq",
+        "district": "Qubadlı",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 20.3,
+        "population": 2350,
+        "households": 570,
+        "active_workforce": 1130,
+        "returnees_current": 330,
+        "returnees_target": 2350,
+        "bonitet_score": 88,
+        "elevation_m": 540,
+        "cropland_pct": 60,
+        "grassland_pct": 22,
+        "tree_cover_pct": 10,
+        "built_up_pct": 6,
+        "water_pct": 2,
+        "recommended_sectors": "Bazarçay və Bərgüşad vadilərində bağçılıq, Meyvə qurudulması və emalı",
+        "linked_parcel_id": "AZ-02-QBD-008",
+        "centroid_lon": 46.725,
+        "centroid_lat": 39.31,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.7,
+              39.295
+            ],
+            [
+              46.75,
+              39.3
+            ],
+            [
+              46.745,
+              39.325
+            ],
+            [
+              46.705,
+              39.32
+            ],
+            [
+              46.7,
+              39.295
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-qbd-02",
+      "properties": {
+        "id": "village-qbd-02",
+        "iebt_code": "0208034",
+        "name": "Dondarlı",
+        "district": "Qubadlı",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 17.1,
+        "population": 1810,
+        "households": 440,
+        "active_workforce": 880,
+        "returnees_current": 240,
+        "returnees_target": 1810,
+        "bonitet_score": 87,
+        "elevation_m": 590,
+        "cropland_pct": 58,
+        "grassland_pct": 25,
+        "tree_cover_pct": 10,
+        "built_up_pct": 5,
+        "water_pct": 2,
+        "recommended_sectors": "Tütünçülük, Arıçılıq, Ətlik və südlük heyvandarlıq",
+        "linked_parcel_id": "AZ-02-QBD-008",
+        "centroid_lon": 46.615,
+        "centroid_lat": 39.365,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.595,
+              39.35
+            ],
+            [
+              46.64,
+              39.355
+            ],
+            [
+              46.635,
+              39.38
+            ],
+            [
+              46.6,
+              39.375
+            ],
+            [
+              46.595,
+              39.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-xcv-01",
+      "properties": {
+        "id": "village-xcv-01",
+        "iebt_code": "0209010",
+        "name": "Hadrut",
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 25,
+        "population": 2800,
+        "households": 680,
+        "active_workforce": 1350,
+        "returnees_current": 410,
+        "returnees_target": 2800,
+        "bonitet_score": 86,
+        "elevation_m": 760,
+        "cropland_pct": 45,
+        "grassland_pct": 32,
+        "tree_cover_pct": 15,
+        "built_up_pct": 6,
+        "water_pct": 2,
+        "recommended_sectors": "Tarixi mədəni irs və aqroturizm, Şərabçılıq və üzüm bağları",
+        "linked_parcel_id": "AZ-02-XCV-009",
+        "centroid_lon": 47.03,
+        "centroid_lat": 39.525,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.005,
+              39.51
+            ],
+            [
+              47.055,
+              39.515
+            ],
+            [
+              47.05,
+              39.54
+            ],
+            [
+              47.01,
+              39.535
+            ],
+            [
+              47.005,
+              39.51
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-xcv-02",
+      "properties": {
+        "id": "village-xcv-02",
+        "iebt_code": "0209025",
+        "name": "Tuğ",
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 18.4,
+        "population": 1950,
+        "households": 470,
+        "active_workforce": 940,
+        "returnees_current": 290,
+        "returnees_target": 1950,
+        "bonitet_score": 88,
+        "elevation_m": 840,
+        "cropland_pct": 42,
+        "grassland_pct": 30,
+        "tree_cover_pct": 21,
+        "built_up_pct": 5,
+        "water_pct": 2,
+        "recommended_sectors": "Tarixi Tuğ Dövlət Tarix-Memarlıq Qoruğu, Şərabçılıq və qastronomiya turizmi",
+        "linked_parcel_id": "AZ-02-XCV-009",
+        "centroid_lon": 46.965,
+        "centroid_lat": 39.565,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.945,
+              39.55
+            ],
+            [
+              46.99,
+              39.555
+            ],
+            [
+              46.985,
+              39.58
+            ],
+            [
+              46.95,
+              39.575
+            ],
+            [
+              46.945,
+              39.55
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-xcl-01",
+      "properties": {
+        "id": "village-xcl-01",
+        "iebt_code": "0210015",
+        "name": "Ballıca",
+        "district": "Xocalı",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 15.6,
+        "population": 1480,
+        "households": 360,
+        "active_workforce": 720,
+        "returnees_current": 230,
+        "returnees_target": 1480,
+        "bonitet_score": 80,
+        "elevation_m": 720,
+        "cropland_pct": 50,
+        "grassland_pct": 28,
+        "tree_cover_pct": 15,
+        "built_up_pct": 5,
+        "water_pct": 2,
+        "recommended_sectors": "Bağçılıq, Arıçılıq, Eko-kənd təsərrüfatı və istixana",
+        "linked_parcel_id": "AZ-02-XCL-010",
+        "centroid_lon": 46.735,
+        "centroid_lat": 39.925,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.715,
+              39.91
+            ],
+            [
+              46.76,
+              39.915
+            ],
+            [
+              46.755,
+              39.94
+            ],
+            [
+              46.72,
+              39.935
+            ],
+            [
+              46.715,
+              39.91
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-xcl-02",
+      "properties": {
+        "id": "village-xcl-02",
+        "iebt_code": "0210028",
+        "name": "Meşəli",
+        "district": "Xocalı",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 17.2,
+        "population": 1260,
+        "households": 300,
+        "active_workforce": 610,
+        "returnees_current": 190,
+        "returnees_target": 1260,
+        "bonitet_score": 78,
+        "elevation_m": 860,
+        "cropland_pct": 38,
+        "grassland_pct": 32,
+        "tree_cover_pct": 24,
+        "built_up_pct": 4,
+        "water_pct": 2,
+        "recommended_sectors": "Meşə kənarı meşə-baxım təsərrüfatı, Meşə giləmeyvələri və fındıqçılıq",
+        "linked_parcel_id": "AZ-02-XCL-010",
+        "centroid_lon": 46.685,
+        "centroid_lat": 39.885,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.665,
+              39.87
+            ],
+            [
+              46.71,
+              39.875
+            ],
+            [
+              46.705,
+              39.9
+            ],
+            [
+              46.67,
+              39.895
+            ],
+            [
+              46.665,
+              39.87
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-trt-01",
+      "properties": {
+        "id": "village-trt-01",
+        "iebt_code": "2401001",
+        "name": "Suqovuşan",
+        "district": "Tərtər",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 18.5,
+        "population": 1250,
+        "households": 310,
+        "active_workforce": 620,
+        "returnees_current": 180,
+        "returnees_target": 1250,
+        "bonitet_score": 88,
+        "elevation_m": 165,
+        "cropland_pct": 70,
+        "grassland_pct": 15,
+        "tree_cover_pct": 10,
+        "built_up_pct": 5,
+        "water_pct": 10,
+        "recommended_sectors": "Suvarılan intensiv taxılçılıq, balıqçılıq və rekreasiya",
+        "linked_parcel_id": "AZ-24-TRT-001",
+        "centroid_lon": 46.885,
+        "centroid_lat": 40.298,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.86,
+              40.28
+            ],
+            [
+              46.91,
+              40.28
+            ],
+            [
+              46.91,
+              40.32
+            ],
+            [
+              46.86,
+              40.32
+            ],
+            [
+              46.86,
+              40.28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-trt-02",
+      "properties": {
+        "id": "village-trt-02",
+        "iebt_code": "2401002",
+        "name": "Çaylı",
+        "district": "Tərtər",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 15.2,
+        "population": 1100,
+        "households": 280,
+        "active_workforce": 550,
+        "returnees_current": 150,
+        "returnees_target": 1100,
+        "bonitet_score": 87,
+        "elevation_m": 175,
+        "cropland_pct": 75,
+        "grassland_pct": 15,
+        "tree_cover_pct": 5,
+        "built_up_pct": 5,
+        "water_pct": 2,
+        "recommended_sectors": "Pambıqçılıq, taxılçılıq və aqro-emal",
+        "linked_parcel_id": "AZ-24-TRT-002",
+        "centroid_lon": 46.915,
+        "centroid_lat": 40.315,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.89,
+              40.3
+            ],
+            [
+              46.94,
+              40.3
+            ],
+            [
+              46.94,
+              40.34
+            ],
+            [
+              46.89,
+              40.34
+            ],
+            [
+              46.89,
+              40.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "village-trt-03",
+      "properties": {
+        "id": "village-trt-03",
+        "iebt_code": "2401003",
+        "name": "Talış",
+        "district": "Tərtər",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "adm_level": 3,
+        "area_sqkm": 21,
+        "population": 980,
+        "households": 240,
+        "active_workforce": 490,
+        "returnees_current": 210,
+        "returnees_target": 980,
+        "bonitet_score": 82,
+        "elevation_m": 450,
+        "cropland_pct": 55,
+        "grassland_pct": 30,
+        "tree_cover_pct": 10,
+        "built_up_pct": 5,
+        "water_pct": 1,
+        "recommended_sectors": "Heyvandarlıq, arıçılıq və dənli bitkilər",
+        "linked_parcel_id": "AZ-24-TRT-003",
+        "centroid_lon": 46.825,
+        "centroid_lat": 40.345,
+        "hdx_source": "HDX Azerbaijan ADM3 Subnational Boundaries (BMT OCHA)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.8,
+              40.33
+            ],
+            [
+              46.85,
+              40.33
+            ],
+            [
+              46.85,
+              40.37
+            ],
+            [
+              46.8,
+              40.37
+            ],
+            [
+              46.8,
+              40.33
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

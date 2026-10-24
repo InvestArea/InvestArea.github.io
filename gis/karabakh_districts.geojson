@@ -1,0 +1,630 @@
+{
+  "type": "FeatureCollection",
+  "name": "Qarabağ və Şərqi Zəngəzur İnzibati Sərhədləri",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 1150,
+        "returnees_count": 5200,
+        "active_workforce": 1850,
+        "employment_target_jobs": 3400,
+        "primary_sectors": "Taxılçılıq, Bağçılıq, Aqropark və Emal",
+        "color": "#15803d",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 115000,
+        "arable_land_ha": 46200,
+        "elevation_range": "220 – 1,480 m",
+        "dominant_relief": "Düzənlik & maili dağətəyi allüvial terrası",
+        "average_bonitet": 84,
+        "water_resources": "Xaçınçay və Qarqarçay hövzələri, subartezianlar",
+        "competition_parcels_count": 6,
+        "villages_count": 14
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.78,
+              40.12
+            ],
+            [
+              47.02,
+              40.15
+            ],
+            [
+              47.18,
+              40.05
+            ],
+            [
+              47.16,
+              39.88
+            ],
+            [
+              46.96,
+              39.85
+            ],
+            [
+              46.82,
+              39.92
+            ],
+            [
+              46.74,
+              40.04
+            ],
+            [
+              46.78,
+              40.12
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 1386,
+        "returnees_count": 4800,
+        "active_workforce": 1620,
+        "employment_target_jobs": 2900,
+        "primary_sectors": "İntensiv bağçılıq (badam, zeytun), Taxılçılıq, İstixana",
+        "color": "#d97706",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 138600,
+        "arable_land_ha": 42500,
+        "elevation_range": "180 – 1,250 m",
+        "dominant_relief": "Maili çöl və Araz vadisi allüviumu",
+        "average_bonitet": 82,
+        "water_resources": "Köndələnçay və Aşağı Araz magistral kanalları",
+        "competition_parcels_count": 6,
+        "villages_count": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47,
+              39.75
+            ],
+            [
+              47.25,
+              39.76
+            ],
+            [
+              47.38,
+              39.62
+            ],
+            [
+              47.28,
+              39.46
+            ],
+            [
+              47.06,
+              39.48
+            ],
+            [
+              46.95,
+              39.6
+            ],
+            [
+              47,
+              39.75
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "district": "Şuşa",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 289,
+        "returnees_count": 2100,
+        "active_workforce": 850,
+        "employment_target_jobs": 1200,
+        "primary_sectors": "Aqro-turizm, Giləmeyvəçilik, Arıçılıq, Əl sənətləri",
+        "color": "#0284c7",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 28900,
+        "arable_land_ha": 4800,
+        "elevation_range": "1,100 – 2,100 m",
+        "dominant_relief": "Dağlıq karst platosu və dərələr",
+        "average_bonitet": 78,
+        "water_resources": "Zarıslıçay və Daşaltıçay hövzəsi",
+        "competition_parcels_count": 5,
+        "villages_count": 8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.68,
+              39.8
+            ],
+            [
+              46.8,
+              39.81
+            ],
+            [
+              46.82,
+              39.71
+            ],
+            [
+              46.72,
+              39.68
+            ],
+            [
+              46.64,
+              39.73
+            ],
+            [
+              46.68,
+              39.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "district": "Cəbrayıl",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "area_sqkm": 1050,
+        "returnees_count": 3600,
+        "active_workforce": 1340,
+        "employment_target_jobs": 2500,
+        "primary_sectors": "Araz Vadisi İqtisadi Zonası, Üzümçülük, Logistika, Aqropark",
+        "color": "#059669",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 105000,
+        "arable_land_ha": 34000,
+        "elevation_range": "200 – 1,100 m",
+        "dominant_relief": "Arazboyu terras düzənliyi (Aqropark)",
+        "average_bonitet": 80,
+        "water_resources": "Xudafərin su qovşağı və Araz çayı",
+        "competition_parcels_count": 5,
+        "villages_count": 11
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.88,
+              39.48
+            ],
+            [
+              47.12,
+              39.46
+            ],
+            [
+              47.15,
+              39.3
+            ],
+            [
+              46.95,
+              39.22
+            ],
+            [
+              46.78,
+              39.3
+            ],
+            [
+              46.84,
+              39.42
+            ],
+            [
+              46.88,
+              39.48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "area_sqkm": 707,
+        "returnees_count": 2400,
+        "active_workforce": 980,
+        "employment_target_jobs": 1900,
+        "primary_sectors": "Ağıllı Kənd Aqroparkı, İstixana, Meyvəçilik, Nəqliyyat Dəhlizi",
+        "color": "#8b5cf6",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 70700,
+        "arable_land_ha": 18200,
+        "elevation_range": "280 – 1,850 m",
+        "dominant_relief": "Bərgüşad-Oxçuçay terrasları və maili relyef",
+        "average_bonitet": 81,
+        "water_resources": "Bərgüşad, Oxçuçay və Araz çayı",
+        "competition_parcels_count": 5,
+        "villages_count": 10
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.52,
+              39.18
+            ],
+            [
+              46.78,
+              39.22
+            ],
+            [
+              46.75,
+              38.98
+            ],
+            [
+              46.48,
+              38.9
+            ],
+            [
+              46.44,
+              39.06
+            ],
+            [
+              46.52,
+              39.18
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "district": "Qubadlı",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "area_sqkm": 802,
+        "returnees_count": 1800,
+        "active_workforce": 760,
+        "employment_target_jobs": 1500,
+        "primary_sectors": "Qərzəkli meyvələr (qoz, fındıq), Tütünçülük, Heyvandarlıq",
+        "color": "#ea580c",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 80200,
+        "arable_land_ha": 22000,
+        "elevation_range": "350 – 1,650 m",
+        "dominant_relief": "Həkəri çay vadisi və maili dağətəyi",
+        "average_bonitet": 79,
+        "water_resources": "Bərgüşad və Həkəri çayları",
+        "competition_parcels_count": 5,
+        "villages_count": 10
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.48,
+              39.48
+            ],
+            [
+              46.74,
+              39.46
+            ],
+            [
+              46.72,
+              39.26
+            ],
+            [
+              46.5,
+              39.24
+            ],
+            [
+              46.42,
+              39.36
+            ],
+            [
+              46.48,
+              39.48
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "district": "Laçın",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "area_sqkm": 1835,
+        "returnees_count": 3100,
+        "active_workforce": 1250,
+        "employment_target_jobs": 2200,
+        "primary_sectors": "Yaylaq heyvandarlığı (ət və süd), Balıqçılıq, Meşəçilik, Arıçılıq",
+        "color": "#4338ca",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 183500,
+        "arable_land_ha": 12400,
+        "elevation_range": "700 – 2,800 m",
+        "dominant_relief": "Dağlıq-yaylaq və dərə-yarğan relyefi",
+        "average_bonitet": 76,
+        "water_resources": "Həkəri çayı və mineral bulaq suları",
+        "competition_parcels_count": 5,
+        "villages_count": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.32,
+              39.92
+            ],
+            [
+              46.6,
+              39.88
+            ],
+            [
+              46.66,
+              39.52
+            ],
+            [
+              46.45,
+              39.48
+            ],
+            [
+              46.25,
+              39.62
+            ],
+            [
+              46.3,
+              39.82
+            ],
+            [
+              46.32,
+              39.92
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "area_sqkm": 3050,
+        "returnees_count": 2200,
+        "active_workforce": 890,
+        "employment_target_jobs": 1800,
+        "primary_sectors": "Alp çəmən heyvandarlığı, Kəlbəcər balı, Mineral sular (İstisu)",
+        "color": "#166534",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 305000,
+        "arable_land_ha": 15600,
+        "elevation_range": "1,100 – 3,700 m",
+        "dominant_relief": "Yüksək dağlıq yaylaq və subalp çəmənliyi",
+        "average_bonitet": 74,
+        "water_resources": "Tərtərçay və Levçay baş qolları, İstisu",
+        "competition_parcels_count": 5,
+        "villages_count": 12
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              45.85,
+              40.28
+            ],
+            [
+              46.32,
+              40.24
+            ],
+            [
+              46.42,
+              39.98
+            ],
+            [
+              46.22,
+              39.86
+            ],
+            [
+              45.82,
+              39.94
+            ],
+            [
+              45.72,
+              40.15
+            ],
+            [
+              45.85,
+              40.28
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 1458,
+        "returnees_count": 2700,
+        "active_workforce": 1100,
+        "employment_target_jobs": 2000,
+        "primary_sectors": "Hadrut dağətəyi üzümçülük, Şərabçılıq, Taxılçılıq",
+        "color": "#9333ea",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 145800,
+        "arable_land_ha": 32500,
+        "elevation_range": "400 – 1,800 m",
+        "dominant_relief": "Maili təpəlik və üzümçülük tirələri",
+        "average_bonitet": 83,
+        "water_resources": "Quruçay və Köndələnçay hövzələri",
+        "competition_parcels_count": 5,
+        "villages_count": 11
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.85,
+              39.78
+            ],
+            [
+              47.16,
+              39.75
+            ],
+            [
+              47.18,
+              39.52
+            ],
+            [
+              46.9,
+              39.55
+            ],
+            [
+              46.8,
+              39.68
+            ],
+            [
+              46.85,
+              39.78
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "district": "Xocalı",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 970,
+        "returnees_count": 2500,
+        "active_workforce": 950,
+        "employment_target_jobs": 1700,
+        "primary_sectors": "Əkinçilik, Yemçilik, Arıçılıq, Aqro-emal",
+        "color": "#0d9488",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 97000,
+        "arable_land_ha": 21000,
+        "elevation_range": "550 – 2,100 m",
+        "dominant_relief": "Dağətəyi və Qarqarçay çay vadisi",
+        "average_bonitet": 80,
+        "water_resources": "Qarqarçay və Badara çayları",
+        "competition_parcels_count": 4,
+        "villages_count": 8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.66,
+              40.06
+            ],
+            [
+              46.92,
+              40.04
+            ],
+            [
+              46.88,
+              39.84
+            ],
+            [
+              46.7,
+              39.86
+            ],
+            [
+              46.6,
+              39.96
+            ],
+            [
+              46.66,
+              40.06
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "district": "Tərtər",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "area_sqkm": 960,
+        "returnees_count": 3200,
+        "active_workforce": 1450,
+        "employment_target_jobs": 2600,
+        "primary_sectors": "Suvarılan taxılçılıq, pambıqçılıq, subtropik meyvəçilik",
+        "color": "#059669",
+        "fill_opacity": 0.25,
+        "total_land_fund_ha": 96000,
+        "arable_land_ha": 52000,
+        "elevation_range": "150 – 2,200 m",
+        "dominant_relief": "Geniş suvarılan allüvial alluvium düzənliyi",
+        "average_bonitet": 87,
+        "water_resources": "Suqovuşan su anbarı və Tərtərçay kanalı",
+        "competition_parcels_count": 6,
+        "villages_count": 10
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.75,
+              40.35
+            ],
+            [
+              46.98,
+              40.42
+            ],
+            [
+              47.05,
+              40.28
+            ],
+            [
+              46.9,
+              40.22
+            ],
+            [
+              46.72,
+              40.26
+            ],
+            [
+              46.75,
+              40.35
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

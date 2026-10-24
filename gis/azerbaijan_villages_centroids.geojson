@@ -1,0 +1,563 @@
+{
+  "type": "FeatureCollection",
+  "name": "Azerbaijan_Karabakh_Villages_Centroids_Point",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "pt-village-agd-01",
+      "properties": {
+        "iebt_code": "0201015",
+        "name": "Sarıcalı",
+        "district": "Ağdam",
+        "population": 1720,
+        "active_workforce": 860,
+        "bonitet_score": 84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.985,
+          40.045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-agd-02",
+      "properties": {
+        "iebt_code": "0201022",
+        "name": "Kəngərli",
+        "district": "Ağdam",
+        "population": 2540,
+        "active_workforce": 1250,
+        "bonitet_score": 88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.942,
+          40.081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-agd-03",
+      "properties": {
+        "iebt_code": "0201031",
+        "name": "Xıdırlı",
+        "district": "Ağdam",
+        "population": 2950,
+        "active_workforce": 1420,
+        "bonitet_score": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.92,
+          40.035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-agd-04",
+      "properties": {
+        "iebt_code": "0201045",
+        "name": "Baş Qərvənd",
+        "district": "Ağdam",
+        "population": 3200,
+        "active_workforce": 1540,
+        "bonitet_score": 82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.05,
+          40.09
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-fzl-01",
+      "properties": {
+        "iebt_code": "0202011",
+        "name": "Dövlətyarlı (Ağıllı Kənd)",
+        "district": "Füzuli",
+        "population": 2150,
+        "active_workforce": 1040,
+        "bonitet_score": 92
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.11,
+          39.63
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-fzl-02",
+      "properties": {
+        "iebt_code": "0202025",
+        "name": "Qoçəhmədli",
+        "district": "Füzuli",
+        "population": 1980,
+        "active_workforce": 980,
+        "bonitet_score": 87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.165,
+          39.585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-fzl-03",
+      "properties": {
+        "iebt_code": "0202038",
+        "name": "Qaraxanbəyli",
+        "district": "Füzuli",
+        "population": 2450,
+        "active_workforce": 1190,
+        "bonitet_score": 89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.23,
+          39.645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-fzl-04",
+      "properties": {
+        "iebt_code": "0202049",
+        "name": "Pirəhmədli",
+        "district": "Füzuli",
+        "population": 1760,
+        "active_workforce": 850,
+        "bonitet_score": 84
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.195,
+          39.545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-ssa-01",
+      "properties": {
+        "iebt_code": "0203014",
+        "name": "Daşaltı",
+        "district": "Şuşa",
+        "population": 1250,
+        "active_workforce": 610,
+        "bonitet_score": 74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.755,
+          39.742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-ssa-02",
+      "properties": {
+        "iebt_code": "0203028",
+        "name": "Turşsu",
+        "district": "Şuşa",
+        "population": 1580,
+        "active_workforce": 760,
+        "bonitet_score": 72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.602,
+          39.715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-ssa-03",
+      "properties": {
+        "iebt_code": "0203033",
+        "name": "Malıbəyli",
+        "district": "Şuşa",
+        "population": 1840,
+        "active_workforce": 890,
+        "bonitet_score": 76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.775,
+          39.805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-klb-01",
+      "properties": {
+        "iebt_code": "0204012",
+        "name": "Zar",
+        "district": "Kəlbəcər",
+        "population": 2200,
+        "active_workforce": 1060,
+        "bonitet_score": 75
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.035,
+          40.082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-klb-02",
+      "properties": {
+        "iebt_code": "0204026",
+        "name": "Yanşaq",
+        "district": "Kəlbəcər",
+        "population": 1750,
+        "active_workforce": 840,
+        "bonitet_score": 73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.21,
+          40.165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-klb-03",
+      "properties": {
+        "iebt_code": "0204044",
+        "name": "Başlıbel",
+        "district": "Kəlbəcər",
+        "population": 1910,
+        "active_workforce": 910,
+        "bonitet_score": 77
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.13,
+          40.035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-lcn-01",
+      "properties": {
+        "iebt_code": "0205011",
+        "name": "Zabux",
+        "district": "Laçın",
+        "population": 1820,
+        "active_workforce": 880,
+        "bonitet_score": 79
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.515,
+          39.695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-lcn-02",
+      "properties": {
+        "iebt_code": "0205022",
+        "name": "Sus",
+        "district": "Laçın",
+        "population": 1200,
+        "active_workforce": 580,
+        "bonitet_score": 76
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.565,
+          39.675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-lcn-03",
+      "properties": {
+        "iebt_code": "0205037",
+        "name": "Güləbird",
+        "district": "Laçın",
+        "population": 1980,
+        "active_workforce": 960,
+        "bonitet_score": 82
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.685,
+          39.495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-zgl-01",
+      "properties": {
+        "iebt_code": "0206010",
+        "name": "Ağalı (Ağıllı Kənd 1, 2, 3)",
+        "district": "Zəngilan",
+        "population": 1520,
+        "active_workforce": 740,
+        "bonitet_score": 91
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.68,
+          39.11
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-zgl-02",
+      "properties": {
+        "iebt_code": "0206024",
+        "name": "Mincivan",
+        "district": "Zəngilan",
+        "population": 3200,
+        "active_workforce": 1550,
+        "bonitet_score": 88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.715,
+          39.03
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-zgl-03",
+      "properties": {
+        "iebt_code": "0206048",
+        "name": "Cahangirbəyli",
+        "district": "Zəngilan",
+        "population": 1680,
+        "active_workforce": 810,
+        "bonitet_score": 87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.635,
+          39.085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-cbr-01",
+      "properties": {
+        "iebt_code": "0207011",
+        "name": "Cocuq Mərcanlı",
+        "district": "Cəbrayıl",
+        "population": 1650,
+        "active_workforce": 800,
+        "bonitet_score": 89
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.285,
+          39.385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-cbr-02",
+      "properties": {
+        "iebt_code": "0207025",
+        "name": "Şükürbəyli",
+        "district": "Cəbrayıl",
+        "population": 1920,
+        "active_workforce": 930,
+        "bonitet_score": 90
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.05,
+          39.365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-cbr-03",
+      "properties": {
+        "iebt_code": "0207038",
+        "name": "Horovlu",
+        "district": "Cəbrayıl",
+        "population": 2240,
+        "active_workforce": 1080,
+        "bonitet_score": 88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.015,
+          39.425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-qbd-01",
+      "properties": {
+        "iebt_code": "0208012",
+        "name": "Xanlıq",
+        "district": "Qubadlı",
+        "population": 2350,
+        "active_workforce": 1130,
+        "bonitet_score": 88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.725,
+          39.31
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-qbd-02",
+      "properties": {
+        "iebt_code": "0208034",
+        "name": "Dondarlı",
+        "district": "Qubadlı",
+        "population": 1810,
+        "active_workforce": 880,
+        "bonitet_score": 87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.615,
+          39.365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-xcv-01",
+      "properties": {
+        "iebt_code": "0209010",
+        "name": "Hadrut",
+        "district": "Xocavənd",
+        "population": 2800,
+        "active_workforce": 1350,
+        "bonitet_score": 86
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.03,
+          39.525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-xcv-02",
+      "properties": {
+        "iebt_code": "0209025",
+        "name": "Tuğ",
+        "district": "Xocavənd",
+        "population": 1950,
+        "active_workforce": 940,
+        "bonitet_score": 88
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.965,
+          39.565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-xcl-01",
+      "properties": {
+        "iebt_code": "0210015",
+        "name": "Ballıca",
+        "district": "Xocalı",
+        "population": 1480,
+        "active_workforce": 720,
+        "bonitet_score": 80
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.735,
+          39.925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "pt-village-xcl-02",
+      "properties": {
+        "iebt_code": "0210028",
+        "name": "Meşəli",
+        "district": "Xocalı",
+        "population": 1260,
+        "active_workforce": 610,
+        "bonitet_score": 78
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.685,
+          39.885
+        ]
+      }
+    }
+  ]
+}

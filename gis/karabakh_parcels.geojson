@@ -1,0 +1,602 @@
+{
+  "type": "FeatureCollection",
+  "name": "Qarabağ Dövlət Aqrar Torpaq Fondu və Məşğulluq Sahələri",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "cadastreNumber": "AGD-2026-0012",
+        "district": "Ağdam",
+        "village": "Qiyaslı",
+        "areaHectares": 120.0,
+        "sector": "EKINCILIK",
+        "soilBonitet": 85,
+        "irrigationType": "PIVOT",
+        "minInvestmentAzn": 450000.0,
+        "latitude": 39.991,
+        "longitude": 46.927,
+        "soilPh": 7.0,
+        "soilOrganicCarbon": 27.0,
+        "clayContent": 30.2,
+        "elevationMeters": 245,
+        "ndviIndex": 0.64,
+        "terrainSlope": 1.2,
+        "anamaCertificate": "AZ-ANM-2025/08",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 24,
+        "seasonalJobs": 50,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 1850,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#15803d",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.920578,
+              39.98608
+            ],
+            [
+              46.933422,
+              39.98608
+            ],
+            [
+              46.933422,
+              39.99592
+            ],
+            [
+              46.920578,
+              39.99592
+            ],
+            [
+              46.920578,
+              39.98608
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "cadastreNumber": "FZL-2026-0045",
+        "district": "Füzuli",
+        "village": "Horadiz",
+        "areaHectares": 85.0,
+        "sector": "BAGCHILIQ",
+        "soilBonitet": 82,
+        "irrigationType": "DAMCILI",
+        "minInvestmentAzn": 650000.0,
+        "latitude": 39.601,
+        "longitude": 47.142,
+        "soilPh": 6.9,
+        "soilOrganicCarbon": 39.9,
+        "clayContent": 28.5,
+        "elevationMeters": 210,
+        "ndviIndex": 0.58,
+        "terrainSlope": 1.8,
+        "anamaCertificate": "AZ-ANM-2025/14",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 35,
+        "seasonalJobs": 80,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 1620,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#d97706",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.136626,
+              39.596859
+            ],
+            [
+              47.147374,
+              39.596859
+            ],
+            [
+              47.147374,
+              39.605141
+            ],
+            [
+              47.136626,
+              39.605141
+            ],
+            [
+              47.136626,
+              39.596859
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "cadastreNumber": "CBR-2026-0078",
+        "district": "Cəbrayıl",
+        "village": "Böyük Mərcanlı",
+        "areaHectares": 250.0,
+        "sector": "AQROPARK",
+        "soilBonitet": 78,
+        "irrigationType": "KANAL",
+        "minInvestmentAzn": 1800000.0,
+        "latitude": 39.398,
+        "longitude": 47.025,
+        "soilPh": 7.1,
+        "soilOrganicCarbon": 35.7,
+        "clayContent": 26.0,
+        "elevationMeters": 290,
+        "ndviIndex": 0.52,
+        "terrainSlope": 2.1,
+        "anamaCertificate": "AZ-ANM-2025/03",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 65,
+        "seasonalJobs": 110,
+        "returneeQuotaPercent": 80,
+        "availableLaborPool": 1340,
+        "leaseYears": 30,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#7c3aed",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.01581,
+              39.390898
+            ],
+            [
+              47.03419,
+              39.390898
+            ],
+            [
+              47.03419,
+              39.405102
+            ],
+            [
+              47.01581,
+              39.405102
+            ],
+            [
+              47.01581,
+              39.390898
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "cadastreNumber": "ZNG-2026-0102",
+        "district": "Zəngilan",
+        "village": "Ağalı",
+        "areaHectares": 45.0,
+        "sector": "ISTIXANA",
+        "soilBonitet": 89,
+        "irrigationType": "DAMCILI",
+        "minInvestmentAzn": 900000.0,
+        "latitude": 39.062,
+        "longitude": 46.654,
+        "soilPh": 7.2,
+        "soilOrganicCarbon": 31.3,
+        "clayContent": 29.4,
+        "elevationMeters": 380,
+        "ndviIndex": 0.69,
+        "terrainSlope": 3.5,
+        "anamaCertificate": "AZ-ANM-2024/99",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 50,
+        "seasonalJobs": 40,
+        "returneeQuotaPercent": 90,
+        "availableLaborPool": 980,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#10b981",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.65012,
+              39.058987
+            ],
+            [
+              46.65788,
+              39.058987
+            ],
+            [
+              46.65788,
+              39.065013
+            ],
+            [
+              46.65012,
+              39.065013
+            ],
+            [
+              46.65012,
+              39.058987
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "cadastreNumber": "QBD-2026-0033",
+        "district": "Qubadlı",
+        "village": "Mahruzlu",
+        "areaHectares": 60.0,
+        "sector": "BAGCHILIQ",
+        "soilBonitet": 84,
+        "irrigationType": "TEBII_MENBE",
+        "minInvestmentAzn": 500000.0,
+        "latitude": 39.344,
+        "longitude": 46.582,
+        "soilPh": 7.2,
+        "soilOrganicCarbon": 32.5,
+        "clayContent": 31.0,
+        "elevationMeters": 520,
+        "ndviIndex": 0.72,
+        "terrainSlope": 4.2,
+        "anamaCertificate": "AZ-ANM-2025/19",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 28,
+        "seasonalJobs": 60,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 760,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#d97706",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.577501,
+              39.340521
+            ],
+            [
+              46.586499,
+              39.340521
+            ],
+            [
+              46.586499,
+              39.347479
+            ],
+            [
+              46.577501,
+              39.347479
+            ],
+            [
+              46.577501,
+              39.340521
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "cadastreNumber": "LCN-2026-0061",
+        "district": "Laçın",
+        "village": "Zabux",
+        "areaHectares": 320.0,
+        "sector": "HEYVANDARLIQ",
+        "soilBonitet": 75,
+        "irrigationType": "TEBII_MENBE",
+        "minInvestmentAzn": 850000.0,
+        "latitude": 39.638,
+        "longitude": 46.546,
+        "soilPh": 6.8,
+        "soilOrganicCarbon": 43.0,
+        "clayContent": 22.8,
+        "elevationMeters": 1180,
+        "ndviIndex": 0.78,
+        "terrainSlope": 8.5,
+        "anamaCertificate": "AZ-ANM-2025/22",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 42,
+        "seasonalJobs": 30,
+        "returneeQuotaPercent": 80,
+        "availableLaborPool": 1250,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#0284c7",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.535566,
+              39.629965
+            ],
+            [
+              46.556434,
+              39.629965
+            ],
+            [
+              46.556434,
+              39.646035
+            ],
+            [
+              46.535566,
+              39.646035
+            ],
+            [
+              46.535566,
+              39.629965
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "cadastreNumber": "KLB-2026-0094",
+        "district": "Kəlbəcər",
+        "village": "Zülfüqarlı",
+        "areaHectares": 180.0,
+        "sector": "HEYVANDARLIQ",
+        "soilBonitet": 76,
+        "irrigationType": "TEBII_MENBE",
+        "minInvestmentAzn": 700000.0,
+        "latitude": 40.108,
+        "longitude": 46.037,
+        "soilPh": 6.7,
+        "soilOrganicCarbon": 45.5,
+        "clayContent": 21.0,
+        "elevationMeters": 1650,
+        "ndviIndex": 0.81,
+        "terrainSlope": 9.8,
+        "anamaCertificate": "AZ-ANM-2025/31",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 30,
+        "seasonalJobs": 25,
+        "returneeQuotaPercent": 80,
+        "availableLaborPool": 890,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#0284c7",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.029121,
+              40.101974
+            ],
+            [
+              46.044879,
+              40.101974
+            ],
+            [
+              46.044879,
+              40.114026
+            ],
+            [
+              46.029121,
+              40.114026
+            ],
+            [
+              46.029121,
+              40.101974
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "cadastreNumber": "SSA-2026-0015",
+        "district": "Şuşa",
+        "village": "Daşaltı",
+        "areaHectares": 35.0,
+        "sector": "BAGCHILIQ",
+        "soilBonitet": 81,
+        "irrigationType": "DAMCILI",
+        "minInvestmentAzn": 400000.0,
+        "latitude": 39.753,
+        "longitude": 46.751,
+        "soilPh": 7.0,
+        "soilOrganicCarbon": 38.0,
+        "clayContent": 27.5,
+        "elevationMeters": 1320,
+        "ndviIndex": 0.75,
+        "terrainSlope": 5.6,
+        "anamaCertificate": "AZ-ANM-2024/77",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 20,
+        "seasonalJobs": 45,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 850,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#d97706",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.747544,
+              39.750343
+            ],
+            [
+              46.754456,
+              39.750343
+            ],
+            [
+              46.754456,
+              39.755657
+            ],
+            [
+              46.747544,
+              39.755657
+            ],
+            [
+              46.747544,
+              39.750343
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "cadastreNumber": "XVD-2026-0050",
+        "district": "Xocavənd",
+        "village": "Hadrut",
+        "areaHectares": 95.0,
+        "sector": "BAGCHILIQ",
+        "soilBonitet": 87,
+        "irrigationType": "DAMCILI",
+        "minInvestmentAzn": 800000.0,
+        "latitude": 39.523,
+        "longitude": 47.031,
+        "soilPh": 7.3,
+        "soilOrganicCarbon": 34.2,
+        "clayContent": 32.1,
+        "elevationMeters": 750,
+        "ndviIndex": 0.68,
+        "terrainSlope": 3.8,
+        "anamaCertificate": "AZ-ANM-2025/11",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 40,
+        "seasonalJobs": 90,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 1100,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#d97706",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              47.025325,
+              39.518622
+            ],
+            [
+              47.036675,
+              39.518622
+            ],
+            [
+              47.036675,
+              39.527378
+            ],
+            [
+              47.025325,
+              39.527378
+            ],
+            [
+              47.025325,
+              39.518622
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "cadastreNumber": "XCL-2026-0021",
+        "district": "Xocalı",
+        "village": "Əsgəran",
+        "areaHectares": 105.0,
+        "sector": "EKINCILIK",
+        "soilBonitet": 86,
+        "irrigationType": "ARTEZIAN",
+        "minInvestmentAzn": 550000.0,
+        "latitude": 39.912,
+        "longitude": 46.833,
+        "soilPh": 7.1,
+        "soilOrganicCarbon": 29.8,
+        "clayContent": 33.0,
+        "elevationMeters": 560,
+        "ndviIndex": 0.63,
+        "terrainSlope": 2.4,
+        "anamaCertificate": "AZ-ANM-2025/05",
+        "anamaStatus": "TAM_TEMIZLENMIS",
+        "requiredPermanentJobs": 22,
+        "seasonalJobs": 45,
+        "returneeQuotaPercent": 85,
+        "availableLaborPool": 950,
+        "leaseYears": 25,
+        "legalStatus": "Dövlət İcarəsi (Sosial Öhdəlikli)",
+        "color": "#15803d",
+        "fill_opacity": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              46.827,
+              39.907398
+            ],
+            [
+              46.839,
+              39.907398
+            ],
+            [
+              46.839,
+              39.916602
+            ],
+            [
+              46.827,
+              39.916602
+            ],
+            [
+              46.827,
+              39.907398
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

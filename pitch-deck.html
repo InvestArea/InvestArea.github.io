@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="az" class="h-full">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InvestArea • Pitch Deck & Layihə Təqdimatı (Fərman № 236)</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="InvestArea: Qarabağ və Şərqi Zəngəzur Rəqəmsal Aqro-İnvestisiya və Torpaq İdarəetmə Sistemi. AR Prezidentinin 236 nömrəli Fərmanına əsaslanan rəsmi təqdimat slaydları."/>
+  <meta property="og:title" content="InvestArea • Rəsmi Pitch Deck Slaydları"/>
+  <meta property="og:description" content="Qarabağ Dövlət Torpaq Fondu, 100 Ballıq Ekspertlər Qrupu Qiymətləndirməsi, 50 AZN Dövlət Komissiya Haqqı və GIS İnvestisiya Platforması."/>
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
+  
+  <!-- FontAwesome & Material Symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#00251a',
+              deep: '#003526',
+              primary: '#047857',
+              light: '#10b981',
+              accent: '#d97706',
+              gold: '#f59e0b',
+              surface: '#0f172a',
+              card: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Slide Deck Global Setup & Mobile Viewport Protection */
+    html, body {
+      height: 100%;
+      min-height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #051610;
+      color: #f1f5f9;
+      font-family: 'Inter', sans-serif;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #deck-slides-container {
+      flex: 1 1 0%;
+      width: 100%;
+      max-width: 86rem; /* 7xl */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(0.75rem, 2vw, 1.75rem);
+      padding-right: clamp(0.75rem, 2vw, 1.75rem);
+      padding-top: clamp(0.5rem, 1.5vh, 1.25rem);
+      padding-bottom: clamp(0.5rem, 1.5vh, 1.25rem);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      opacity: 0;
+      width: 100%;
+      min-height: 100%;
+      margin: auto 0; /* Auto margin centers when slide fits, and safely scrolls from top (0) when taller */
+      transform: scale(0.99) translateY(6px);
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slide.active {
+      display: flex;
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Gradient texts & Glassmorphism */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-emerald {
+      background: linear-gradient(135deg, #a7f3d0 0%, #34d399 50%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .glass-card-emerald {
+      background: rgba(4, 47, 34, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Custom Scrollbar for slide overflow */
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(16, 185, 129, 0.4);
+      border-radius: 4px;
+    }
+
+    /* Prevent screenshots from expanding beyond screen height */
+    .slide-media-box img {
+      max-height: min(340px, 42vh);
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.75rem;
+    }
+
+    /* Height-adaptive scaling: Laptop screens (MacBook Air 13", 1366x768, 1440x900, 1280x800) */
+    @media (max-height: 850px) {
+      #deck-nav-header { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      #deck-bottom-bar { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+      .slide h1 { font-size: clamp(1.35rem, 3.8vh, 2.15rem) !important; line-height: 1.15 !important; }
+      .slide h2 { font-size: clamp(1.15rem, 3.2vh, 1.7rem) !important; line-height: 1.15 !important; }
+      .slide p { font-size: 0.8125rem !important; line-height: 1.35 !important; }
+      .slide .grid { gap: 0.5rem !important; }
+      .slide .gap-4, .slide .gap-6 { gap: 0.5rem !important; }
+      .slide .gap-3 { gap: 0.4rem !important; }
+      .slide .gap-2.5 { gap: 0.35rem !important; }
+      .slide .p-4, .slide .p-3.5 { padding: 0.5rem 0.65rem !important; }
+      .slide .p-5 { padding: 0.65rem 0.85rem !important; }
+      .slide-media-box img { max-height: min(230px, 32vh) !important; }
+      .team-avatar { width: 72px !important; height: 72px !important; }
+      .team-card { padding: 0.5rem !important; gap: 0.35rem !important; }
+    }
+
+    /* Very compact height screens (< 720px) */
+    @media (max-height: 720px) {
+      .slide h1 { font-size: clamp(1.2rem, 3.5vh, 1.65rem) !important; line-height: 1.1 !important; }
+      .slide h2 { font-size: clamp(1.05rem, 3vh, 1.4rem) !important; line-height: 1.1 !important; }
+      .slide p { font-size: 0.75rem !important; line-height: 1.3 !important; }
+      .slide-media-box img { max-height: min(170px, 26vh) !important; }
+      .team-avatar { width: 56px !important; height: 56px !important; }
+      .team-card { padding: 0.4rem !important; }
+      .slide .p-3, .slide .p-2.5 { padding: 0.35rem 0.5rem !important; }
+      .slide .text-xs { font-size: 0.7rem !important; }
+      .slide .text-sm { font-size: 0.75rem !important; }
+    }
+
+    /* Mobile & small portrait devices (width <= 768px) */
+    @media (max-width: 768px) {
+      .slide {
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        margin-top: 0;
+        justify-content: flex-start;
+      }
+      .slide h1 { font-size: 1.4rem !important; line-height: 1.2 !important; }
+      .slide h2 { font-size: 1.25rem !important; line-height: 1.2 !important; }
+      .slide p { font-size: 0.8125rem !important; }
+      .slide-media-box img { max-height: 200px !important; width: 100% !important; object-fit: cover !important; }
+      .team-avatar { width: 64px !important; height: 64px !important; }
+    }
+
+    /* Print optimization */
+    @media print {
+      body {
+        overflow: visible !important;
+        background: #ffffff !important;
+        color: #0f172a !important;
+      }
+      #deck-nav-header, #deck-bottom-bar, #overview-modal {
+        display: none !important;
+      }
+      .slide {
+        display: flex !important;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-after: always;
+        height: 100vh;
+        color: #0f172a !important;
+        background: #ffffff !important;
+        border-bottom: 2px solid #cbd5e1;
+      }
+      .glass-card, .glass-card-emerald {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- ================= TOP NAVIGATION & PROGRESS BAR ================= -->
+  <header id="deck-nav-header" class="w-full bg-slate-950/85 backdrop-blur-xl border-b border-emerald-900/40 z-50 px-4 sm:px-6 py-2.5 flex items-center justify-between flex-shrink-0">
+    <!-- Progress Indicator Strip -->
+    <div class="absolute top-0 left-0 right-0 h-1 bg-slate-800">
+      <div id="deck-progress-bar" class="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-amber-400 transition-all duration-300 w-1/13"></div>
+    </div>
+
+    <!-- Left Brand & Vision -->
+    <div class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-2.5 text-white no-underline group" title="Əsas Portala Qayıt">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-950 flex items-center justify-center text-white border border-emerald-400/30 shadow-md group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-seedling text-emerald-300 text-sm"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-extrabold text-base tracking-tight text-white flex items-center gap-1.5 leading-none">
+            InvestArea <span class="text-[10px] bg-amber-400 text-amber-950 px-1.5 py-0.5 rounded font-mono font-bold">PITCH DECK</span>
+          </span>
+          <span class="text-[10px] text-emerald-300 font-medium hidden sm:block">Qarabağ Aqro-İnvestisiya &amp; Fərman № 236</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Center Slide Title Pill -->
+    <div class="hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 border border-emerald-500/30 text-xs text-emerald-200">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span id="header-slide-topic" class="font-semibold truncate max-w-md">1. Giriş və Strateji Baxış</span>
+    </div>
+
+    <!-- Right Controls -->
+    <div class="flex items-center gap-1.5 sm:gap-2">
+      <!-- Overview Grid Button -->
+      <button type="button" onclick="toggleOverviewModal()" class="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center gap-1 transition-all cursor-pointer" title="Bütün slaydların qəfəsi (O)">
+        <span class="material-symbols-outlined text-[16px]">grid_view</span>
+        <span class="hidden sm:inline">İcmal</span>
+      </button>
+
+      <!-- Print / Export PDF -->
+      <button type="button" onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-semibold flex items-center gap-1 transition-all cursor-pointer" title="Slaydları Çap et / PDF ixrac et (P)">
+        <span class="material-symbols-outlined text-[16px]">print</span>
+        <span class="hidden sm:inline">PDF</span>
+      </button>
+
+      <!-- Fullscreen Toggle -->
+      <button type="button" onclick="toggleFullscreen()" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs transition-all cursor-pointer" title="Tam Ekran (F)">
+        <span class="material-symbols-outlined text-[18px]" id="fullscreen-icon">fullscreen</span>
+      </button>
+
+      <!-- Back to Portal -->
+      <a href="/" class="px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-1 transition-all no-underline shadow-sm cursor-pointer ml-1">
+        <span>Portala Keç</span>
+        <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= MAIN SLIDES CONTAINER ================= -->
+  <main id="deck-slides-container" class="custom-scroll">
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 1: COVER & EXECUTIVE VISION -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide active w-full py-1 sm:py-2" data-slide="1" data-title="1. Giriş və Strateji Baxış">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <!-- Left Content -->
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-400 text-amber-950 uppercase tracking-widest font-mono shadow-xs">
+              AR PREZİDENTİNİN FƏRMANI № 236
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-500/40">
+              Dövlət Qeydiyyatı: 236-F/2024
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-950 text-blue-300 border border-blue-500/40">
+              27 Noyabr 2024
+            </span>
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-5xl font-black text-white leading-tight tracking-tight">
+            Qarabağ və Şərqi Zəngəzur <br/>
+            <span class="text-gradient-emerald">Rəqəmsal Aqro-İnvestisiya</span> <br/>
+            və Dövlət Torpaq İdarəetmə Portalı
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+            İşğaldan azad edilmiş torpaqların <strong class="text-white">100% dövlət mülkiyyəti</strong> əsasında şəffaf idarə olunması, <strong class="text-emerald-300">kənd sakinlərinə 5 hektarlıq güzəştli icarə</strong> və <strong class="text-amber-300">iri strateji investisiya sahələri</strong> üçün vahid GIS və açıq artırma ekosistemi.
+          </p>
+
+          <!-- 4 Pillars Ribbon -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-700/60 flex flex-col">
+              <span class="text-emerald-400 font-extrabold text-xs">100% Dövlət</span>
+              <span class="text-[11px] text-slate-400">Pay torpağı yoxdur</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-700/60 flex flex-col">
+              <span class="text-blue-400 font-extrabold text-xs">Min. 5 ha Kənd</span>
+              <span class="text-[11px] text-slate-400">Yalnız sakinlərə</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-700/60 flex flex-col">
+              <span class="text-amber-400 font-extrabold text-xs">100 Bal Şkalası</span>
+              <span class="text-[11px] text-slate-400">9 Qurum Ekspertizası</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-900/80 border border-slate-700/60 flex flex-col">
+              <span class="text-emerald-400 font-extrabold text-xs">50 AZN Rüsum</span>
+              <span class="text-[11px] text-slate-400">Dövlət komissiyası</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Showcase: Actual Live GIS Map Screenshot -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-2xl group">
+            <img src="/images/screenshots/screenshot_map.png" alt="InvestArea Real GIS Map və Torpaq Fond Xəritəsi" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-emerald-200 bg-slate-950/85 backdrop-blur-md p-2 rounded-xl border border-white/10">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-mono font-bold">investarea.gov.az</span>
+              </div>
+              <span class="text-[11px] text-slate-400">Canlı GIS və Peyk Telemetriyası</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 2: PROBLEM STATEMENT -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="2" data-title="2. Mövcud Problem və Çağırışlar">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <!-- Left: 4 Concrete Challenges -->
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-950 text-rose-300 border border-rose-500/40 uppercase tracking-wide">
+              Mövcud Çətinliklər
+            </span>
+            <span class="text-xs text-slate-400">Qarabağ və Şərqi Zəngəzur Regionu</span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Qarabağda Torpaq İdarəçiliyi <br/>
+            <span class="text-rose-400">Nə Üçün Xüsusi Yanaşma Tələb Edir?</span>
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-rose-900/40 flex flex-col gap-1.5">
+              <div class="flex items-center gap-2 text-rose-400 font-bold text-xs">
+                <span class="material-symbols-outlined text-[18px]">rule_folder</span>
+                <span>100% Dövlət Əmlakı Xüsusiyyəti</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Qarabağda <strong>pay torpağı və ya ayrı-ayrı qurumların müstəqil torpağı yoxdur</strong>. Bütün torpaqlar vahid dövlət mülkiyyətindədir və mərkəzləşdirilmiş elektron uçot olmadan paylanma riskləri yaranır.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-amber-900/40 flex flex-col gap-1.5">
+              <div class="flex items-center gap-2 text-amber-400 font-bold text-xs">
+                <span class="material-symbols-outlined text-[18px]">balance</span>
+                <span>Sakin ↔ İnvestor Ədalətsizliyi Riski</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Kəndə qayıdan yerli sakinin 5 ha sahəyə olan həyati ehtiyacı ilə iri holdinqlərin yüzlərlə hektar tələbi eyni cərgədə yarışdırıla bilməz; fərqli hüquqi rejim zəruridir.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-blue-900/40 flex flex-col gap-1.5">
+              <div class="flex items-center gap-2 text-blue-400 font-bold text-xs">
+                <span class="material-symbols-outlined text-[18px]">visibility_off</span>
+                <span>Peyk və Relyef Asimmetriyası</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Torpağın meylliliyi (DEM relyef), münbitlik boniteti, suvarma xətləri və ANAMA mina təmizlənmə statusu açıq şəkildə təqdim edilmədikdə investorlar çəkinir.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-purple-900/40 flex flex-col gap-1.5">
+              <div class="flex items-center gap-2 text-purple-400 font-bold text-xs">
+                <span class="material-symbols-outlined text-[18px]">gavel</span>
+                <span>Subyektiv Müsabiqə Qorxusu</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Açıq artırmalarda yalnız ən çox pul təklif edən yox, biznes planı sahənin aqronomik xüsusiyyətlərinə ən uyğun olan qalib seçilməlidir (9 dövlət orqanının 100 balı).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real Screenshot of Selected Plot Cadastre Card & Analysis -->
+        <div class="lg:col-span-5 flex flex-col gap-2">
+          <div class="rounded-2xl overflow-hidden border border-slate-700 shadow-xl">
+            <img src="/images/screenshots/screenshot_passport.png" alt="Dövlət Kadastr və Relyef Pasportu (DEM)" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">İnvestArea Rəsmi Kadastr və Relyef Pasportu (DEM &amp; SoilGrids)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 3: SOLUTION & DECREE 236 FOUNDATION -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="3" data-title="3. Həll: Fərman № 236 və İkiqat Bölgü">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase tracking-wide">
+              Rəqəmsal Həll &amp; Qanuni Baza
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Fərman № 236 Əsasında <br/>
+            <span class="text-gradient-emerald">İkiqat Dövlət Torpaq Bölgüsü Rejimi</span>
+          </h2>
+
+          <div class="flex flex-col gap-3 pt-1">
+            <!-- 1. Kəndətrafı İcarə Fondu -->
+            <div class="p-4 rounded-xl bg-emerald-950/50 border-2 border-emerald-500/50 flex flex-col gap-1.5 shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-emerald-300 font-extrabold text-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]">holiday_village</span>
+                  Kəndətrafı İcarə Fondu (Minimum 5 hektarlıq parsellər)
+                </span>
+                <span class="px-2 py-0.5 rounded bg-emerald-800 text-white text-[10px] font-bold">YALNIZ SAKİNLƏRƏ</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Kənd yaşayış məntəqələrinə bitişik torpaqlar <strong>minimum 5 hektar</strong> olmaqla parselləşdirilir və <strong>yalnız həmin kənddə rəsmi qeydiyyatda olan və məskunlaşan vətəndaşlara («Böyük Qayıdış» sakinlərinə)</strong> güzəştli icarəyə verilir. Kənar investorlara verilmir.
+              </p>
+            </div>
+
+            <!-- 2. Strateji Aqro-İnvestisiya Fondu -->
+            <div class="p-4 rounded-xl bg-blue-950/50 border-2 border-blue-500/50 flex flex-col gap-1.5 shadow-md">
+              <div class="flex items-center justify-between">
+                <span class="text-blue-300 font-extrabold text-sm flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[20px]">public</span>
+                  Strateji Aqro-İnvestisiya Fondu (Kənddən kənar iri massivlər)
+                </span>
+                <span class="px-2 py-0.5 rounded bg-blue-800 text-white text-[10px] font-bold">AÇIQ MÜSABİQƏ</span>
+              </div>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Kəndlərdən uzaqda yerləşən iri aqrar massivlər açıq müsabiqəyə çıxarılır. <strong>Bütün ölkələrin nümayəndələri, xarici vətəndaşlar, yerli hüquqi və fiziki şəxslər</strong> bərabər hüquqla investor ola bilərlər.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real Screenshot of Catalog with Dual Allocation Category Filter -->
+        <div class="lg:col-span-5 flex flex-col gap-2">
+          <div class="rounded-2xl overflow-hidden border border-emerald-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_catalog.png" alt="Torpaq Fondu və Fərman 236 Bölgü Süzgəcləri" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Platformada 236 nömrəli Fərman üzrə 2 istiqamətli süzgəc inteqrasiyası</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 4: PRODUCT TOUR - GIS SPATIAL INTELLIGENCE -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="4" data-title="4. Məhsul: İnteraktiv GIS Aqrar Xəritə">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-950 text-teal-300 border border-teal-500/40 uppercase tracking-wide">
+              GIS &amp; Peyk Kəşfiyyatı
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            İnteraktiv GIS Xəritə, <br/>
+            <span class="text-gradient-emerald">Sentinel-2 və DEM 3D Relyef Modeli</span>
+          </h2>
+
+          <div class="flex flex-col gap-2.5 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <span class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">1</span>
+              <div>
+                <strong class="text-white block">Dəqiq Kadastr Poliqonları &amp; Sahə Ölçmə:</strong>
+                Qarabağın 10 inzibati rayonu üzrə kadastr sərhədləri, xəritədə sərbəst poliqon çəkmə və avtomatlaşdırılmış hektar hesablanması.
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">2</span>
+              <div>
+                <strong class="text-white block">DEM Relyef və Hündürlük Meyilliyi:</strong>
+                Meyillilik dərəcəsi (0-15°), düzən relyef pivot suvarma təhlili və dəniz səviyyəsindən hündürlük profilləri.
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <span class="w-7 h-7 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">3</span>
+              <div>
+                <strong class="text-white block">SoilGrids Torpaq Analitikası &amp; ANAMA Sertifikatı:</strong>
+                Torpaq boniteti (0-100), pH turşuluğu, gillilik, üzvi karbon və ANAMA minadan tam təmizlənmiş yaşıl zona verifikasiyası.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2">
+          <div class="rounded-2xl overflow-hidden border border-emerald-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_map.png" alt="InvestArea Real GIS Map və Torpaq Fond Xəritəsi" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Canlı GIS Map &amp; Kadastr Sahə Kartotekası</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 5: LIVE AUCTION & BIDDING SYSTEM -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="5" data-title="5. Müsabiqə və Açıq Artırma Mexanizmi">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-950 text-amber-300 border border-amber-500/40 uppercase tracking-wide">
+              Auksion &amp; Müsabiqə
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Şəffaf Müsabiqə və <br/>
+            <span class="text-gradient-gold">Real-Vaxt Açıq Artırma Sistemi</span>
+          </h2>
+
+          <div class="flex flex-col gap-2.5 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <i class="fa-solid fa-gavel text-amber-400 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Dinamik Qiymət və 10,000 AZN Minimum Addım:</strong>
+                Hər yeni təklif cari lider təklifdən ən azı 10,000 AZN yüksək olmalıdır. Auksion bitmə vaxtı və lider adı canlı yenilənir.
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <i class="fa-solid fa-crop-simple text-emerald-400 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Çevik Hektar Tələbi (Slider İdarəetməsi):</strong>
+                İnvestor biznes planının miqyasına uyğun olaraq sahənin bütövünü və ya tələb etdiyi hektar hissəsini sərbəst seçə bilər.
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex items-start gap-3">
+              <i class="fa-solid fa-users-gear text-blue-400 text-lg mt-0.5"></i>
+              <div>
+                <strong class="text-white block">Sosial Öhdəlik &amp; İş Yerləri Tələbi:</strong>
+                Təklif verərkən investor açacağı daimi iş yerləri sayını və Böyük Qayıdış sakinləri kvotasını öhdəlik kimi rəsmiləşdirir.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2">
+          <div class="rounded-2xl overflow-hidden border border-amber-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_auction.png" alt="Canlı Auksion və Müsabiqə Sistemi" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Müsabiqə &amp; Açıq Artırma Tabı (Aktiv lotlar və liderlər)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 6: 50 AZN STATE COMMISSION FEE -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="6" data-title="6. 50 AZN Dövlət Komissiya Haqqı">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-950 text-amber-300 border border-amber-500/40 uppercase tracking-wide">
+              Maddə 4 • Fərman № 236
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            İnvestor Müraciəti Zamanı <br/>
+            <span class="text-gradient-gold">50 AZN Dövlət Komissiya Haqqı</span>
+          </h2>
+
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+            236 nömrəli Fərmanın 4-cü maddəsinə uyğun olaraq, müsabiqədə və ya açıq artırmada iştirak üçün elektron müraciət göndərildikdə hər bir iddiaçı üzrə <strong class="text-amber-300">50 (əlli) AZN dövlət komissiya / iştirak haqqı</strong> çıxılır.
+          </p>
+
+          <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-500/50 flex flex-col gap-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-amber-200 text-sm flex items-center gap-2">
+                <i class="fa-solid fa-receipt text-amber-400"></i>
+                Dövlət İştirak və Komissiya Haqqı
+              </span>
+              <span class="text-lg font-black text-amber-300 font-mono">50.00 AZN</span>
+            </div>
+            <p class="text-[11.5px] text-slate-300 leading-relaxed">
+              Toplanmış dövlət komissiyası müsabiqənin texniki və hüquqi ekspertizasına, kadastr və peyk telemetriyası xidmətlərinə yönəldilir və layihə birbaşa <strong>9 səlahiyyətli dövlət orqanının Ekspertlər Qrupuna</strong> göndərilir.
+            </p>
+            <div class="flex items-center gap-2 pt-1 border-t border-amber-500/30 text-[11px] text-amber-300">
+              <span class="material-symbols-outlined text-[16px]">check_circle</span>
+              <span>İnvestor tərəfindən məcburi qaydada təsdiqlənən razılıq bəndi və qəbz.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2 slide-media-box">
+          <div class="rounded-2xl overflow-hidden border border-amber-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_bid_modal.png" alt="50 AZN Dövlət Komissiya Haqqı və Təklif Modalı" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Təklif Pəncərəsində 50 AZN dövlət komissiyası və razılıq qutusu</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 7: 100-POINT EXPERT COMMISSION SCORING -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="7" data-title="7. 100 Ballıq Ekspertlər Qrupu Sistemi">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase tracking-wide">
+              Maddə 3 • 9 Dövlət Qurumu
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            100 Ballıq Qiymətləndirmə: <br/>
+            <span class="text-gradient-emerald">Müstəsna Olaraq Ekspertlər Qrupuna Aiddir</span>
+          </h2>
+
+          <p class="text-xs text-slate-300">
+            KTN, İqtisadiyyat Nazirliyi, ANAMA, ETSN, Dövlət Şəhərsalma Komitəsi, ADSEA, DƏK, AVİS və DSMF nümayəndələrindən ibarət komissiya layihələri 5 meyar üzrə qiymətləndirir:
+          </p>
+
+          <div class="flex flex-col gap-2 text-xs">
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-between">
+              <span class="font-semibold text-white">1. Torpaq Boniteti və Aqronomik Uyğunluq</span>
+              <span class="font-mono font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">Maks. 25 Bal</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-between">
+              <span class="font-semibold text-white">2. Ağıllı Suvarma &amp; Su Qənaəti (Pivot / Damcılı)</span>
+              <span class="font-mono font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">Maks. 20 Bal</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-between">
+              <span class="font-semibold text-white">3. Hektara Düşən Real İnvestisiya &amp; Bank Zəmanəti</span>
+              <span class="font-mono font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">Maks. 20 Bal</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-between">
+              <span class="font-semibold text-white">4. Yeni İş Yerləri &amp; Böyük Qayıdış Sakinləri Kvotası</span>
+              <span class="font-mono font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">Maks. 20 Bal</span>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-between">
+              <span class="font-semibold text-white">5. Ekoloji Standartlar, Yaşıl Enerji &amp; Üzvi Gübrə</span>
+              <span class="font-mono font-bold text-emerald-400 bg-emerald-950 px-2 py-0.5 rounded border border-emerald-500/30">Maks. 15 Bal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2 slide-media-box">
+          <div class="rounded-2xl overflow-hidden border border-emerald-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_protocol.png" alt="Ekspertlər Qrupu Komissiya Protokolu" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">9 Dövlət Qurumunun 100 Ballıq Qiymətləndirmə Protokolu Modalı</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 8: IN-APP DECREE 236 DOCUMENT VIEWER -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="8" data-title="8. Fərman № 236 In-App Oxuyucu">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase tracking-wide">
+              Sıfır Xarici Keçid • In-App Oxu
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Prezident Fərmanı № 236 <br/>
+            <span class="text-gradient-emerald">Saytın Daxilində Tam İşlək Oxuyucu</span>
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            İstifadəçilər heç bir xarici linkə (e-qanun və s.) yönləndirilmir; rəsmi dövlət mətni birbaşa portalın daxilində hazırlanmış zəngin interaktiv oxuyucudan oxunur.
+          </p>
+
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">search</span>
+                Canlı Daxili Axtarış
+              </span>
+              <span class="text-slate-400 text-[11px]">Fərmanın maddələrində real-vaxt söz axtarışı.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-blue-400 font-bold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">touch_app</span>
+                Maddələrə Keçid Çipləri
+              </span>
+              <span class="text-slate-400 text-[11px]">Preambula və 1-5-ci maddələrə tək kliklə sıçrama.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-amber-400 font-bold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">print</span>
+                Rəsmi Çap Modulu
+              </span>
+              <span class="text-slate-400 text-[11px]">Dövlət gerbli sənədin birbaşa printerə ötürülməsi.</span>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-purple-400 font-bold flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">content_copy</span>
+                Sitat və Mətn Kopyalama
+              </span>
+              <span class="text-slate-400 text-[11px]">Hüquqi maddələrin panoya ani kopyalanması.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2 slide-media-box">
+          <div class="rounded-2xl overflow-hidden border border-emerald-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_decree236.png" alt="Fərman 236 In-App Oxuyucu Modalı" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Fərman № 236 In-App Sənəd Oxuyucusu və Axtarış Aləti</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 9: B2B MATCHMAKING & SIMULATOR -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="9" data-title="9. B2B Klaster & Məşğulluq Simulyatoru">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-950 text-purple-300 border border-purple-500/40 uppercase tracking-wide">
+              İnnovasiya Mərkəzi
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            İnvestor ↔ Sahibkar Klasteri &amp; <br/>
+            <span class="text-gradient-gold">Qarabağ Məşğulluq Simulyatoru</span>
+          </h2>
+
+          <div class="flex flex-col gap-3 text-xs text-slate-300">
+            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1.5">
+              <strong class="text-white text-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-amber-400">handshake</span>
+                B2B Matchmaking Klasteri:
+              </strong>
+              <p class="leading-relaxed">
+                İri investor kapitalı və pivot/damcılı suvarma texnologiyasını təmin edir, yerli sahibkar isə sahə təcrübəsi və qayıdan sakinlərdən ibarət daimi kadr briqadasını sahəyə cəlb edir.
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1.5">
+              <strong class="text-white text-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-emerald-400">calculate</span>
+                14,800+ Daimi İş Yeri Simulyatoru:
+              </strong>
+              <p class="leading-relaxed">
+                Hektar, bitki sektoru və rayon parametrlərini seçməklə açılacaq daimi iş yerlərini, tələb olunan kapitalı və təxmini gəlirliliyi real-vaxt alqoritmi ilə hesablayan alət.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2 slide-media-box">
+          <div class="rounded-2xl overflow-hidden border border-purple-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_simulator.png" alt="Məşğulluq Simulyatoru və B2B Matchmaking" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Qarabağ Məşğulluq və İş Yerləri Simulyatoru</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 10: AGRO OPERATOR & MONITORING -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="10" data-title="10. Aqrar Operator və Monitorinq">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center my-auto w-full">
+        <div class="lg:col-span-7 flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-teal-950 text-teal-300 border border-teal-500/40 uppercase tracking-wide">
+              Operator İdarəçiliyi
+            </span>
+          </div>
+
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+            Aqrar Sahə Operatoru &amp; <br/>
+            <span class="text-gradient-emerald">Peyk Aqro-Texnoloji Nəzarət</span>
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-emerald-400 font-bold">Lisenziyalı Operatorlar</span>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Sahələrin müqavilə öhdəliklərini icra edən akkreditə olunmuş dövlət və özəl aqrar sahə operatorlarının reyestri.
+              </p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-blue-400 font-bold">Peyk NDVI Bitki İnkişafı</span>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Sentinel-2 peyk indeksləri ilə əkinlərin vegetasiya sağlamlığının mütəmadi izlənilməsi.
+              </p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-amber-400 font-bold">Termal &amp; Yanğın Auditi</span>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                NASA FIRMS peyk sensorları vasitəsilə torpaq sahələrində yanğın risklərinin 24/7 monitorinqi.
+              </p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-700 flex flex-col gap-1">
+              <span class="text-purple-400 font-bold">EKTİS &amp; AVİS İnteqrasiyası</span>
+              <p class="text-[11px] text-slate-400 leading-relaxed">
+                Kənd Təsərrüfatı Nazirliyinin vahid elektron informasiya sistemləri ilə məlumat sinxronizasiyası.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-2 slide-media-box">
+          <div class="rounded-2xl overflow-hidden border border-teal-500/40 shadow-xl">
+            <img src="/images/screenshots/screenshot_operator.png" alt="Aqrar Sahə Operatoru Modulu" class="w-full h-auto object-cover"/>
+          </div>
+          <span class="text-[11px] text-slate-400 text-center">Aqrar Sahə Operatoru İdarəetmə Paneli</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 11: TECHNOLOGY ARCHITECTURE & CYBERSECURITY -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="11" data-title="11. Texnoloji Arxitektura və Təhlükəsizlik">
+      <div class="flex flex-col gap-4 text-left max-w-4xl mx-auto my-auto w-full">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-blue-950 text-blue-300 border border-blue-500/40 uppercase tracking-wide">
+            Dövlət Standartları
+          </span>
+        </div>
+
+        <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+          Yüksək Məhsuldarlıqlı Arxitektura &amp; <br/>
+          <span class="text-gradient-emerald">Bank Səviyyəli Kibertəhlükəsizlik</span>
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 pt-2 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-emerald-500/30 flex flex-col gap-2">
+            <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+              <i class="fa-solid fa-server"></i>
+              <span>Backend &amp; GIS Engine</span>
+            </div>
+            <ul class="text-slate-300 space-y-1.5 text-[11px]">
+              <li>• Node.js &amp; Java Spring Boot arxitekturası</li>
+              <li>• QGIS Layihə &amp; GeoJSON spatial engine</li>
+              <li>• Vercel Edge &amp; Docker konteynerizasiya</li>
+              <li>• Mikro-servis memarlığı &amp; RESTful API v1</li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-teal-500/40 flex flex-col gap-2 shadow-lg shadow-teal-950/30">
+            <div class="flex items-center gap-2 text-teal-400 font-bold text-sm">
+              <i class="fa-solid fa-brain"></i>
+              <span>Google Gemini &amp; GeoAI</span>
+            </div>
+            <ul class="text-slate-300 space-y-1.5 text-[11px]">
+              <li>• Google Gemini 1.5/2.0 Flash Dil Modeli</li>
+              <li>• Peyk NDVI &amp; Torpaq-iqlim GeoAI analizi</li>
+              <li>• 5 İllik maliyyə modeli &amp; AKİA ROI simulyatoru</li>
+              <li>• Səsli daxiletmə və xəritədə avtonom FlyTo</li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-blue-500/30 flex flex-col gap-2">
+            <div class="flex items-center gap-2 text-blue-400 font-bold text-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Kibertəhlükəsizlik</span>
+            </div>
+            <ul class="text-slate-300 space-y-1.5 text-[11px]">
+              <li>• SİMA İmza və myGov dövlət auth inteqrasiyası</li>
+              <li>• FİN və VÖEN verifikasiyası</li>
+              <li>• Rol əsaslı giriş (RBAC: Sakin, İnvestor, Admin)</li>
+              <li>• Audit loqları, CSRF və XSS qoruması</li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-amber-500/30 flex flex-col gap-2">
+            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+              <i class="fa-solid fa-wifi"></i>
+              <span>PWA Oflayn Rejim</span>
+            </div>
+            <ul class="text-slate-300 space-y-1.5 text-[11px]">
+              <li>• Service Worker &amp; Cache Storage v1</li>
+              <li>• Dağlıq və kənd zonalarında internetsiz işləmə</li>
+              <li>• Oflayn kadastr xəritəsi və pasportlar</li>
+              <li>• Şəbəkə bərpa olunduqda avto-sinxronizasiya</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 12: OUR TEAM -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="12" data-title="12. Peşəkar Komandamız">
+      <div class="flex flex-col gap-4 text-center max-w-5xl mx-auto my-auto w-full">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase tracking-widest font-mono">
+            PEŞƏKAR KOMANDA
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-2">
+            Layihənin Arxasında Duran <span class="text-gradient-emerald">İxtisaslaşmış Heyət</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto mt-1">
+            İnformasiya texnologiyaları, kibertəhlükəsizlik, məhsul dizaynı və aqro-iqtisadi tədqiqat sahələrində vahid komanda sinerjisi.
+          </p>
+        </div>
+
+        <!-- 4 Team Members Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-1 sm:pt-2">
+          
+          <!-- 1. SÜLEYMAN (DEVELOPER) - WITH REAL UPLOADED PHOTO -->
+          <div class="team-card p-3 sm:p-4 rounded-2xl bg-slate-900/95 border-2 border-emerald-500/50 shadow-xl flex flex-col items-center text-center gap-2 sm:gap-3 relative overflow-hidden group">
+            <div class="team-avatar w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-emerald-400 shadow-md relative bg-slate-800">
+              <img src="/images/team/suleyman.jpg" alt="Süleyman - Developer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div class="absolute bottom-1 right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-emerald-500 border-2 border-slate-950" title="Aktiv"></div>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm sm:text-base text-white">Süleyman</h3>
+              <span class="text-[10px] sm:text-xs font-extrabold text-emerald-400 font-mono uppercase tracking-wider block mt-0.5">Developer</span>
+              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 leading-tight">
+                Full-Stack Mühəndis &amp; GIS Arxitekturası. Node.js, Java Spring Boot və QGIS inteqrasiyaları.
+              </p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 pt-1.5 sm:pt-2 border-t border-slate-800 w-full justify-center text-slate-400 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-300 font-mono text-[9px] sm:text-[10px]">Lead Dev</span>
+            </div>
+          </div>
+
+          <!-- 2. HÖRMÜZ (CYBERSECURIST) - WITH REAL UPLOADED PHOTO -->
+          <div class="team-card p-3 sm:p-4 rounded-2xl bg-slate-900/95 border-2 border-blue-500/50 shadow-xl flex flex-col items-center text-center gap-2 sm:gap-3 relative overflow-hidden group hover:border-blue-400 transition-colors">
+            <div class="team-avatar w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-blue-400 shadow-md relative bg-slate-800">
+              <img src="/images/team/hormuz.jpg" alt="Hörmüz - Cybersecurist" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+              <div class="absolute bottom-1 right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-blue-500 border-2 border-slate-950" title="Aktiv"></div>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm sm:text-base text-white">Hörmüz</h3>
+              <span class="text-[10px] sm:text-xs font-extrabold text-blue-400 font-mono uppercase tracking-wider block mt-0.5">Cybersecurist</span>
+              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 leading-tight">
+                Kibertəhlükəsizlik və İnfrastruktur Mühafizəsi. Dövlət identifikasiyası, məlumatların şifrələnməsi və audit.
+              </p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 pt-1.5 sm:pt-2 border-t border-slate-800 w-full justify-center text-slate-400 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-300 font-mono text-[9px] sm:text-[10px]">Security</span>
+            </div>
+          </div>
+
+          <!-- 3. BANU (UI/UX DESIGNER) - WITH REAL UPLOADED PHOTO -->
+          <div class="team-card p-3 sm:p-4 rounded-2xl bg-slate-900/95 border-2 border-purple-500/50 shadow-xl flex flex-col items-center text-center gap-2 sm:gap-3 relative overflow-hidden group hover:border-purple-400 transition-colors">
+            <div class="team-avatar w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-purple-400 shadow-md relative bg-slate-800">
+              <img src="/images/team/banu.jpg" alt="Banu - UI/UX Designer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+              <div class="absolute bottom-1 right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-purple-500 border-2 border-slate-950" title="Aktiv"></div>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm sm:text-base text-white">Banu</h3>
+              <span class="text-[10px] sm:text-xs font-extrabold text-purple-400 font-mono uppercase tracking-wider block mt-0.5">UI/UX Designer</span>
+              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 leading-tight">
+                İstifadəçi Təcrübəsi və Rəqəmsal Məhsul Dizaynı. Dövlət portalı estetikası, mobil adaptasiya və a11y.
+              </p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 pt-1.5 sm:pt-2 border-t border-slate-800 w-full justify-center text-slate-400 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-purple-300 font-mono text-[9px] sm:text-[10px]">Product Design</span>
+            </div>
+          </div>
+
+          <!-- 4. EMİL (RESEARCHER) - WITH REAL UPLOADED PHOTO -->
+          <div class="team-card p-3 sm:p-4 rounded-2xl bg-slate-900/95 border-2 border-amber-500/50 shadow-xl flex flex-col items-center text-center gap-2 sm:gap-3 relative overflow-hidden group hover:border-amber-400 transition-colors">
+            <div class="team-avatar w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-amber-400 shadow-md relative bg-slate-800">
+              <img src="/images/team/emil.jpg" alt="Emil - Researcher" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"/>
+              <div class="absolute bottom-1 right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full bg-amber-500 border-2 border-slate-950" title="Aktiv"></div>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-sm sm:text-base text-white">Emil</h3>
+              <span class="text-[10px] sm:text-xs font-extrabold text-amber-400 font-mono uppercase tracking-wider block mt-0.5">Researcher</span>
+              <p class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 leading-tight">
+                Aqro-İqtisadi Tədqiqat və Torpaq Analitikası. Fərman № 236 üzrə hüquqi baza, aqronomik meyarlar və statistika.
+              </p>
+            </div>
+            <div class="mt-auto flex items-center gap-2 pt-1.5 sm:pt-2 border-t border-slate-800 w-full justify-center text-slate-400 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-amber-300 font-mono text-[9px] sm:text-[10px]">Research</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 13: ROADMAP & FUTURE VISION -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="13" data-title="13. Yol Xəritəsi (Roadmap 2026-2028)">
+      <div class="flex flex-col gap-4 text-left max-w-4xl mx-auto my-auto w-full">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-500/40 uppercase tracking-wide">
+            Strateji İnkişaf
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-white mt-1">
+            Yol Xəritəsi: <span class="text-gradient-emerald">2026 – 2028</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-2 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-900 border-t-4 border-emerald-500 flex flex-col gap-1.5">
+            <span class="text-xs font-mono font-bold text-emerald-400">FAZA 1 • 2026 Q1-Q2</span>
+            <strong class="text-white text-sm">Fərman № 236 Tətbiqi</strong>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              18,450 ha fondun pilot rayonlar (Ağdam, Füzuli, Cəbrayıl) üzrə 5 ha kəndətrafı və iri massivlərə ayrılması və ilkin auksionlar.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900 border-t-4 border-blue-500 flex flex-col gap-1.5">
+            <span class="text-xs font-mono font-bold text-blue-400">FAZA 2 • 2026 Q3-Q4</span>
+            <strong class="text-white text-sm">AI Peyk Monitorinqi</strong>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              Sentinel-2 və Planet Labs peyk təsvirləri ilə bitki inkişafının və suvarma itkilərinin avtomatlaşdırılmış süni intellekt analizi.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900 border-t-4 border-amber-500 flex flex-col gap-1.5">
+            <span class="text-xs font-mono font-bold text-amber-400">FAZA 3 • 2027</span>
+            <strong class="text-white text-sm">B2B Klaster &amp; İxrac</strong>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              Qarabağ aqro-məhsullarının xarici bazarlara ixracı üçün vahid aqrar birja və blokçeyn mənşə sertifikatlaşdırması.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-900 border-t-4 border-purple-500 flex flex-col gap-1.5">
+            <span class="text-xs font-mono font-bold text-purple-400">FAZA 4 • 2028+</span>
+            <strong class="text-white text-sm">Tam Regional Əhatə</strong>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              Qarabağ və Şərqi Zəngəzurun bütün kənd və qəsəbələrində 100% rəqəmsal torpaq idarəçiliyi və 14,800+ daimi məşğulluq hədəfi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------ -->
+    <!-- SLIDE 14: SUMMARY & CALL TO ACTION -->
+    <!-- ------------------------------------------------------------------ -->
+    <section class="slide w-full py-1 sm:py-2" data-slide="14" data-title="14. Nəticə və Əməkdaşlıq">
+      <div class="flex flex-col gap-5 text-center max-w-3xl mx-auto my-auto w-full">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-amber-950 uppercase tracking-widest font-mono">
+            STRATEJİ NƏTİCƏ
+          </span>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-white mt-3">
+            Qarabağın Torpaqları <br/>
+            <span class="text-gradient-emerald">Gələcəyin Ağıllı Kənd Təsərrüfatı ilə Dirçəlir</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
+            InvestArea — dövlətin nəzarəti, sakinlərin rifahı və beynəlxalq investorların kapitalı üçün etibarlı rəqəmsal körpüdür.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-emerald-950/80 to-slate-900 border-2 border-emerald-500/40 shadow-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-left">
+            <div class="text-xs text-emerald-300 font-bold uppercase font-mono">Rəsmi Platforma</div>
+            <div class="text-lg font-black text-white">investarea.gov.az</div>
+            <div class="text-xs text-slate-400 mt-0.5">Azərbaycan Respublikası, Bakı şəhəri</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="/" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg transition-all no-underline flex items-center gap-1.5 cursor-pointer">
+              <span>Canlı Demo Platformaya Keç</span>
+              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="text-xs text-slate-400 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-scroll text-amber-400"></i>
+          <span>Azərbaycan Respublikası Prezidentinin 27 noyabr 2024-cü il tarixli 236 nömrəli Fərmanı</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= BOTTOM PRESENTATION BAR ================= -->
+  <footer id="deck-bottom-bar" class="w-full bg-slate-950/90 backdrop-blur-xl border-t border-emerald-900/40 z-50 px-4 sm:px-6 py-2.5 flex items-center justify-between flex-shrink-0">
+    <!-- Slide Counter & Hotkey Help -->
+    <div class="flex items-center gap-3">
+      <div class="font-mono text-xs font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30">
+        <span id="current-slide-num">01</span> / <span id="total-slides-num">14</span>
+      </div>
+      <span class="hidden md:inline-block text-[11px] text-slate-500 font-medium">
+        Klaviatura: <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">←</kbd> <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">→</kbd> və ya <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">Space</kbd> • <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">F</kbd> Tam Ekran • <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono">O</kbd> İcmal
+      </span>
+    </div>
+
+    <!-- Slide Navigation Arrows -->
+    <div class="flex items-center gap-2">
+      <button type="button" id="prev-btn" onclick="prevSlide()" class="w-9 h-9 rounded-xl bg-slate-900 hover:bg-emerald-900/60 text-slate-300 hover:text-white border border-slate-700 hover:border-emerald-500/50 flex items-center justify-center transition-all cursor-pointer shadow-xs disabled:opacity-30 disabled:cursor-not-allowed">
+        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+      </button>
+      <button type="button" id="next-btn" onclick="nextSlide()" class="w-9 h-9 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold flex items-center justify-center transition-all cursor-pointer shadow-md disabled:opacity-30 disabled:cursor-not-allowed">
+        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ================= OVERVIEW MODAL (GRID OF ALL SLIDES) ================= -->
+  <div id="overview-modal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex flex-col p-6 overflow-y-auto custom-scroll">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-800 max-w-7xl mx-auto w-full">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-emerald-400 text-[24px]">grid_view</span>
+        <h3 class="text-lg font-bold text-white">Bütün Slaydlar (İcmal Qəfəsi)</h3>
+      </div>
+      <button type="button" onclick="toggleOverviewModal()" class="w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center cursor-pointer border-none">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 py-6 max-w-7xl mx-auto w-full" id="overview-grid-container">
+      <!-- Generated dynamically in script below -->
+    </div>
+  </div>
+
+  <!-- ================= PITCH DECK ENGINE SCRIPT ================= -->
+  <script>
+    let currentSlide = 1;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    document.getElementById('total-slides-num').innerText = totalSlides.toString().padStart(2, '0');
+
+    function updateSlideUI() {
+      slides.forEach((s, idx) => {
+        if (idx + 1 === currentSlide) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      // Update counter & progress bar
+      document.getElementById('current-slide-num').innerText = currentSlide.toString().padStart(2, '0');
+      const progressPercent = (currentSlide / totalSlides) * 100;
+      document.getElementById('deck-progress-bar').style.width = `${progressPercent}%`;
+
+      // Update topic text in header
+      const activeSlideEl = slides[currentSlide - 1];
+      const title = activeSlideEl.getAttribute('data-title') || `Slayd ${currentSlide}`;
+      document.getElementById('header-slide-topic').innerText = title;
+
+      // Update disabled states
+      document.getElementById('prev-btn').disabled = (currentSlide === 1);
+      document.getElementById('next-btn').disabled = (currentSlide === totalSlides);
+
+      // Scroll to top of active slide
+      const mainEl = document.querySelector('main');
+      if (mainEl) mainEl.scrollTop = 0;
+
+      // Update URL hash without extra history clutter
+      if (window.location.hash !== '#' + currentSlide) {
+        history.replaceState(null, '', '#' + currentSlide);
+      }
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        updateSlideUI();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateSlideUI();
+      }
+    }
+
+    function goToSlide(n) {
+      if (n >= 1 && n <= totalSlides) {
+        currentSlide = n;
+        updateSlideUI();
+        const overview = document.getElementById('overview-modal');
+        if (overview && !overview.classList.contains('hidden')) {
+          overview.classList.add('hidden');
+        }
+      }
+    }
+
+    // Keyboard controls
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'Backspace') {
+        prevSlide();
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
+      } else if (e.key.toLowerCase() === 'o') {
+        toggleOverviewModal();
+      } else if (e.key.toLowerCase() === 'p') {
+        window.print();
+      } else if (e.key === 'Escape') {
+        const overview = document.getElementById('overview-modal');
+        if (overview && !overview.classList.contains('hidden')) {
+          overview.classList.add('hidden');
+        }
+      }
+    });
+
+    // Touch swipe support for mobile (safe against vertical scrolling)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let touchEndY = 0;
+    window.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    window.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      const diffX = touchStartX - touchEndX;
+      const diffY = touchStartY - touchEndY;
+      // Only switch slide if horizontal swipe distance is > 55px and at least 1.8x larger than vertical movement
+      if (Math.abs(diffX) > 55 && Math.abs(diffX) > Math.abs(diffY) * 1.8) {
+        if (diffX > 0) nextSlide();
+        else prevSlide();
+      }
+    }, { passive: true });
+
+    // Fullscreen toggle
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.warn("Fullscreen request error:", err);
+        });
+        const icon = document.getElementById('fullscreen-icon');
+        if (icon) icon.innerText = 'fullscreen_exit';
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+        const icon = document.getElementById('fullscreen-icon');
+        if (icon) icon.innerText = 'fullscreen';
+      }
+    }
+
+    // Overview modal generator
+    function toggleOverviewModal() {
+      const modal = document.getElementById('overview-modal');
+      if (!modal) return;
+      const isHidden = modal.classList.contains('hidden');
+      if (isHidden) {
+        // Build cards
+        const container = document.getElementById('overview-grid-container');
+        container.innerHTML = '';
+        slides.forEach((s, idx) => {
+          const slideNum = idx + 1;
+          const title = s.getAttribute('data-title') || `Slayd ${slideNum}`;
+          const isCurr = slideNum === currentSlide;
+          
+          const card = document.createElement('div');
+          card.className = `p-3 rounded-xl border text-left cursor-pointer transition-all ${isCurr ? 'bg-emerald-950/80 border-emerald-400 ring-2 ring-emerald-500' : 'bg-slate-900/90 border-slate-700 hover:border-slate-500'}`;
+          card.onclick = () => goToSlide(slideNum);
+          card.innerHTML = `
+            <div class="flex items-center justify-between text-xs font-mono mb-2">
+              <span class="font-bold ${isCurr ? 'text-emerald-300' : 'text-slate-400'}">SLAYD ${slideNum.toString().padStart(2, '0')}</span>
+              ${isCurr ? '<span class="w-2 h-2 rounded-full bg-emerald-400"></span>' : ''}
+            </div>
+            <h4 class="text-xs font-bold text-white line-clamp-2 leading-snug">${title}</h4>
+          `;
+          container.appendChild(card);
+        });
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Initialize UI on load with URL hash or param support
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramSlide = parseInt(urlParams.get('slide'), 10);
+    const hashSlide = parseInt(window.location.hash.replace('#', ''), 10);
+    if (!isNaN(paramSlide) && paramSlide >= 1 && paramSlide <= totalSlides) {
+      currentSlide = paramSlide;
+    } else if (!isNaN(hashSlide) && hashSlide >= 1 && hashSlide <= totalSlides) {
+      currentSlide = hashSlide;
+    }
+
+    window.addEventListener('hashchange', () => {
+      const h = parseInt(window.location.hash.replace('#', ''), 10);
+      if (!isNaN(h) && h >= 1 && h <= totalSlides && h !== currentSlide) {
+        currentSlide = h;
+        updateSlideUI();
+      }
+    });
+
+    updateSlideUI();
+  </script>
+</body>
+</html>

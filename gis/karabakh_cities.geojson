@@ -1,0 +1,254 @@
+{
+  "type": "FeatureCollection",
+  "name": "Qarabağ və Şərqi Zəngəzur Şəhərləri",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "city-ssa",
+      "properties": {
+        "id": "city-ssa",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Şuşa şəhəri",
+        "district": "Şuşa",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Azərbaycanın Mədəniyyət Paytaxtı və Qoruq Şəhər",
+        "population": 15000,
+        "elevation_m": 1420,
+        "description": "Şuşa Qalası, Cıdır Düzü və Yuxarı Gövhər Ağa Məscidi tarixi mərkəzi, dağ turizmi və aqrar rekreasiya qovşağı.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.749, 39.758]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-xkd",
+      "properties": {
+        "id": "city-xkd",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Xankəndi şəhəri",
+        "district": "Xankəndi",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Respublika Əhəmiyyətli Şəhər və Təhsil-Sənaye Qovşağı",
+        "population": 55000,
+        "elevation_m": 820,
+        "description": "Qarabağ Universiteti şəhərciyi, aqrar elmi-tədqiqat laboratoriyaları və mərkəzi logistika bazası.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.753, 39.818]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-agd",
+      "properties": {
+        "id": "city-agd",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Ağdam şəhəri",
+        "district": "Ağdam",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Qarabağın Sənaye və Aqropark Mərkəzi",
+        "population": 42000,
+        "elevation_m": 370,
+        "description": "Ağdam Sənaye Parkı, taxıl emalı elevatorları, toxumçuluq klasterləri və logistika qovşağı.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.929, 39.993]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-fzl",
+      "properties": {
+        "id": "city-fzl",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Füzuli şəhəri",
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Ağıllı Şəhər və Beynəlxalq Hava Limanı",
+        "population": 35000,
+        "elevation_m": 415,
+        "description": "Füzuli Beynəlxalq Hava Limanı, Ağıllı kənd və şəhər infrastruktur şəbəkəsi, intensiv bağçılıq mərkəzi.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.143, 39.600]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-klb",
+      "properties": {
+        "id": "city-klb",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Kəlbəcər şəhəri",
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "status": "Şərqi Zəngəzurun Yüksək Dağ və Sağlamlıq Mərkəzi",
+        "population": 22000,
+        "elevation_m": 1600,
+        "description": "Tərtər vadisi, İstisu mineral suları, dağ heyvandarlığı, arıçılıq və yaşıl enerji mərkəzi.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.037, 40.108]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-lcn",
+      "properties": {
+        "id": "city-lcn",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Laçın şəhəri",
+        "district": "Laçın",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "status": "Həkəri Vadisi Yaşıl Şəhər və Turizm Mərkəzi",
+        "population": 24000,
+        "elevation_m": 900,
+        "description": "Laçın Beynəlxalq Hava Limanı, mebel və aqrosənaye emalı, su-elektrik stansiyaları şəbəkəsi.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.546, 39.638]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-zgl",
+      "properties": {
+        "id": "city-zgl",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Zəngilan şəhəri",
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "status": "Zəngəzur Dəhlizinin Başlanğıc və Nəqliyyat Qovşağı",
+        "population": 21000,
+        "elevation_m": 430,
+        "description": "Zəngilan Beynəlxalq Hava Limanı, Arazboyu aqroparklar, Ağalı Ağıllı Kəndi ekosistemi.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.652, 39.085]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-cbr",
+      "properties": {
+        "id": "city-cbr",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Cəbrayıl şəhəri",
+        "district": "Cəbrayıl",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "status": "Araz Vadisi İqtisadi Zonası və Sənaye Mərkəzi",
+        "population": 23000,
+        "elevation_m": 580,
+        "description": "Araz Vadisi İqtisadi Zonası, Xudafərin tarixi körpüləri logistikası, pambıq və taxıl emalı.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.026, 39.400]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-qbd",
+      "properties": {
+        "id": "city-qbd",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Qubadlı şəhəri",
+        "district": "Qubadlı",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "status": "Bərgüşad Vadisi Aqrar Emal Mərkəzi",
+        "population": 18000,
+        "elevation_m": 600,
+        "description": "Bərgüşad və Həkəri çayları qovşağı, intensiv subtropik meyvəçilik, heyvandarlıq və yemçilik.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.582, 39.344]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-xcv",
+      "properties": {
+        "id": "city-xcv",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Xocavənd şəhəri",
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Qarabağ Üzümçülük və Şərabçılıq Mərkəzi",
+        "population": 19000,
+        "elevation_m": 500,
+        "description": "Ərazinin məhsuldar torpaqları, Tuğ və Xocavənd üzüm bağları, aqroturizm qovşağı.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [47.110, 39.791]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "city-xcl",
+      "properties": {
+        "id": "city-xcl",
+        "entity_type": "CITY",
+        "category_az": "Şəhər Mərkəzi",
+        "name": "Xocalı şəhəri",
+        "district": "Xocalı",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "status": "Aqrar Logistika və İstehsalat Şəhəri",
+        "population": 16000,
+        "elevation_m": 570,
+        "description": "Xocalı aeroportu ətrafı logistik mərkəz, aqrar istixana kompleksləri və toxumçuluq.",
+        "color": "#4338ca",
+        "icon": "fa-city"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.793, 39.913]
+      }
+    }
+  ]
+}

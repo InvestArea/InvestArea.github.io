@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sənədlərin Yoxlanması və 9 Ekspert Komissiyası Paneli | Qarabağ Aqro-İnvest</title>
+  <meta name="description" content="Azərbaycan Respublikası Kənd Təsərrüfatı Nazirliyi və Müsabiqə Komissiyası - Müraciətlər, Sənədlərin Yoxlanması (Biznes Plan, AVİS, EKTİS, DƏK, DSMF, Bank Zəmanəti) və Ekspert Qiymətləndirməsi Paneli">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📑</text></svg>">
+  
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-default-tab="apps">
+
+  <!-- ================= SUPERUSER AUTHENTICATION SCREEN ================= -->
+  <div id="admin-auth-barrier" class="admin-auth-barrier">
+    <div class="admin-auth-card">
+      <div class="admin-auth-header">
+        <div class="admin-auth-emblem" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+          <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+        <span class="admin-auth-gov-tag">Azərbaycan Respublikası Müsabiqə Komissiyası</span>
+        <h2>Sənədlərin Yoxlanması Paneli</h2>
+        <p>Müraciətlər, Dövlət İnteqrasiyaları və Ekspert Komissiyası Şöbəsi</p>
+        <div class="admin-auth-badge" style="background: rgba(2, 132, 199, 0.15); border-color: rgba(2, 132, 199, 0.4); color: #38bdf8;">
+          <i class="fa-solid fa-lock"></i> Səlahiyyətli Komissiya Üzvü / Ekspert Girişi
+        </div>
+      </div>
+
+      <form id="admin-login-form" onsubmit="handleAdminLogin(event)" class="admin-auth-form">
+        <div id="admin-login-error" class="admin-auth-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="admin-login-error-text">Daxil edilmiş məlumatlar yanlışdır!</span>
+        </div>
+
+        <div class="admin-auth-group">
+          <label for="admin-login-email">Komissiya Üzvü / Superuser E-poçt</label>
+          <div class="admin-auth-input-wrap">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" id="admin-login-email" required placeholder="admin@investarea.gov.az" autocomplete="username">
+          </div>
+        </div>
+
+        <div class="admin-auth-group">
+          <label for="admin-login-password">Məxfi Giriş Şifrəsi</label>
+          <div class="admin-auth-input-wrap">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="admin-login-password" required placeholder="••••••••••••" autocomplete="current-password">
+            <button type="button" class="admin-auth-pwd-toggle" onclick="toggleAdminPwdVisibility()" title="Şifrəni göstər/gizlət">
+              <i class="fa-solid fa-eye" id="admin-pwd-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="admin-auth-submit-btn" id="admin-login-btn" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Sənəd Yoxlama Sisteminə Daxil Ol</span>
+        </button>
+
+        <button type="button" class="admin-auth-demo-btn" onclick="fillSuperadminDemo()" style="margin-top: 10px; width: 100%; background: rgba(2, 132, 199, 0.12); border: 1px dashed rgba(2, 132, 199, 0.4); color: #38bdf8; padding: 8px 12px; border-radius: 10px; font-size: 0.76rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Məlumatları Avtomatik Doldur (admin@investarea.gov.az)</span>
+        </button>
+
+        <div class="admin-auth-footer-notice">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Bu panelə yalnız 9 Dövlət Qurumunun nümayəndələrindən ibarət Ekspert Komissiyası və Nazirlik tərəfindən təyin edilmiş Sənəd İnzibatçıları daxil ola bilər.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="admin-layout" id="admin-layout">
+    <div id="admin-sidebar-backdrop" class="admin-sidebar-backdrop" onclick="toggleAdminSidebar()"></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-emblem" style="background: #0284c7;">
+          <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+        <div class="sidebar-title">
+          <h2>Sənədlərin Yoxlanması</h2>
+          <p>9 Ekspert Komissiyası Paneli</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <div class="menu-heading">Sənəd & Ekspertiza Şöbəsi</div>
+        
+        <button class="sidebar-item active" data-tab="apps">
+          <i class="fa-solid fa-file-signature"></i>
+          <span>Müsabiqə Müraciətləri</span>
+          <span class="badge" id="badge-menu-apps">0</span>
+        </button>
+
+        <button class="sidebar-item" data-tab="experts">
+          <i class="fa-solid fa-users-gear"></i>
+          <span>9 Ekspert Komissiyası</span>
+          <span class="badge" id="badge-menu-experts" style="background: #0284c7; color: #fff;">9</span>
+        </button>
+
+        <button class="sidebar-item" data-tab="users">
+          <i class="fa-solid fa-users-viewfinder"></i>
+          <span>İnvestor & Sahibkar Dosyeləri</span>
+          <span class="badge" id="badge-menu-users">0</span>
+        </button>
+
+        <button class="sidebar-item" data-tab="coop">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <span>Tərəfdaşlıq Müqavilələri</span>
+          <span class="badge" id="badge-menu-coop">0</span>
+        </button>
+
+        <button class="sidebar-item" data-tab="audit">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>Audit və Qərar Jurnalı</span>
+        </button>
+
+
+        <a href="/portal" target="_blank" class="sidebar-item" style="color: #93c5fd;">
+          <i class="fa-solid fa-globe"></i>
+          <span>Əsas Portala Keç</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; margin-left: auto;"></i>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-sync-status">
+          <div class="pulse-dot" style="background: #38bdf8;"></div>
+          <div>
+            <div style="font-weight: 700; color: #fff;">Dövlət Şlüzü: AKTİV</div>
+            <div style="font-size: 0.68rem; color: #94a3b8;">AVİS • EKTİS • DƏK • DSMF • Bank</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="admin-main">
+
+      <!-- Topbar Header -->
+      <header class="admin-topbar">
+        <div class="topbar-branding">
+          <button type="button" class="btn-toggle-sidebar" id="admin-sidebar-toggle-btn" onclick="toggleAdminSidebar()" aria-label="Menyu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div style="font-size: 1.8rem; color: #0284c7;">
+            <i class="fa-solid fa-file-circle-check"></i>
+          </div>
+          <div class="topbar-title">
+            <h1>Sənədlərin Yoxlanması və Ekspert Komissiyası Paneli</h1>
+            <p>Müraciətlərin Təftişi, Rəsmi Dövlət Arayışları və 9 Qurumun Qiymətləndirmə Protokolu</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+          <a href="/portal" target="_blank" class="btn-admin btn-admin-secondary" style="text-decoration: none; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-globe"></i>
+            <span>Əsas Portal</span>
+          </a>
+
+          <div class="admin-user-pill" id="admin-topbar-user">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150" alt="Super Admin" class="admin-user-avatar-mini">
+            <div class="admin-user-info-text">
+              <span class="admin-user-info-name">Komissiya Baş Katibi</span>
+              <span class="admin-user-info-role"><i class="fa-solid fa-stamp"></i> Sənəd Təftişi</span>
+            </div>
+          </div>
+
+          <button class="btn-admin btn-admin-secondary" onclick="exportAdminReport()" title="Müraciətləri və sənəd cədvəlini CSV formatında ixrac et">
+            <i class="fa-solid fa-file-excel" style="color: #10b981;"></i> CSV İxrac
+          </button>
+
+          <button class="btn-admin btn-admin-danger" onclick="adminLogout()" title="Sessiyanı sonlandır">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Çıxış
+          </button>
+        </div>
+      </header>
+
+      <!-- Subheader / Status Banner -->
+      <section class="admin-superuser-banner" style="background: linear-gradient(135deg, #082f49 0%, #0369a1 100%); border: 1px solid #38bdf8; border-radius: 14px; padding: 14px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 16px rgba(3, 105, 161, 0.25); flex-wrap: wrap; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(56, 189, 248, 0.2); border: 1px solid #7dd3fc; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #bae6fd;">
+            <i class="fa-solid fa-file-shield"></i>
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span style="color: #fff; font-weight: 800; font-size: 1.05rem;">Sənədlərin Elektron Yoxlanması və Qiymətləndirmə Paneli</span>
+              <span style="background: #38bdf8; color: #082f49; padding: 2px 8px; border-radius: 999px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase;">9 Qurum Müsabiqə Komissiyası</span>
+              <span style="background: rgba(56, 189, 248, 0.25); color: #bae6fd; border: 1px solid #38bdf8; padding: 2px 8px; border-radius: 999px; font-size: 0.65rem; font-weight: 700;">AVİS • EKTİS • DƏK • DSMF • Bank</span>
+            </div>
+            <div style="font-size: 0.78rem; color: #e0f2fe; margin-top: 3px; display: flex; gap: 16px; flex-wrap: wrap;">
+              <span><i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> AVİS Vergi Arayışı: <strong>100% Borcsuzluq</strong></span>
+              <span><i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> EKTİS Aqrar Reyestr: <strong>Avtomatik İnteqrasiya</strong></span>
+              <span><i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> Müvəkkil Bank Zəmanəti: <strong>Elektron Təsdiq</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <button type="button" onclick="refreshAdminDataSilently(); showAdminToast('Bütün sənəd və müraciət məlumatları yeniləndi.', 'success');" class="btn-admin" style="background: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.3); font-weight: 700; padding: 7px 12px; border-radius: 8px; cursor: pointer;">
+            <i class="fa-solid fa-rotate"></i> Yenilə
+          </button>
+        </div>
+      </section>
+
+      <!-- KPI Metrics Cards Grid -->
+      <section class="admin-metrics-grid">
+        <div class="metric-card blue">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-file-contract"></i></div>
+          <div class="metric-content">
+            <h3>Daxil Olmuş Müraciətlər</h3>
+            <div class="val" id="metric-apps-count">0</div>
+            <div class="sub">Təklif: <strong id="metric-apps-invest" style="color: #0284c7;">0 ₼</strong></div>
+          </div>
+        </div>
+
+        <div class="metric-card green">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="metric-content">
+            <h3>Qeydiyyatlı İnvestorlar</h3>
+            <div class="val" id="metric-investor-count">0</div>
+            <div class="sub">Kapital: <strong id="metric-investor-capital" style="color: #047857;">0 ₼</strong></div>
+          </div>
+        </div>
+
+        <div class="metric-card gold">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-tractor"></i></div>
+          <div class="metric-content">
+            <h3>Yerli Sahibkarlar</h3>
+            <div class="val" id="metric-sahibkar-count">0</div>
+            <div class="sub">Torpaq tələbi: <strong id="metric-sahibkar-demand" style="color: #b45309;">0 ha</strong></div>
+          </div>
+        </div>
+
+        <div class="metric-card purple">
+          <div class="metric-icon-wrap"><i class="fa-solid fa-handshake"></i></div>
+          <div class="metric-content">
+            <h3>Birgə Klasterlər</h3>
+            <div class="val" id="metric-partnerships-count">0</div>
+            <div class="sub">İnvestor + Sahibkar Kooperasiyası</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: APPLICATIONS REGISTRY & DOCUMENT VERIFICATION ================= -->
+      <section class="admin-panel-section active" id="section-apps">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2><i class="fa-solid fa-file-signature text-sky-600"></i> Müsabiqə Müraciətləri və Sənədlərin Yoxlanması</h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                İddiaçıların təqdim etdiyi Biznes Plan, AVİS vergi çıxarışı, EKTİS aqrar çıxarış, DƏK kadastr qeydiyyatı, DSMF sığorta və Bank zəmanət məktublarının təftişi
+              </p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <span class="status-pill tesdiqlendi"><i class="fa-solid fa-network-wired"></i> Dövlət Servisləri İnteqrasiyası</span>
+            </div>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Müraciət Kodu</th>
+                  <th>Müraciətçi (FİN / VÖEN)</th>
+                  <th>Müsabiqə Lotu &amp; Rayon</th>
+                  <th>İnvestisiya Həcmi</th>
+                  <th>Yeni İş Yerləri</th>
+                  <th>Sənəd Statusu</th>
+                  <th>Dövlət Reyestri</th>
+                  <th style="text-align: right;">Sənəd Təftişi &amp; Qərar</th>
+                </tr>
+              </thead>
+              <tbody id="admin-applications-tbody">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: 9 EXPERTS COMMISSION SCORING MATRIX ================= -->
+      <section class="admin-panel-section" id="section-experts">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2><i class="fa-solid fa-users-gear text-indigo-600"></i> İşğaldan Azad Edilmiş Ərazilər Üzrə İnvestisiya Müsabiqəsi Komissiyası</h2>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 3px;">
+                Müsabiqə Əsasnaməsinə uyğun olaraq 9 səlahiyyətli dövlət qurumu nümayəndəsindən ibarət kollegial ekspert heyəti
+              </p>
+            </div>
+            <span class="status-pill aktiv" style="background: rgba(14, 165, 233, 0.15); border: 1px solid #38bdf8; color: #0284c7; font-weight: 700;">
+              <i class="fa-solid fa-scale-balanced"></i> Şəffaf Elektron Səsvermə (≥ 5 Səs Çoxluğu)
+            </span>
+          </div>
+
+          <!-- Commission Agency Banner & Interactive Voting Dashboard -->
+          <div style="background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%); color: #fff; padding: 22px 24px; border-radius: 14px; margin-bottom: 24px; box-shadow: 0 6px 18px rgba(6,78,59,0.2); position: relative; overflow: hidden;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; position: relative; z-index: 2;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #a7f3d0; font-weight: 800; background: rgba(255,255,255,0.12); padding: 3px 8px; border-radius: 4px;">
+                    <i class="fa-solid fa-shield-halved"></i> Dövlət İdarələrarası Kollegiya
+                  </span>
+                  <span style="font-size: 0.72rem; color: #fde047; font-weight: 700;">
+                    <i class="fa-solid fa-gavel"></i> Kvorum: Ən azı 5 səs çoxluğu (≥ 5 / 9)
+                  </span>
+                </div>
+                <div style="font-size: 1.35rem; font-weight: 900; margin-top: 4px; letter-spacing: -0.01em;">
+                  9 Dövlət Qurumu Hesabı Üzrə Canlı Torpaq Ayrılması Səsvermə Sistemi
+                </div>
+                <div style="font-size: 0.82rem; color: #d1fae5; margin-top: 5px; max-width: 860px; line-height: 1.45;">
+                  İnvestisiya üçün ayrılmış torpaqlara müraciət edən yerli və xarici investorların torpaq sahəsini <strong>götürüb-götürə bilməyəcəyi</strong> 9 dövlət qurumu nümayəndəsinin ümumi səsverməsi ilə müəyyən edilir. Ən azı 5 lehinə səs toplayan investora <strong>Aqrar Sahə Operatoru</strong> lisenziyası və 25 illik dövlət icarə hüququ verilir.
+                </div>
+              </div>
+
+              <!-- Quick Tally Counter -->
+              <div style="display: flex; gap: 10px; align-items: center;">
+                <div style="background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); padding: 8px 14px; border-radius: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size: 1.35rem; font-weight: 900; color: #6ee7b7;" id="doc-vote-stat-approve">0</div>
+                  <div style="font-size: 0.68rem; color: #a7f3d0; font-weight: 700;">Lehinə Səs</div>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); padding: 8px 14px; border-radius: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size: 1.35rem; font-weight: 900; color: #fca5a5;" id="doc-vote-stat-reject">0</div>
+                  <div style="font-size: 0.68rem; color: #fecaca; font-weight: 700;">Əleyhinə Səs</div>
+                </div>
+                <div style="background: rgba(0,0,0,0.2); backdrop-filter: blur(4px); padding: 8px 14px; border-radius: 10px; text-align: center; border: 1px solid rgba(255,255,255,0.15);">
+                  <div style="font-size: 1.35rem; font-weight: 900; color: #fde047;" id="doc-vote-stat-pending">9</div>
+                  <div style="font-size: 0.68rem; color: #fef08a; font-weight: 700;">Gözlənilir</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= VOTING APPLICATION & LAND SELECTOR ================= -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 14px;">
+              <div>
+                <span style="font-size: 0.74rem; text-transform: uppercase; font-weight: 800; color: var(--gov-primary); letter-spacing: 0.05em;">
+                  <i class="fa-solid fa-map-location-dot"></i> 1-ci Addım: Müsabiqə Torpaq Sahəsi və İnvestor Seçimi
+                </span>
+                <h3 style="font-size: 1rem; font-weight: 800; color: #0f172a; margin-top: 2px;">
+                  Səsverməyə Çıxarılan İnvestisiya Torpaq Sahəsi & Müraciətçi
+                </h3>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <label for="commission-session-select-doc" style="font-size: 0.78rem; font-weight: 700; color: #475569;">Müraciət:</label>
+                <select id="commission-session-select-doc" class="form-control-admin" style="font-size: 0.82rem; font-weight: 700; padding: 6px 12px; width: 360px; border: 2px solid #059669; border-radius: 8px; background: #f0fdf4; color: #065f46;" onchange="handleVotingSessionSelectChange(this.value)">
+                  <!-- Populated dynamically -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Selected Investor & Land Dossier Preview -->
+            <div id="voting-target-dossier-card-doc" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 10px; padding: 14px 18px;">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- ================= LIVE DECISION & CONSENSUS SCOREBOARD ================= -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
+              <div>
+                <span style="font-size: 0.74rem; text-transform: uppercase; font-weight: 800; color: #0284c7; letter-spacing: 0.05em;">
+                  <i class="fa-solid fa-chart-pie"></i> 2-ci Addım: Kollegial Qərar Vəziyyəti və Çoxluq Qaydası
+                </span>
+                <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-top: 2px;">
+                  9 Qurumun Səsvermə Nəticəsi və Yekun Qərar
+                </h3>
+              </div>
+              <div id="voting-decision-status-pill-doc">
+                <!-- Dynamically populated status pill -->
+              </div>
+            </div>
+
+            <!-- Segmented Progress Bar (9 blocks) -->
+            <div style="margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.76rem; font-weight: 700; color: #475569; margin-bottom: 6px;">
+                <span>Səs Bölgüsü: <span id="voting-tally-text-doc">0 Lehinə / 0 Əleyhinə / 9 Gözlənilir</span></span>
+                <span style="color: #059669;"><i class="fa-solid fa-flag-checkered"></i> Qərar Kvotası: 5 Səs</span>
+              </div>
+              <div id="voting-segmented-bar-doc" style="display: flex; gap: 4px; height: 16px; background: #e2e8f0; border-radius: 8px; padding: 2px; overflow: hidden;">
+                <!-- 9 visual segments dynamically rendered -->
+              </div>
+            </div>
+
+            <!-- Dynamic Decision Banner -->
+            <div id="voting-decision-banner-box-doc" style="padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+              <!-- Dynamically populated banner with protocol link -->
+            </div>
+          </div>
+
+          <!-- ================= 9 STATE ACCOUNTS SWITCHER BAR & VOTING CONSOLE ================= -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+              <div>
+                <span style="font-size: 0.74rem; text-transform: uppercase; font-weight: 800; color: #7c3aed; letter-spacing: 0.05em;">
+                  <i class="fa-solid fa-user-shield"></i> 3-cü Addım: Səlahiyyətli Dövlət Hesabını Seçin və Səs Verin
+                </span>
+                <h3 style="font-size: 1.05rem; font-weight: 800; color: #0f172a; margin-top: 2px;">
+                  9 Səlahiyyətli Dövlət Qurumu Hesabı Arasında Keçid
+                </h3>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button type="button" class="btn-admin btn-sm" style="background: #059669; color: #fff; font-weight: 700; cursor: pointer;" onclick="triggerConsensusVoteAll('REALISTIC')">
+                  <i class="fa-solid fa-bolt"></i> ⚡ 9 Qurum Üzrə Kollegial Səsvermə
+                </button>
+                <button type="button" class="btn-admin btn-sm" style="background: #f1f5f9; color: #475569; font-weight: 700; border: 1px solid #cbd5e1; cursor: pointer;" onclick="triggerResetVotesCurrentApp()">
+                  <i class="fa-solid fa-rotate-left"></i> 🔄 Səsverməni Sıfırla
+                </button>
+                <button type="button" class="btn-admin btn-sm" style="background: #0284c7; color: #fff; font-weight: 700; cursor: pointer;" onclick="openOfficialProtocolModalCurrentApp()">
+                  <i class="fa-solid fa-file-contract"></i> 📜 Rəsmi Protokolu Gör
+                </button>
+              </div>
+            </div>
+
+            <!-- 9 Official Agency Account Chips -->
+            <div id="commission-accounts-chips-bar-doc" style="display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; margin-bottom: 16px;">
+              <!-- Dynamically populated agency chips: KTN, İN, ƏMDX, ETSN, ADSEA, AXA, AKİA, PXN, EKTİS -->
+            </div>
+
+            <!-- Active Voter Interactive Form Panel -->
+            <div id="active-voter-control-panel-doc" style="background: #f8fafc; border: 1.5px solid #059669; border-radius: 10px; padding: 16px 20px;">
+              <!-- Dynamically rendered voter interface for selected agency -->
+            </div>
+          </div>
+
+          <!-- 9 State Agencies Grid -->
+          <div class="experts-grid-admin" id="admin-experts-grid">
+            <!-- Populated dynamically by admin.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: USERS REGISTRY (INVESTORS & SAHIBKARLAR) ================= -->
+      <section class="admin-panel-section" id="section-users">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2><i class="fa-solid fa-users text-emerald-600"></i> İnvestorlar və Sahibkarlar Vahid Dosye Reyestri</h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                Müsabiqə iştirakçılarının profili, maliyyə və aqrar təcrübəsi, EKTİS akkreditasiyası və canlı statusu
+              </p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div style="font-size: 0.82rem; color: var(--text-muted);">
+                Göstərilən iştirakçılar: <strong id="filtered-users-count" style="color: var(--gov-primary);">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Toolbar -->
+          <div class="admin-toolbar" style="margin-bottom: 20px;">
+            <div class="search-input-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="admin-user-search" placeholder="Ad, Şirkət, FİN, VÖEN və ya EKTİS kodu ilə axtarış...">
+            </div>
+
+            <div class="role-pill-group">
+              <button class="role-pill-btn active" data-role="">Bütün İştirakçılar</button>
+              <button class="role-pill-btn" data-role="INVESTOR"><i class="fa-solid fa-briefcase"></i> Yalnız İnvestorlar</button>
+              <button class="role-pill-btn" data-role="SAHIBKAR"><i class="fa-solid fa-tractor"></i> Yalnız Sahibkarlar</button>
+            </div>
+
+            <select class="filter-select" id="admin-user-status-filter">
+              <option value="">Bütün Statuslar</option>
+              <option value="AKTIV">Aktiv</option>
+              <option value="YOXLAMADA">Yoxlamada Olanlar</option>
+              <option value="TESDIQLENIB">Təsdiqlənmiş</option>
+              <option value="BLOKLANIB">Bloklanmış</option>
+            </select>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>İştirakçı / Şirkət</th>
+                  <th>Kateqoriya</th>
+                  <th>VÖEN / FİN</th>
+                  <th>Maliyyə &amp; Texnika</th>
+                  <th>Reytinq &amp; Akkreditasiya</th>
+                  <th>Status</th>
+                  <th style="text-align: right;">Əməliyyat</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: COOPERATION PARTNERSHIPS ================= -->
+      <section class="admin-panel-section" id="section-coop">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2><i class="fa-solid fa-handshake-angle text-purple-600"></i> İnvestor-Sahibkar Kooperasiya Müqavilələri</h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                Maliyyə yatıran şirkətlər ilə yerli torpaq becərən sahibkarlar arasında dövlət təminatlı birgə aqrar müqavilələr
+              </p>
+            </div>
+            <button class="btn-admin btn-admin-primary" onclick="openCoopModalWithUser(null)">
+              <i class="fa-solid fa-plus"></i> Yeni Tərəfdaşlıq Müqaviləsi
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Klaster Kodu</th>
+                  <th>İnvestor (Maliyyəçi)</th>
+                  <th>Sahibkar (İcraçı)</th>
+                  <th>Rayon & Sahə</th>
+                  <th>Yatırılan Kapital (AZN)</th>
+                  <th>Müqavilə Statusu</th>
+                  <th>Qeydlər və Şərtlər</th>
+                </tr>
+              </thead>
+              <tbody id="admin-partnerships-tbody">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB: AUDIT & SECURITY LOGS ================= -->
+      <section class="admin-panel-section" id="section-audit">
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h2><i class="fa-solid fa-shield-halved text-amber-600"></i> Dövlət Audit və Sənəd Yoxlama Jurnalı</h2>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 3px;">
+                Sənədlərin təsdiqi, ekspert səsverməsi və status dəyişikliklərinin blokçeyn tipli təhlükəsiz qeydiyyatı
+              </p>
+            </div>
+            <button class="btn-admin btn-admin-secondary" onclick="loadAuditLogs()">
+              <i class="fa-solid fa-arrows-rotate"></i> Yenilə
+            </button>
+          </div>
+
+          <div class="table-responsive">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Zaman</th>
+                  <th>Səlahiyyətli Şəxs</th>
+                  <th>Əməliyyat Növü</th>
+                  <th>Məzmun &amp; Detallar</th>
+                  <th>İP Ünvan</th>
+                </tr>
+              </thead>
+              <tbody id="admin-audit-tbody">
+                <!-- Dynamically populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ================= MODAL: USER DOSSIER INSPECTOR ================= -->
+  <div class="admin-modal-overlay" id="modal-user-dossier">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <h3><i class="fa-solid fa-id-card-clip"></i> İddiaçının Rəsmi Dövlət Dosyesi</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-user-dossier')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="admin-modal-body" id="modal-dossier-body">
+        <!-- Dynamically rendered -->
+      </div>
+      <div style="display: flex; justify-content: flex-end; padding: 14px 20px; border-top: 1px solid #e2e8f0; background: #f8fafc;">
+        <button class="btn-admin btn-admin-secondary" onclick="closeModal('modal-user-dossier')">Bağla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: STATUS & ACCREDITATION CHANGE ================= -->
+  <div class="admin-modal-overlay" id="modal-status-change">
+    <div class="admin-modal" style="max-width: 500px;">
+      <div class="admin-modal-header">
+        <h3><i class="fa-solid fa-stamp"></i> İştirakçı Statusu və Akkreditasiya Qərarı</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-status-change')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="admin-modal-body">
+        <p style="font-size: 0.85rem; color: #475569; margin-bottom: 16px;" id="status-modal-desc">
+          İştirakçının statusunu təsdiq və ya imtina edin.
+        </p>
+
+        <div class="form-group-admin">
+          <label>Yeni Status Təyini</label>
+          <select id="status-modal-select" class="form-control-admin">
+            <option value="AKTIV">Aktiv (Müsabiqəyə buraxılsın)</option>
+            <option value="YOXLAMADA">Yoxlamada (Əlavə sənəd tələb olunur)</option>
+            <option value="TESDIQLENIB">Təsdiqlənmiş (Bütün tələblərə cavab verir)</option>
+            <option value="BLOKLANIB">Bloklanmış (İmtina / Saxta məlumat)</option>
+          </select>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group-admin">
+            <label>EKTİS Akkreditasiya Balı (0-100)</label>
+            <input type="number" id="status-modal-score" class="form-control-admin" min="0" max="100" value="90">
+          </div>
+          <div class="form-group-admin" style="display: flex; flex-direction: column; justify-content: center;">
+            <label style="cursor: pointer; display: flex; align-items: center; gap: 8px; margin-top: 18px;">
+              <input type="checkbox" id="status-modal-accredited" style="width: 18px; height: 18px; accent-color: #10b981;">
+              <span>EKTİS Akkreditasiyası Təsdiqlənib</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group-admin">
+          <label>İnzibati Qərar Qeydi</label>
+          <textarea id="status-modal-notes" class="form-control-admin" rows="3" placeholder="Status dəyişikliyinin əsası, komissiya protokolu..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button class="btn-admin btn-admin-secondary" onclick="closeModal('modal-status-change')">Ləğv Et</button>
+          <button class="btn-admin btn-admin-primary" onclick="submitUserStatusChange()">Təsdiqlə və Qeydə Al</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: 9 AGENCIES APPLICATION SCORING & AI OPINION ================= -->
+  <div class="admin-modal-overlay" id="modal-app-scoring">
+    <div class="admin-modal" style="max-width: 900px;">
+      <div class="admin-modal-header" style="background: linear-gradient(135deg, #022c22 0%, #064e3b 100%); color: #fff;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fa-solid fa-stamp" style="font-size: 1.3rem; color: #6ee7b7;"></i>
+          <div>
+            <h3 style="color: #fff; margin: 0; font-size: 1.1rem;" id="app-scoring-title">Müraciətin Qiymətləndirilməsi &amp; 9 Dövlət Qurumu</h3>
+            <p style="margin: 2px 0 0 0; font-size: 0.76rem; color: #a7f3d0;" id="app-scoring-subtitle">Kənd Təsərrüfatı Nazirliyi Müsabiqə Komissiyası Protokolu</p>
+          </div>
+        </div>
+        <button class="modal-close-btn" style="color: #fff;" onclick="closeModal('modal-app-scoring')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      
+      <div class="admin-modal-body" style="padding: 20px;">
+
+        <!-- AI DOCUMENT ANALYSIS BLOCK -->
+        <div style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 1.5px solid #6ee7b7; border-radius: 10px; padding: 14px; margin-bottom: 16px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="font-size: 1.1rem; color: #047857;"><i class="fa-solid fa-microchip"></i></span>
+              <strong style="color: #065f46; font-size: 0.92rem;">AI Sənəd Analitikası və Avtomatik Rəy Tərtibi</strong>
+            </div>
+            <span class="status-pill tesdiqlendi" style="font-size: 0.72rem;">
+              <i class="fa-solid fa-microchip"></i> Sənəd Analitikası Modulu
+            </span>
+          </div>
+          <p style="font-size: 0.76rem; color: #047857; margin: 0 0 10px 0;">
+            İddiaçının təqdim etdiyi Biznes Plan, AVİS (Vergi), EKTİS (Aqrar Reyestr), DƏK (Kadastr), DSMF və Bank zəmanətini analiz edin və komissiya üçün rəsmi ekspert rəyi hazırlayın.
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" class="btn-admin btn-sm" style="background: #047857; color: #ffffff; border: none; font-weight: 700; padding: 7px 14px; font-size: 0.8rem; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 6px;" onclick="runAiDocumentAnalysis()">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Sənədləri Analiz Et &amp; Skorinq Al
+            </button>
+            <button type="button" class="btn-admin btn-sm" style="background: #0284c7; color: #ffffff; border: none; font-weight: 700; padding: 7px 14px; font-size: 0.8rem; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 6px;" onclick="runAiGenerateOpinion()">
+              <i class="fa-solid fa-pen-nib"></i> Ekspert Rəyini Tərtib Et
+            </button>
+          </div>
+          <div id="ai-analysis-feedback" style="display: none; margin-top: 10px; padding: 10px; background: #ffffff; border-radius: 8px; border: 1px solid #a7f3d0; font-size: 0.78rem; color: #065f46;"></div>
+        </div>
+
+        <div id="scoring-app-info-card" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; margin-bottom: 20px;">
+          <!-- Dynamically filled with applicant details -->
+        </div>
+
+        <!-- 9 State Agencies Scoring Controls -->
+        <h4 style="margin: 0 0 10px 0; font-size: 0.92rem; color: #0f172a; display: flex; align-items: center; gap: 6px;">
+          <i class="fa-solid fa-scale-balanced text-emerald-600"></i> 9 Dövlət Qurumu üzrə Bal Göstəriciləri (Cəmi 100 bal)
+        </h4>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px;">
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">1. KTN (Aqrar Uyğunluq) - max 20</label>
+            <input type="number" id="score-ktn" class="form-control-admin" min="0" max="20" value="18" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">2. İN (İqtisadi Səmərə) - max 15</label>
+            <input type="number" id="score-in" class="form-control-admin" min="0" max="15" value="14" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">3. ƏMDX (Kadastr) - max 15</label>
+            <input type="number" id="score-emdx" class="form-control-admin" min="0" max="15" value="15" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">4. ETSN (Ekoloji Uyğunluq) - max 10</label>
+            <input type="number" id="score-etsn" class="form-control-admin" min="0" max="10" value="9" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">5. ADSEA (Su Təminatı) - max 10</label>
+            <input type="number" id="score-adsea" class="form-control-admin" min="0" max="10" value="10" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">6. AXA (Aqrar Xidmətlər) - max 10</label>
+            <input type="number" id="score-axa" class="form-control-admin" min="0" max="10" value="9" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">7. AKİA (İnvestisiya Zəmanəti) - max 10</label>
+            <input type="number" id="score-akia" class="form-control-admin" min="0" max="10" value="9" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">8. PXN (Mina Təhlükəsizliyi) - max 5</label>
+            <input type="number" id="score-pxn" class="form-control-admin" min="0" max="5" value="5" oninput="calculateTotalScoreLive()">
+          </div>
+          <div class="form-group-admin" style="margin: 0; background: #fff; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;">
+            <label style="font-size: 0.75rem; font-weight: 700; color: #0f172a;">9. EKTİS (Fermer Balı) - max 5</label>
+            <input type="number" id="score-ektis" class="form-control-admin" min="0" max="5" value="5" oninput="calculateTotalScoreLive()">
+          </div>
+        </div>
+
+        <div style="background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+          <div>
+            <div style="font-size: 0.78rem; color: #166534; font-weight: 700; text-transform: uppercase;">Yekun Müsabiqə Uyğunluq Skoru</div>
+            <div style="font-size: 0.75rem; color: #15803d; margin-top: 2px;">(Min. təsdiq həddi: 70 bal)</div>
+          </div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: #047857;" id="live-total-score">94 / 100</div>
+        </div>
+
+        <!-- Commission Notes & Official Decision -->
+        <div class="form-group-admin">
+          <label>Müsabiqə Komissiyasının Rəsmi Rəyi və Qərarı</label>
+          <textarea id="app-scoring-notes" class="form-control-admin" rows="3" placeholder="9 dövlət qurumunun nümayəndələrinin ümumi rəyi, investisiya öhdəliklərinin icra müddəti..."></textarea>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e2e8f0;">
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn-admin btn-admin-danger" onclick="submitScoringDecision('REJECTED')">
+              <i class="fa-solid fa-xmark"></i> İmtina Et
+            </button>
+            <button type="button" class="btn-admin btn-admin-secondary" onclick="submitScoringDecision('UNDER_REVIEW')">
+              <i class="fa-solid fa-clock"></i> Əlavə Yoxlamaya Göndər
+            </button>
+          </div>
+          <button type="button" class="btn-admin btn-admin-primary" style="background: #047857; font-weight: 700;" onclick="submitScoringDecision('APPROVED')">
+            <i class="fa-solid fa-check"></i> Sənədləri Təsdiqlə &amp; Qalib Seç
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: CREATE COOP ================= -->
+  <div class="admin-modal-overlay" id="modal-create-coop">
+    <div class="admin-modal" style="max-width: 600px;">
+      <div class="admin-modal-header">
+        <h3><i class="fa-solid fa-handshake"></i> Yeni İnvestor-Sahibkar Tərəfdaşlıq Müqaviləsi</h3>
+        <button class="modal-close-btn" onclick="closeModal('modal-create-coop')"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <form onsubmit="handleCreateCooperation(event)" class="admin-modal-body">
+        <div class="form-group-admin">
+          <label>İnvestor (Maliyyə yatıran şirkət)</label>
+          <select id="coop-investor-select" class="form-control-admin" required></select>
+        </div>
+        <div class="form-group-admin">
+          <label>Sahibkar (Torpağı becərəcək fermer)</label>
+          <select id="coop-sahibkar-select" class="form-control-admin" required></select>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group-admin">
+            <label>Qarabağ Rayonu</label>
+            <select id="coop-district" class="form-control-admin">
+              <option value="Ağdam">Ağdam</option>
+              <option value="Füzuli">Füzuli</option>
+              <option value="Cəbrayıl">Cəbrayıl</option>
+              <option value="Zəngilan">Zəngilan</option>
+              <option value="Qubadlı">Qubadlı</option>
+              <option value="Laçın">Laçın</option>
+              <option value="Kəlbəcər">Kəlbəcər</option>
+              <option value="Şuşa">Şuşa</option>
+              <option value="Xocavənd">Xocavənd</option>
+              <option value="Xocalı">Xocalı</option>
+            </select>
+          </div>
+          <div class="form-group-admin">
+            <label>Birgə Sahə (ha)</label>
+            <input type="number" id="coop-area" class="form-control-admin" value="120" min="5" required>
+          </div>
+        </div>
+        <div class="form-group-admin">
+          <label>İnvestisiya Həcmi (AZN)</label>
+          <input type="number" id="coop-budget" class="form-control-admin" value="450000" min="10000" required>
+        </div>
+        <div class="form-group-admin">
+          <label>Müqavilə Şərtləri və Aqro Texnoloji Plan</label>
+          <textarea id="coop-notes" class="form-control-admin" rows="2" placeholder="Suvarma xərcləri, texnika təminatı və məhsul bölgüsü faizləri..."></textarea>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" class="btn-admin btn-admin-secondary" onclick="closeModal('modal-create-coop')">Ləğv Et</button>
+          <button type="submit" class="btn-admin btn-admin-primary">Müqaviləni İmzala &amp; Təsdiqlə</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MODAL: 9 QURUMDAN İBARƏT DÖVLƏT MÜSABİQƏ KOMİSSİYASI PROTOKOLU ================= -->
+  <div class="admin-modal-overlay" id="modal-commission-protocol" style="display: none;">
+    <div class="admin-modal-box" style="max-width: 900px; padding: 0; overflow: hidden; border-radius: 16px;">
+      <div style="background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); color: #fff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: #fde047;">
+            <i class="fa-solid fa-gavel"></i>
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span id="protocol-number-badge" style="background: #fde047; color: #022c22; font-size: 0.68rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; font-family: monospace;">PROTOKOL №-09/QAR-0001</span>
+              <span style="font-size: 0.74rem; color: #a7f3d0;">9 Səlahiyyətli Dövlət Qurumunun Birgə Qərarı</span>
+            </div>
+            <h3 style="font-size: 1.1rem; font-weight: 800; margin-top: 2px; color: #fff;">
+              İnvestisiya Torpaq Müsabiqəsi Üzrə Yekun Dövlət Qərar Protokolu
+            </h3>
+          </div>
+        </div>
+        <button class="admin-modal-close" style="color: #fff; font-size: 1.6rem; background: none; border: none; cursor: pointer;" onclick="closeModal('modal-commission-protocol')">&times;</button>
+      </div>
+
+      <div style="padding: 22px 24px; max-height: 75vh; overflow-y: auto;">
+        <!-- Proclamation Banner -->
+        <div id="protocol-winner-card" style="background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%); border: 2px solid #059669; border-radius: 12px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 18px;">
+          <div>
+            <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 800; color: #047857;">
+              <i class="fa-solid fa-award"></i> Komissiyanın Yekun Seçimi:
+            </span>
+            <div id="protocol-winner-name" style="font-size: 1.2rem; font-weight: 900; color: #064e3b; margin-top: 2px;">
+              "Qarabağ Aqro-İnvest MMC" (Elmir Quliyev)
+            </div>
+            <div style="font-size: 0.76rem; color: #065f46; margin-top: 4px; display: flex; gap: 14px; flex-wrap: wrap;">
+              <span>Status: <strong id="protocol-winner-party">Hüquqi Şəxs (MMC)</strong></span>
+              <span>Torpaq Kadastr: <strong id="protocol-parcel-cadastre">AGD-2026-0012 (Ağdam, 120 ha)</strong></span>
+            </div>
+          </div>
+          <div style="text-align: right; background: #fff; padding: 10px 18px; border-radius: 10px; border: 1px solid #a7f3d0;">
+            <div style="font-size: 0.68rem; color: #64748b; text-transform: uppercase; font-weight: 700;">Kollegial Uyğunluq Balı</div>
+            <div id="protocol-winner-score" style="font-size: 1.5rem; font-weight: 900; color: #059669;">95 / 100</div>
+            <div id="protocol-vote-tally-pill" style="font-size: 0.72rem; color: #047857; font-weight: 800;">9 / 9 Lehinə Səs</div>
+          </div>
+        </div>
+
+        <!-- Decision Rule Box -->
+        <div style="background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 12px 16px; font-size: 0.8rem; color: #78350f; line-height: 1.45; margin-bottom: 18px;">
+          <strong>Qərarın Hüquqi Əsası:</strong> AR Prezidentinin 27 noyabr 2024-cü il tarixli 236 nömrəli Fərmanına və Torpaq Müsabiqəsi Əsasnaməsinə uyğun olaraq, investisiya üçün ayrılmış torpaqlarda qalib <em>ən yüksək məbləğ təklif edən deyil, biznes planı aqroiqlim parametrlərinə, torpaq bonitetinə, qənaətli suvarma sisteminə və yerli məşğulluq kvotasına ən uyğun olan</em> iddiaçı 9 dövlət qurumunun ən azı 5 səs çoxluğu ilə təsdiq edilir.
+        </div>
+
+        <!-- 9 State Agencies Digital Signatures Grid -->
+        <div style="margin-bottom: 18px;">
+          <div style="font-size: 0.82rem; font-weight: 800; color: #0f172a; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-solid fa-signature text-emerald-600"></i> 9 Səlahiyyətli Dövlət Qurumu Nümayəndəsinin Rəsmi Rəyi və SİMA Elektron İmzaları
+          </div>
+          <div id="protocol-agencies-signatures" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px;">
+            <!-- Populated dynamically by admin.js -->
+          </div>
+        </div>
+
+        <!-- Integrated Clearance Statement -->
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px 16px; font-size: 0.76rem; color: #475569; line-height: 1.45;">
+          <strong style="color: #0f172a;"><i class="fa-solid fa-shield-check text-emerald-600"></i> Dövlət Servislərindən İnteqrasiya Yoxlanışı:</strong>
+          İddiaçının AVİS (0% aqro vergi və borcun olmaması), EKTİS (aqrar təcrübə reyestri), DƏK (LADM torpaq kadastr), DSMF (sosial ödənişlər) və müvəkkil bankın maliyyə zəmanəti elektron qaydada yoxlanılmış və tam təsdiq edilmişdir.
+        </div>
+      </div>
+
+      <div style="background: #f1f5f9; border-top: 1px solid #e2e8f0; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <span style="font-size: 0.72rem; color: #64748b; font-family: monospace;">
+          <i class="fa-solid fa-lock"></i> SHA-256 SİMA Rəqəmsal Möhür: 7F8E-91A2-4B5C-2026-QAR
+        </span>
+        <button type="button" class="btn-admin btn-admin-secondary" onclick="closeModal('modal-commission-protocol')">Bağla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="admin-toast-container" id="admin-toast-container"></div>
+
+  <!-- Shared Admin Script -->
+  <script src="js/admin.js?v=20261016-docsv1"></script>
+</body>
+</html>

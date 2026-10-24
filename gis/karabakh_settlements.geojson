@@ -1,0 +1,312 @@
+{
+  "type": "FeatureCollection",
+  "name": "Qarabağ və Şərqi Zəngəzur Qəsəbələri və Rəsmi Ərazi Hüdudları",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "settlement-asgaran",
+      "properties": {
+        "id": "settlement-asgaran",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Əsgəran qəsəbəsi",
+        "aliases": ["Asgaran", "Askeran", "Esgeran", "Eskaran", "Əsgəran"],
+        "district": "Xocalı",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "iebt_code": "0401001",
+        "area_sqkm": 12.4,
+        "area_ha": 1240,
+        "population": 4200,
+        "elevation_m": 530,
+        "state_cadastre_doc": "AR Dövlət Şəhərsalma və Arxitektura Komitəsi Əsgəran Baş Planı (2025-2040)",
+        "description": "Əsgəran qalası, Qarqarçay vadisi, Yevlax-Xocalı-Laçın magistralı, bağçılıq və aqrar emal müəssisələri.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [46.833, 39.938]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [46.818, 39.952],
+            [46.832, 39.956],
+            [46.846, 39.950],
+            [46.852, 39.940],
+            [46.849, 39.928],
+            [46.838, 39.922],
+            [46.825, 39.924],
+            [46.817, 39.934],
+            [46.815, 39.945],
+            [46.818, 39.952]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-hadrut",
+      "properties": {
+        "id": "settlement-hadrut",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Hadrut qəsəbəsi",
+        "aliases": ["Hadrut", "Hadrout", "Hadrud"],
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "iebt_code": "0901001",
+        "area_sqkm": 14.2,
+        "area_ha": 1420,
+        "population": 4800,
+        "elevation_m": 720,
+        "state_cadastre_doc": "AR Dövlət Şəhərsalma və Arxitektura Komitəsi Hadrut Baş Planı",
+        "description": "Tarixi Hadrut qəsəbəsi, dağ-meşə relyefi, intensiv bağçılıq və rekreasiya zonası.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [47.030, 39.524]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [47.015, 39.534],
+            [47.032, 39.538],
+            [47.045, 39.532],
+            [47.048, 39.520],
+            [47.041, 39.510],
+            [47.026, 39.512],
+            [47.016, 39.522],
+            [47.015, 39.534]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-suqovushan",
+      "properties": {
+        "id": "settlement-suqovushan",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Suqovuşan qəsəbəsi",
+        "aliases": ["Suqovushan", "Sugovushan", "Suqovusan"],
+        "district": "Tərtər / Ağdərə",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "iebt_code": "1001002",
+        "area_sqkm": 11.8,
+        "area_ha": 1180,
+        "population": 3600,
+        "elevation_m": 460,
+        "state_cadastre_doc": "Suqovuşan Turizm və Rekreasiya Baş Planı",
+        "description": "Suqovuşan su anbarı, balıqçılıq, hidroenerji və su idmanı turizmi mərkəzi.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [46.757, 40.354]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [46.744, 40.362],
+            [46.760, 40.366],
+            [46.772, 40.359],
+            [46.771, 40.347],
+            [46.756, 40.342],
+            [46.743, 40.349],
+            [46.744, 40.362]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-mincivan",
+      "properties": {
+        "id": "settlement-mincivan",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Mincivan qəsəbəsi",
+        "aliases": ["Mincivan", "Minjivan", "Mincıvan"],
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "iebt_code": "0801002",
+        "area_sqkm": 15.6,
+        "area_ha": 1560,
+        "population": 5200,
+        "elevation_m": 350,
+        "state_cadastre_doc": "Zəngilan Mincivan Logistika və Aqro-qəsəbə Baş Planı",
+        "description": "Zəngəzur dəhlizi dəmiryolu stansiyası, logistika terminalı və aqro-ticarət mərkəzi.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [46.720, 39.030]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [46.705, 39.040],
+            [46.724, 39.044],
+            [46.735, 39.035],
+            [46.734, 39.020],
+            [46.718, 39.016],
+            [46.706, 39.025],
+            [46.705, 39.040]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-agband",
+      "properties": {
+        "id": "settlement-agband",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Ağbənd qəsəbəsi",
+        "aliases": ["Agband", "Agbend", "Ağbənd"],
+        "district": "Zəngilan",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "iebt_code": "0801003",
+        "area_sqkm": 9.5,
+        "area_ha": 950,
+        "population": 3100,
+        "elevation_m": 320,
+        "state_cadastre_doc": "Ağbənd Sərhəd-Gömrük və Aqrar Tranzit Planı",
+        "description": "Araz çayı sahili, sərhəd-keçid məntəqəsi və beynəlxalq tranzit qovşağı.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [46.568, 38.905]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [46.556, 38.913],
+            [46.572, 38.915],
+            [46.581, 38.908],
+            [46.578, 38.897],
+            [46.564, 38.895],
+            [46.555, 38.902],
+            [46.556, 38.913]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-qirmizibazar",
+      "properties": {
+        "id": "settlement-qirmizibazar",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Qırmızı Bazar qəsəbəsi",
+        "aliases": ["Qirmizi Bazar", "Girmizi Bazar", "Krasny Bazar", "Qırmızı Bazar"],
+        "district": "Xocavənd",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "iebt_code": "0901002",
+        "area_sqkm": 8.7,
+        "area_ha": 870,
+        "population": 2900,
+        "elevation_m": 610,
+        "state_cadastre_doc": "Xocavənd Üzümçülük və Qəsəbə Baş Planı",
+        "description": "Xocavənd üzümçülük massivi, şərab istehsalı və dağətəyi kənd təsərrüfatı.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [46.953, 39.676]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [46.942, 39.684],
+            [46.958, 39.688],
+            [46.966, 39.680],
+            [46.964, 39.668],
+            [46.950, 39.664],
+            [46.941, 39.672],
+            [46.942, 39.684]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-horadiz",
+      "properties": {
+        "id": "settlement-horadiz",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "Horadiz qəsəbəsi",
+        "aliases": ["Horadiz", "Goradiz"],
+        "district": "Füzuli",
+        "economic_region": "Qarabağ iqtisadi rayonu",
+        "iebt_code": "0701002",
+        "area_sqkm": 18.5,
+        "area_ha": 1850,
+        "population": 7800,
+        "elevation_m": 290,
+        "state_cadastre_doc": "Füzuli Horadiz Aqrar Şəbəkə Planı",
+        "description": "Füzulinin Arazboyu aqrar qəsəbəsi, suvarılan əkinçilik və taxılçılıq mərkəzi.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [47.339, 39.448]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [47.324, 39.458],
+            [47.345, 39.461],
+            [47.356, 39.452],
+            [47.353, 39.438],
+            [47.336, 39.435],
+            [47.323, 39.444],
+            [47.324, 39.458]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "settlement-istisu",
+      "properties": {
+        "id": "settlement-istisu",
+        "entity_type": "TOWN",
+        "category_az": "Qəsəbə",
+        "name": "İstisu qəsəbəsi",
+        "aliases": ["Istisu", "İstisu"],
+        "district": "Kəlbəcər",
+        "economic_region": "Şərqi Zəngəzur iqtisadi rayonu",
+        "iebt_code": "0501002",
+        "area_sqkm": 10.3,
+        "area_ha": 1030,
+        "population": 2500,
+        "elevation_m": 2100,
+        "state_cadastre_doc": "Kəlbəcər İstisu Müalicə-Sanatoriya və Qəsəbə Baş Planı",
+        "description": "Təbii mineral İstisu kurortu, mineral su qablaşdırma zavodu və dağ balçılığı.",
+        "color": "#ea580c",
+        "icon": "fa-tree-city",
+        "centroid": [45.961, 39.954]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [45.949, 39.962],
+            [45.965, 39.966],
+            [45.974, 39.959],
+            [45.972, 39.946],
+            [45.958, 39.942],
+            [45.948, 39.950],
+            [45.949, 39.962]
+          ]
+        ]
+      }
+    }
+  ]
+}
