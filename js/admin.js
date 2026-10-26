@@ -5,7 +5,7 @@ function getApiEndpoint(path) {
     return 'http://localhost:8088' + path;
   }
   if (window.location.hostname && window.location.hostname.endsWith('github.io')) {
-    return 'https://invest-area-backing.vercel.app' + path;
+    return path;
   }
   if (window.location.port && window.location.port !== '8088') {
     const host = window.location.hostname || 'localhost';
