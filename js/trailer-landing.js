@@ -217,26 +217,35 @@ function toggleTrailerOverlay() {
 
 // 6. Navigation and Portal Transitions
 function jumpToPortal(tabName) {
-  const portalRoot = document.getElementById('portal-root');
-  if (portalRoot) {
-    portalRoot.scrollIntoView({ behavior: 'smooth' });
-    if (tabName && typeof switchTab === 'function') {
-      switchTab(tabName);
+  try {
+    const user = localStorage.getItem('invest_area_user');
+    if (!user) {
+      if (typeof showNotification === 'function') {
+        showNotification('Zəhmət olmasa, əvvəlcə Şəxsi Kabinetə daxil olun və ya qeydiyyatdan keçin.');
+      }
+      if (typeof focusAuthCard === 'function') {
+        focusAuthCard('login');
+      }
+      return;
     }
-  } else {
-    const target = tabName ? "./index.html#" + tabName : "./index.html#map";
-    window.location.href = target;
+    const portalRoot = document.getElementById('portal-root');
+    if (portalRoot) {
+      portalRoot.scrollIntoView({ behavior: 'smooth' });
+      if (tabName && typeof switchTab === 'function') {
+        switchTab(tabName);
+      }
+    } else {
+      const target = tabName ? "./portal.html#" + tabName : "./portal.html#map";
+      window.location.href = target;
+    }
+  } catch (e) {
+    window.location.href = tabName ? "./portal.html#" + tabName : "./portal.html#map";
   }
 }
 window.jumpToPortal = jumpToPortal;
 
 function jumpToLanding() {
-  const gateway = document.getElementById('cinematic-gateway');
-  if (gateway) {
-    gateway.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    window.location.href = "./";
-  }
+  window.location.href = "./index.html";
 }
 window.jumpToLanding = jumpToLanding;
 

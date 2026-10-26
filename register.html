@@ -7,7 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@200;300;400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -37,473 +37,520 @@
     };
   </script>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Strict Entrance Lock: Standalone gateway, no downward scroll */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden !important;
+      position: fixed;
+    }
+  </style>
 </head>
-<body class="relative w-screen h-screen overflow-hidden bg-black font-sans text-slate-100 select-none">
+<body class="relative w-screen h-screen overflow-hidden bg-black font-sans text-slate-100 select-none flex flex-col justify-between">
 
-  <!-- ========================================== -->
-  <!-- 1. TRAILER BACKGROUND (Cinematic Engine)   -->
-  <!-- ========================================== -->
-  <div id="trailer-viewport">
-    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-75 contrast-125 pointer-events-none" poster="images/trailer-4.jpg">
-      <source src="videos/agro-hero.webm" type="video/webm">
-      <source src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Deutsche_Welle_-_Daily_Drone_-_Rapsfeld.webm" type="video/webm">
-    </video>
-    <div id="sc"></div>
-    <div class="gd-trailer"></div>
-    <div id="progress-line"><div></div></div>
-  </div>
+  <section id="cinematic-gateway" class="relative w-full min-h-screen overflow-hidden bg-black font-sans text-slate-100 select-none flex flex-col justify-between" style="min-height: 100vh;">
 
-  <!-- ========================================== -->
-  <!-- 2. TOP GLOBAL NAVIGATION BAR (HEADER)      -->
-  <!-- ========================================== -->
-  <header class="absolute top-0 left-0 right-0 z-30 px-6 lg:px-12 py-5 flex items-center justify-between pointer-events-auto bg-gradient-to-b from-black/90 via-black/50 to-transparent">
-    <!-- Brand / Identity -->
-    <a href="index.html" class="flex items-center gap-4 text-white no-underline group">
-      <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 via-teal-700 to-emerald-950 flex items-center justify-center border border-emerald-400/40 shadow-lg shadow-emerald-900/50 group-hover:scale-105 transition-transform">
-        <i class="fa-solid fa-seedling text-teal-300 text-xl"></i>
-      </div>
-      <div>
-        <div class="flex items-center gap-2">
-          <span class="text-white font-extrabold tracking-tight text-lg">Qarabağ Aqro İnvestisiya</span>
-          <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wider bg-emerald-500/20 text-teal-300 border border-emerald-500/30 uppercase">Portal</span>
-        </div>
-        <p class="text-[11px] text-slate-300 tracking-wide font-normal">İşğaldan azad edilmiş ərazilər üzrə dövlət investisiya müsabiqəsi</p>
-      </div>
-    </a>
-
-    <!-- Quick Navigation back to main portal -->
-    <nav class="hidden md:flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs font-medium text-slate-300">
-      <a href="index.html" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-emerald-600/40 text-teal-300 transition-colors flex items-center gap-1.5 no-underline">
-        <i class="fa-solid fa-house text-teal-400"></i> Əsas Portala Keçid
-      </a>
-      <a href="index.html#map" class="px-3 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-slate-300 no-underline">
-        <i class="fa-solid fa-map-location-dot text-emerald-400"></i> Aqrar Xəritə
-      </a>
-      <a href="index.html#catalog" class="px-3 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-slate-300 no-underline">
-        <i class="fa-solid fa-table-cells-large text-emerald-400"></i> Kataloq (34 Lot)
-      </a>
-    </nav>
-
-    <!-- Header Actions (Sound, Lang, Sign In / Sign Up) -->
-    <div class="flex items-center gap-3">
-      <!-- Sound toggle for ambient audio -->
-      <button id="mu" class="px-3.5 py-1.5 rounded-full bg-black/50 hover:bg-black/75 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider text-slate-200 flex items-center gap-2 transition-all cursor-pointer">
-        <i id="mu-icon" class="fa-solid fa-volume-xmark text-teal-400"></i>
-        <span id="mu-text">SƏSİ AÇ</span>
-      </button>
-
-      <!-- Language switch -->
-      <div class="hidden sm:flex items-center text-xs font-semibold bg-black/40 border border-white/15 rounded-full p-0.5">
-        <button type="button" class="px-2.5 py-1 rounded-full bg-emerald-700/80 text-white border-none cursor-pointer">AZ</button>
-        <button type="button" class="px-2.5 py-1 rounded-full text-slate-400 hover:text-white border-none bg-transparent cursor-pointer">EN</button>
-      </div>
-
-      <!-- Sign In Button -->
-      <button type="button" onclick="focusAuthCard('login')" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 transition-all cursor-pointer">
-        Daxil Ol
-      </button>
-
-      <!-- PRIMARY SIGN UP BUTTON -->
-      <button type="button" onclick="focusAuthCard('signup')" class="px-5 py-2.5 rounded-xl text-xs font-extrabold text-slate-950 bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 shadow-lg shadow-teal-500/25 border border-teal-200 transition-all flex items-center gap-2 group transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
-        <i class="fa-solid fa-user-plus text-emerald-900 group-hover:scale-110 transition-transform"></i>
-        <span>Qeydiyyat (Sign Up)</span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ========================================== -->
-  <!-- 3. MAIN FOREGROUND CONTENT (HERO + SIGNUP) -->
-  <!-- ========================================== -->
-  <main class="relative z-20 w-full h-full flex flex-col justify-between pt-24 pb-8 px-6 lg:px-14 pointer-events-none">
-
-    <!-- Top Info Pills -->
-    <div class="flex items-center gap-3 pointer-events-auto">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 backdrop-blur-md text-xs font-semibold text-teal-300 shadow-md">
-        <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
-        Dövlət Aqrar İnvestisiya Müsabiqəsi 2025–2026
-      </div>
-      <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 backdrop-blur-md text-xs text-slate-300">
-        <i class="fa-solid fa-shield-halved text-emerald-400"></i>
-        ASAN İmza & EKTİS İntegrasiyalı
-      </div>
+    <!-- 1. TRAILER BACKGROUND (Cinematic Engine with Karabakh Assets) -->
+    <div id="trailer-viewport">
+      <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40 brightness-75 contrast-125 pointer-events-none" poster="images/trailer-4.jpg">
+        <source src="videos/agro-hero.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Deutsche_Welle_-_Daily_Drone_-_Rapsfeld.webm" type="video/webm">
+      </video>
+      <div id="sc"></div>
+      <div class="gd-trailer"></div>
+      <div id="progress-line"><div></div></div>
     </div>
 
-    <!-- Center Grid: Left = Vision, Right = Fast Registration/Login Card -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-4">
-      
-      <!-- Left Column: Vision & Quick Indicators -->
-      <div class="lg:col-span-7 pointer-events-auto pb-4">
-        <!-- Live Scene Indicator -->
-        <div class="flex items-center gap-2 text-xs font-bold text-teal-400 tracking-widest uppercase mb-3">
-          <i class="fa-solid fa-play text-[10px] animate-pulse"></i>
-          <span id="current-scene-name">01 — Ağdam Aqrar-Sənaye Parkı</span>
+    <!-- 2. TOP GLOBAL NAVIGATION BAR (HEADER) -->
+    <header class="relative z-30 px-6 lg:px-12 py-5 flex items-center justify-between pointer-events-auto bg-gradient-to-b from-black/90 via-black/50 to-transparent">
+      <!-- Brand / Identity -->
+      <div class="flex items-center gap-4 cursor-pointer" onclick="jumpToLanding()">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-600 via-teal-700 to-emerald-950 flex items-center justify-center border border-emerald-400/40 shadow-lg shadow-emerald-900/50 hover:scale-105 transition-transform">
+          <i class="fa-solid fa-seedling text-teal-300 text-xl"></i>
         </div>
-
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg max-w-2xl">
-          Qarabağın münbit torpaqlarında <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-300 to-green-200">aqrar gələcəyinizi</span> qurun.
-        </h1>
-
-        <p class="mt-4 text-sm sm:text-base text-slate-200/90 font-medium max-w-xl leading-relaxed drop-shadow">
-          İşğaldan azad edilmiş torpaqlarda müasir əkinçilik, bağçılıq, heyvandarlıq və aqro-park layihələri üçün dövlət müsabiqəsində iştirak edin.
-        </p>
-
-<!-- Secondary CTA buttons -->
-        <div class="mt-7 flex flex-wrap items-center gap-3">
-          <button type="button" onclick="toggleTrailerOverlay()" class="px-4 py-2.5 rounded-xl bg-black/70 hover:bg-black/90 backdrop-blur-md border border-teal-500/40 text-teal-300 text-xs font-bold tracking-wide flex items-center gap-2 transition-all shadow-md cursor-pointer">
-            <i class="fa-solid fa-expand"></i> Tam Ekran Treyler
-          </button>
-          <button type="button" onclick="skipTrailerScene()" class="px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer">
-            <i class="fa-solid fa-forward-step"></i> Növbəti Sahə
-          </button>
-          <a href="index.html" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold flex items-center gap-2 transition-all shadow-lg shadow-emerald-950/50 border border-emerald-400/40 no-underline">
-            <i class="fa-solid fa-seedling"></i> Əsas Portala Keçid <i class="fa-solid fa-arrow-right text-[11px]"></i>
-          </a>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-white font-extrabold tracking-tight text-lg">Qarabağ Aqro İnvestisiya</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold tracking-wider bg-emerald-500/20 text-teal-300 border border-emerald-500/30 uppercase">Portal</span>
+          </div>
+          <p class="text-[11px] text-slate-300 tracking-wide font-normal">İşğaldan azad edilmiş ərazilər üzrə dövlət investisiya müsabiqəsi</p>
         </div>
       </div>
 
-      <!-- Right Column: Dedicated Fast SIGN-UP / Access Widget -->
-      <div class="lg:col-span-5 pointer-events-auto w-full max-w-md ml-auto">
-        <div class="glass-panel p-6 sm:p-7 rounded-3xl relative overflow-hidden" id="auth-fast-card">
-          
-          <!-- Decorative Top Glow -->
-          <div class="absolute -top-16 -right-16 w-36 h-36 bg-emerald-500/25 rounded-full blur-3xl pointer-events-none"></div>
+      <!-- Quick Navigation to existing system modules -->
+      <nav class="hidden md:flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs font-medium text-slate-300">
+        <button type="button" onclick="jumpToPortal('map')" class="px-3.5 py-1.5 rounded-full hover:text-white hover:bg-emerald-600/40 text-teal-300 transition-colors flex items-center gap-1.5 border-none bg-transparent cursor-pointer font-semibold">
+          <i class="fa-solid fa-map-location-dot text-teal-400"></i> Aqrar Xəritə
+        </button>
+        <button type="button" onclick="jumpToPortal('catalog')" class="px-3 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-slate-300 border-none bg-transparent cursor-pointer">
+          <i class="fa-solid fa-table-cells-large text-emerald-400"></i> Kataloq (34 Lot)
+        </button>
+        <button type="button" onclick="jumpToPortal('apply')" class="px-3 py-1 rounded-full hover:text-white hover:bg-white/10 transition-colors flex items-center gap-1.5 text-slate-300 border-none bg-transparent cursor-pointer">
+          <i class="fa-solid fa-file-signature text-emerald-400"></i> Elektron Müraciət
+        </button>
+        <a href="pitch-deck.html" target="_blank" class="px-3 py-1 rounded-full hover:text-white hover:bg-emerald-800/40 text-emerald-300 transition-colors flex items-center gap-1.5 no-underline">
+          <i class="fa-solid fa-slideshare text-emerald-400"></i> Pitch Deck
+        </a>
+      </nav>
 
-          <!-- Header of Form -->
-          <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
-            <div>
-              <div class="text-xs font-bold text-teal-400 uppercase tracking-wider flex items-center gap-1.5">
-                <i class="fa-solid fa-bolt"></i> Dərhal Başlayın
+      <!-- Header Actions (Sound, Lang, Sign In / Sign Up) -->
+      <div class="flex items-center gap-3">
+        <!-- Sound toggle for ambient audio -->
+        <button id="mu" class="px-3.5 py-1.5 rounded-full bg-black/50 hover:bg-black/75 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider text-slate-200 flex items-center gap-2 transition-all cursor-pointer">
+          <i id="mu-icon" class="fa-solid fa-volume-xmark text-teal-400"></i>
+          <span id="mu-text">SƏSİ AÇ</span>
+        </button>
+
+        <!-- Language switch -->
+        <div class="hidden sm:flex items-center text-xs font-semibold bg-black/40 border border-white/15 rounded-full p-0.5">
+          <button type="button" class="px-2.5 py-1 rounded-full bg-emerald-700/80 text-white border-none cursor-pointer">AZ</button>
+          <button type="button" class="px-2.5 py-1 rounded-full text-slate-400 hover:text-white border-none bg-transparent cursor-pointer">EN</button>
+        </div>
+
+        <!-- Sign In Button -->
+        <button type="button" onclick="focusAuthCard('login')" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 transition-all cursor-pointer">
+          Daxil Ol
+        </button>
+
+        <!-- PRIMARY SIGN UP BUTTON -->
+        <button type="button" onclick="focusAuthCard('signup')" class="px-5 py-2.5 rounded-xl text-xs font-extrabold text-slate-950 bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 shadow-lg shadow-teal-500/25 border border-teal-200 transition-all flex items-center gap-2 group transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer">
+          <i class="fa-solid fa-user-plus text-emerald-900 group-hover:scale-110 transition-transform"></i>
+          <span>Qeydiyyat (Sign Up)</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 3. MAIN FOREGROUND CONTENT (HERO + SIGNUP) -->
+    <div class="relative z-20 w-full flex-1 flex flex-col justify-between pt-4 pb-6 px-6 lg:px-14 pointer-events-none">
+
+      <!-- Top Info Pills -->
+      <div class="flex items-center gap-3 pointer-events-auto mb-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/70 border border-emerald-500/40 backdrop-blur-md text-xs font-semibold text-teal-300 shadow-md">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-ping"></span>
+          Dövlət Aqrar İnvestisiya Müsabiqəsi 2025–2026
+        </div>
+        <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 backdrop-blur-md text-xs text-slate-300">
+          <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+          ASAN İmza & EKTİS İntegrasiyalı
+        </div>
+      </div>
+
+      <!-- Center Grid: Left = Cinematic Dynamic Pitch, Right = Interactive Sign-Up Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center my-auto">
+        
+        <!-- Left Column: Vision & Quick Indicators -->
+        <div class="lg:col-span-7 pointer-events-auto pb-4">
+          <!-- Live Scene Indicator -->
+          <div class="flex items-center gap-2 text-xs font-bold text-teal-400 tracking-widest uppercase mb-3">
+            <i class="fa-solid fa-play text-[10px] animate-pulse"></i>
+            <span id="current-scene-name">01 — Ağdam Aqrar-Sənaye Parkı</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg max-w-2xl">
+            Qarabağın münbit torpaqlarında <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-300 to-green-200">aqrar gələcəyinizi</span> qurun.
+          </h1>
+
+          <p class="mt-4 text-sm sm:text-base text-slate-200/90 font-medium max-w-xl leading-relaxed drop-shadow">
+            İşğaldan azad edilmiş torpaqlarda müasir əkinçilik, bağçılıq, heyvandarlıq və aqro-park layihələri üçün dövlət müsabiqəsində iştirak edin.
+          </p>
+
+          <!-- Quick Meta Badges -->
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-xs font-medium text-slate-200">
+            <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
+              <i class="fa-solid fa-vector-square text-teal-400 text-sm"></i>
+              <div>
+                <div class="text-white font-bold text-sm">18,450 ha</div>
+                <div class="text-[10px] text-slate-400">Ümumi Torpaq Fondu</div>
               </div>
-              <h2 class="text-xl font-extrabold text-white mt-0.5">Portalda Qeydiyyat & Giriş</h2>
             </div>
-            <!-- Toggle Tabs -->
-            <div class="flex p-0.5 rounded-lg bg-black/50 border border-white/10 text-[11px] font-bold">
-              <button type="button" id="tab-signup-btn" onclick="switchFormTab('signup')" class="px-3 py-1 rounded-md bg-emerald-600 text-white transition-all shadow border-none cursor-pointer">
-                Qeydiyyat
-              </button>
-              <button type="button" id="tab-login-btn" onclick="switchFormTab('login')" class="px-3 py-1 rounded-md text-slate-400 hover:text-white transition-all border-none bg-transparent cursor-pointer">
-                Giriş
-              </button>
+            <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
+              <i class="fa-solid fa-layer-group text-emerald-400 text-sm"></i>
+              <div>
+                <div class="text-white font-bold text-sm">34 Aktiv Lot</div>
+                <div class="text-[10px] text-slate-400">7 Rayon üzrə</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/10">
+              <i class="fa-solid fa-award text-amber-400 text-sm"></i>
+              <div>
+                <div class="text-white font-bold text-sm">142 Müraciət</div>
+                <div class="text-[10px] text-slate-400">Reyestr Qeydiyyatı</div>
+              </div>
             </div>
           </div>
 
-          <!-- SIGN UP FORM -->
-          <form id="signup-form" onsubmit="handleLandingAuthSubmit(event, 'signup')" class="space-y-3">
-            <!-- Account Type / 2-Role System (Investor vs Sahibkar) -->
-            <div>
-              <label class="block text-[11px] font-semibold text-teal-300 mb-1">Müsabiqədə İştirak Rolunuz (2-li Sistem):</label>
-              <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-1">
-                <label id="lbl-role-investor" class="cursor-pointer flex items-center justify-center gap-2 p-2 rounded-xl bg-emerald-950/70 border border-emerald-500/50 text-teal-200 transition-all hover:bg-emerald-900/60">
-                  <input type="radio" name="acc_type" value="INVESTOR" checked class="accent-teal-400" onchange="updateRoleFieldLabels()">
-                  <span>İnvestor (MMC)</span>
+          <!-- Action buttons -->
+          <div class="mt-7 flex flex-wrap items-center gap-3">
+            <button type="button" onclick="toggleTrailerOverlay()" class="px-4 py-2.5 rounded-xl bg-black/70 hover:bg-black/90 backdrop-blur-md border border-teal-500/40 text-teal-300 text-xs font-bold tracking-wide flex items-center gap-2 transition-all shadow-md cursor-pointer">
+              <i class="fa-solid fa-expand"></i> Tam Ekran Treyler
+            </button>
+            <button type="button" onclick="skipTrailerScene()" class="px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer">
+              <i class="fa-solid fa-forward-step"></i> Növbəti Sahə
+            </button>
+            <button type="button" onclick="jumpToPortal('map')" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold flex items-center gap-2 transition-all shadow-lg shadow-emerald-950/50 border border-emerald-400/40 cursor-pointer">
+              <i class="fa-solid fa-map-location-dot"></i> Portala Keçid (Aqrar Xəritə & Kataloq) <i class="fa-solid fa-chevron-down text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Dedicated Fast SIGN-UP / Access Widget -->
+        <div class="lg:col-span-5 pointer-events-auto w-full max-w-md ml-auto">
+          <!-- Existing session banner (if already logged in) -->
+          <div id="existing-session-banner" style="display: none;"></div>
+
+          <div class="glass-panel p-6 sm:p-7 rounded-3xl relative overflow-hidden" id="auth-fast-card">
+            
+            <!-- Decorative Top Glow -->
+            <div class="absolute -top-16 -right-16 w-36 h-36 bg-emerald-500/25 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Header of Form -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
+              <div>
+                <div class="text-xs font-bold text-teal-400 uppercase tracking-wider flex items-center gap-1.5">
+                  <i class="fa-solid fa-bolt"></i> Dərhal Başlayın
+                </div>
+                <h2 class="text-xl font-extrabold text-white mt-0.5">Portalda Qeydiyyat & Giriş</h2>
+              </div>
+              <!-- Toggle Tabs -->
+              <div class="flex p-0.5 rounded-lg bg-black/50 border border-white/10 text-[11px] font-bold">
+                <button type="button" id="tab-signup-btn" onclick="switchFormTab('signup')" class="px-3 py-1 rounded-md bg-emerald-600 text-white transition-all shadow border-none cursor-pointer">
+                  Qeydiyyat
+                </button>
+                <button type="button" id="tab-login-btn" onclick="switchFormTab('login')" class="px-3 py-1 rounded-md text-slate-400 hover:text-white transition-all border-none bg-transparent cursor-pointer">
+                  Giriş
+                </button>
+              </div>
+            </div>
+
+            <!-- SIGN UP FORM -->
+            <form id="signup-form" onsubmit="handleLandingAuthSubmit(event, 'signup')" class="space-y-3">
+              <!-- Account Type / 2-Role System (Investor vs Sahibkar) -->
+              <div>
+                <label class="block text-[11px] font-semibold text-teal-300 mb-1">Müsabiqədə İştirak Rolunuz (2-li Sistem):</label>
+                <div class="grid grid-cols-2 gap-2 text-xs font-semibold mb-1">
+                  <label id="lbl-role-investor" class="cursor-pointer flex items-center justify-center gap-2 p-2 rounded-xl bg-emerald-950/70 border border-emerald-500/50 text-teal-200 transition-all hover:bg-emerald-900/60">
+                    <input type="radio" name="acc_type" value="INVESTOR" checked class="accent-teal-400" onchange="updateRoleFieldLabels()">
+                    <span>İnvestor (MMC)</span>
+                  </label>
+                  <label id="lbl-role-sahibkar" class="cursor-pointer flex items-center justify-center gap-2 p-2 rounded-xl bg-black/40 border border-white/10 text-slate-300 transition-all hover:bg-black/60">
+                    <input type="radio" name="acc_type" value="SAHIBKAR" class="accent-teal-400" onchange="updateRoleFieldLabels()">
+                    <span>Sahibkar (Fermer)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Full Name / Company -->
+              <div>
+                <label id="lbl-company-title" class="block text-[11px] font-medium text-slate-300 mb-1">Müəssisə və ya İnvestorun Adı</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
+                    <i class="fa-solid fa-building" id="icon-company-role"></i>
+                  </span>
+                  <input type="text" id="signup-name" required placeholder="məs: Qarabağ Aqro Export QSC" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                </div>
+              </div>
+
+              <!-- VÖEN + Phone row -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-medium text-slate-300 mb-1">VÖEN (10 rəqəm)</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
+                      <i class="fa-solid fa-fingerprint"></i>
+                    </span>
+                    <input type="text" id="signup-voen" required maxlength="10" placeholder="1403982121" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs font-mono placeholder:text-slate-500">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-medium text-slate-300 mb-1">Əlaqə Nömrəsi</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                    <input type="tel" id="signup-phone" required placeholder="+994 (50) 000-00-00" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                  </div>
+                </div>
+              </div>
+
+              <!-- FİN Kod + Şifrə row -->
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-medium text-slate-300 mb-1">FİN Kod (7 simvol) *</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
+                      <i class="fa-solid fa-id-card"></i>
+                    </span>
+                    <input type="text" id="signup-pin" required maxlength="7" placeholder="7 simvol" style="text-transform: uppercase;" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs font-mono placeholder:text-slate-500">
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-[11px] font-medium text-slate-300 mb-1">Şəxsi Şifrə *</label>
+                  <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
+                      <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input type="password" id="signup-password" required minlength="6" placeholder="Ən azı 6 simvol" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email Address -->
+              <div>
+                <label class="block text-[11px] font-medium text-slate-300 mb-1">Rəsmi E-poçt ünvanı</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <input type="email" id="signup-email" required placeholder="investor@agro-company.az" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                </div>
+              </div>
+
+              <!-- Target Investment Region -->
+              <div>
+                <label class="block text-[11px] font-medium text-slate-300 mb-1">Maraqlandığınız İqtisadi Rayon</label>
+                <select id="signup-region" class="input-field w-full px-3 py-2 rounded-xl text-xs text-slate-200">
+                  <option value="Ağdam">Ağdam rayonu (Mərkəzi Düzənlik Sahələri)</option>
+                  <option value="Füzuli">Füzuli rayonu (Dağətəyi və Düzən Bağçılıq)</option>
+                  <option value="Zəngilan">Zəngilan rayonu (Həkəri Vadisi & Heyvandarlıq)</option>
+                  <option value="Cəbrayıl">Cəbrayıl rayonu (Arazboyu Düzənlik)</option>
+                  <option value="Kəlbəcər">Kəlbəcər rayonu (Yaylak & Arıçılıq)</option>
+                  <option value="Laçın">Laçın rayonu (Qoz-fındıq & Giləmeyvə)</option>
+                </select>
+              </div>
+
+              <!-- Google Fast Sign-Up Button -->
+              <button type="button" onclick="openGoogleAuthModal()" class="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold flex items-center justify-center gap-2.5 transition-all shadow-md cursor-pointer border-none mb-1">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <span>Google ilə Qeydiyyatdan Keç</span>
+              </button>
+
+              <div class="flex items-center gap-2 my-2">
+                <div class="h-px bg-white/15 flex-1"></div>
+                <span class="text-[10px] text-slate-400">və ya form doldurun</span>
+                <div class="h-px bg-white/15 flex-1"></div>
+              </div>
+
+              <!-- Agreement Checkbox -->
+              <div class="flex items-start gap-2 pt-1">
+                <input type="checkbox" required id="agree" class="mt-0.5 accent-teal-400 rounded cursor-pointer">
+                <label for="agree" class="text-[11px] text-slate-300 leading-tight cursor-pointer">
+                  Müsabiqə Qaydaları və EKTİS şərtləri ilə razıyam.
                 </label>
-                <label id="lbl-role-sahibkar" class="cursor-pointer flex items-center justify-center gap-2 p-2 rounded-xl bg-black/40 border border-white/10 text-slate-300 transition-all hover:bg-black/60">
-                  <input type="radio" name="acc_type" value="SAHIBKAR" class="accent-teal-400" onchange="updateRoleFieldLabels()">
-                  <span>Sahibkar (Fermer)</span>
-                </label>
               </div>
-            </div>
 
-            <!-- Full Name / Company -->
-            <div>
-              <label id="lbl-company-title" class="block text-[11px] font-medium text-slate-300 mb-1">Müəssisə və ya İnvestorun Adı</label>
-              <div class="relative">
-                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
-                  <i class="fa-solid fa-building" id="icon-company-role"></i>
-                </span>
-                <input type="text" id="signup-name" required placeholder="məs: Qarabağ Aqro Export QSC" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
-              </div>
-            </div>
-
-            <!-- VÖEN + Phone row -->
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-[11px] font-medium text-slate-300 mb-1">VÖEN (10 rəqəm)</label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
-                    <i class="fa-solid fa-fingerprint"></i>
-                  </span>
-                  <input type="text" id="signup-voen" required maxlength="10" placeholder="1403982121" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs font-mono placeholder:text-slate-500">
+              <!-- Google reCAPTCHA v2 Widget for Signup -->
+              <div class="recaptcha-widget" id="signup-recaptcha-box" style="margin: 8px 0; background: #ffffff; border-radius: 8px; border: 1px solid #d1d5db; padding: 6px 12px;">
+                <div class="rc-anchor" style="display: flex; align-items: center; justify-content: space-between;">
+                  <div class="rc-checkbox-wrap" onclick="toggleRegisterRecaptcha('signup')" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <div class="rc-checkbox" id="rc-signup-checkbox" style="width: 24px; height: 24px; border: 2px solid #c1c1c1; border-radius: 3px; background: #fff;"></div>
+                    <span class="rc-label" style="font-size: 0.82rem; color: #1e293b; font-weight: 600;">Mən robot deyiləm</span>
+                  </div>
+                  <div class="rc-brand" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="width: 26px; height: 26px;">
+                    <div style="font-size: 0.6rem; color: #64748b; font-weight: bold;">reCAPTCHA</div>
+                  </div>
                 </div>
               </div>
-              <div>
-                <label class="block text-[11px] font-medium text-slate-300 mb-1">Əlaqə Nömrəsi</label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
-                    <i class="fa-solid fa-phone"></i>
-                  </span>
-                  <input type="tel" id="signup-phone" required placeholder="+994 (50) 000-00-00" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
-                </div>
+              <div id="signup-recaptcha-warning" style="display: none; color: #ef4444; font-size: 0.72rem; margin-top: 2px;">
+                <i class="fa-solid fa-triangle-exclamation"></i> Zəhmət olmasa, robot olmadığınızı təsdiq edin!
               </div>
-            </div>
 
-            <!-- FİN Kod + Şifrə row -->
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="block text-[11px] font-medium text-slate-300 mb-1">FİN Kod (7 simvol) *</label>
-                <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
-                    <i class="fa-solid fa-id-card"></i>
-                  </span>
-                  <input type="text" id="signup-pin" required maxlength="7" placeholder="7 simvol" style="text-transform: uppercase;" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs font-mono placeholder:text-slate-500">
+              <!-- SUBMIT SIGN UP BUTTON -->
+              <button type="submit" class="w-full py-2.5 px-4 rounded-xl font-extrabold text-xs text-slate-950 bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 shadow-lg shadow-teal-500/25 border border-teal-200 transition-all flex items-center justify-center gap-2 group mt-2 cursor-pointer">
+                <i class="fa-solid fa-id-card text-emerald-950 group-hover:rotate-12 transition-transform"></i>
+                <span>QEYDİYYATDAN KEÇ (SIGN UP)</span>
+                <i class="fa-solid fa-arrow-right text-[11px] text-emerald-950 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+
+              <!-- ASAN / SİMA Fast Sign-In alternative -->
+              <div class="pt-1 text-center">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1.5">və ya dövlət e-imza ilə birbaşa</span>
+                <div class="grid grid-cols-2 gap-2">
+                  <button type="button" onclick="startAsanAuth('signup')" class="py-1.5 px-2.5 rounded-lg bg-black/40 hover:bg-black/70 border border-white/10 text-[11px] font-semibold text-slate-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
+                    <i class="fa-solid fa-signature text-teal-400"></i> ASAN İmza
+                  </button>
+                  <button type="button" onclick="openSimaModal()" class="py-1.5 px-2.5 rounded-lg bg-black/40 hover:bg-black/70 border border-white/10 text-[11px] font-semibold text-slate-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
+                    <i class="fa-solid fa-mobile-screen text-emerald-400"></i> SİMA İmza
+                  </button>
                 </div>
               </div>
+            </form>
+
+            <!-- SIGN IN (LOGIN) FORM (With Demo Credentials Quick Fill) -->
+            <form id="login-form" onsubmit="handleLandingAuthSubmit(event, 'login')" class="space-y-3 hidden">
+              <!-- Google Fast Login Button -->
+              <button type="button" onclick="openGoogleAuthModal()" class="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold flex items-center justify-center gap-2.5 transition-all shadow-md cursor-pointer border-none mb-1">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <span>Google ilə Daxil Ol</span>
+              </button>
+
+              <div class="flex items-center gap-2 my-2">
+                <div class="h-px bg-white/15 flex-1"></div>
+                <span class="text-[10px] text-slate-400">və ya VÖEN / FİN ilə</span>
+                <div class="h-px bg-white/15 flex-1"></div>
+              </div>
+
+              <!-- Quick Demo Fill Buttons -->
+              <div class="p-2 rounded-xl bg-emerald-950/40 border border-emerald-500/20 text-[11px] mb-2">
+                <span class="text-[10px] text-teal-300 font-bold uppercase tracking-wider block mb-1">Demo Giriş Düymələri:</span>
+                <div class="grid grid-cols-3 gap-1.5">
+                  <button type="button" onclick="fillDemoCredentials('investor')" class="py-1.5 px-1.5 rounded-lg bg-teal-800/50 hover:bg-teal-700/70 text-teal-200 text-[10px] font-bold border border-teal-500/40 transition-all cursor-pointer text-center shadow-sm">
+                    🏢 Demo İnvestor
+                  </button>
+                  <button type="button" onclick="fillDemoCredentials('sahibkar')" class="py-1.5 px-1.5 rounded-lg bg-emerald-800/50 hover:bg-emerald-700/70 text-emerald-200 text-[10px] font-bold border border-emerald-500/40 transition-all cursor-pointer text-center shadow-sm">
+                    🚜 Demo Sahibkar
+                  </button>
+                  <button type="button" onclick="fillDemoCredentials('admin')" class="py-1.5 px-1.5 rounded-lg bg-amber-800/50 hover:bg-amber-700/70 text-amber-200 text-[10px] font-bold border border-amber-500/40 transition-all cursor-pointer text-center shadow-sm">
+                    🛡️ Demo Admin
+                  </button>
+                </div>
+              </div>
+
               <div>
-                <label class="block text-[11px] font-medium text-slate-300 mb-1">Şəxsi Şifrə *</label>
+                <label class="block text-[11px] font-medium text-slate-300 mb-1">E-poçt və ya VÖEN / FİN</label>
                 <div class="relative">
-                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none text-xs">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <input type="text" id="login-voen" required value="investor@qarabaq-agro.az" placeholder="adiniz@example.az və ya VÖEN" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <label class="text-[11px] font-medium text-slate-300">Şifrə</label>
+                  <a href="#" onclick="showNotification('Şifrənizi daxil edin'); return false;" class="text-[10px] text-teal-300 hover:underline">Şifrəni unutmusunuz?</a>
+                </div>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
                     <i class="fa-solid fa-lock"></i>
                   </span>
-                  <input type="password" id="signup-password" required minlength="6" placeholder="Ən azı 6 simvol" class="input-field w-full pl-8 pr-2.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                  <input type="password" id="login-password" required value="DemoPass2026!" placeholder="••••••••••••" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
                 </div>
               </div>
-            </div>
 
-            <!-- Email Address -->
-            <div>
-              <label class="block text-[11px] font-medium text-slate-300 mb-1">Rəsmi E-poçt ünvanı</label>
-              <div class="relative">
-                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
-                  <i class="fa-solid fa-envelope"></i>
-                </span>
-                <input type="email" id="signup-email" required placeholder="investor@agro-company.az" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
-              </div>
-            </div>
-
-            <!-- Target Investment Region -->
-            <div>
-              <label class="block text-[11px] font-medium text-slate-300 mb-1">Maraqlandığınız İqtisadi Rayon</label>
-              <select id="signup-region" class="input-field w-full px-3 py-2 rounded-xl text-xs text-slate-200">
-                <option value="Ağdam">Ağdam rayonu (Mərkəzi Düzənlik Sahələri)</option>
-                <option value="Füzuli">Füzuli rayonu (Dağətəyi və Düzən Bağçılıq)</option>
-                <option value="Zəngilan">Zəngilan rayonu (Həkəri Vadisi & Heyvandarlıq)</option>
-                <option value="Cəbrayıl">Cəbrayıl rayonu (Arazboyu Düzənlik)</option>
-                <option value="Kəlbəcər">Kəlbəcər rayonu (Yaylak & Arıçılıq)</option>
-                <option value="Laçın">Laçın rayonu (Qoz-fındıq & Giləmeyvə)</option>
-              </select>
-            </div>
-
-            <!-- Google Fast Sign-Up Button -->
-            <button type="button" onclick="openGoogleAuthModal()" class="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold flex items-center justify-center gap-2.5 transition-all shadow-md cursor-pointer border-none mb-1">
-              <svg viewBox="0 0 24 24" width="18" height="18">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-              </svg>
-              <span>Google ilə Qeydiyyatdan Keç</span>
-            </button>
-
-            <div class="flex items-center gap-2 my-2">
-              <div class="h-px bg-white/15 flex-1"></div>
-              <span class="text-[10px] text-slate-400">və ya form doldurun</span>
-              <div class="h-px bg-white/15 flex-1"></div>
-            </div>
-
-            <!-- Agreement Checkbox -->
-            <div class="flex items-start gap-2 pt-1">
-              <input type="checkbox" required id="agree" class="mt-0.5 accent-teal-400 rounded cursor-pointer">
-              <label for="agree" class="text-[11px] text-slate-300 leading-tight cursor-pointer">
-                Müsabiqə Qaydaları və EKTİS şərtləri ilə razıyam.
-              </label>
-            </div>
-
-            <!-- Google reCAPTCHA v2 Widget for Signup -->
-            <div class="recaptcha-widget" id="signup-recaptcha-box" style="margin: 8px 0; background: #ffffff; border-radius: 8px; border: 1px solid #d1d5db; padding: 6px 12px;">
-              <div class="rc-anchor" style="display: flex; align-items: center; justify-content: space-between;">
-                <div class="rc-checkbox-wrap" onclick="toggleRegisterRecaptcha('signup')" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
-                  <div class="rc-checkbox" id="rc-signup-checkbox" style="width: 24px; height: 24px; border: 2px solid #c1c1c1; border-radius: 3px; background: #fff;"></div>
-                  <span class="rc-label" style="font-size: 0.82rem; color: #1e293b; font-weight: 600;">Mən robot deyiləm</span>
-                </div>
-                <div class="rc-brand" style="display: flex; flex-direction: column; align-items: center;">
-                  <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="width: 26px; height: 26px;">
-                  <div style="font-size: 0.6rem; color: #64748b; font-weight: bold;">reCAPTCHA</div>
+              <!-- Google reCAPTCHA v2 Widget for Login -->
+              <div class="recaptcha-widget" id="login-recaptcha-box" style="margin: 8px 0; background: #ffffff; border-radius: 8px; border: 1px solid #d1d5db; padding: 6px 12px;">
+                <div class="rc-anchor" style="display: flex; align-items: center; justify-content: space-between;">
+                  <div class="rc-checkbox-wrap" onclick="toggleRegisterRecaptcha('login')" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <div class="rc-checkbox" id="rc-login-checkbox" style="width: 24px; height: 24px; border: 2px solid #c1c1c1; border-radius: 3px; background: #fff;"></div>
+                    <span class="rc-label" style="font-size: 0.82rem; color: #1e293b; font-weight: 600;">Mən robot deyiləm</span>
+                  </div>
+                  <div class="rc-brand" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="width: 26px; height: 26px;">
+                    <div style="font-size: 0.6rem; color: #64748b; font-weight: bold;">reCAPTCHA</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div id="signup-recaptcha-warning" style="display: none; color: #ef4444; font-size: 0.72rem; margin-top: 2px;">
-              <i class="fa-solid fa-triangle-exclamation"></i> Zəhmət olmasa, robot olmadığınızı təsdiq edin!
-            </div>
-
-            <!-- SUBMIT SIGN UP BUTTON -->
-            <button type="submit" class="w-full py-2.5 px-4 rounded-xl font-extrabold text-xs text-slate-950 bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 shadow-lg shadow-teal-500/25 border border-teal-200 transition-all flex items-center justify-center gap-2 group mt-2 cursor-pointer">
-              <i class="fa-solid fa-id-card text-emerald-950 group-hover:rotate-12 transition-transform"></i>
-              <span>QEYDİYYATDAN KEÇ (SIGN UP)</span>
-              <i class="fa-solid fa-arrow-right text-[11px] text-emerald-950 group-hover:translate-x-1 transition-transform"></i>
-            </button>
-
-            <!-- ASAN / SİMA Fast Sign-In alternative -->
-            <div class="pt-1 text-center">
-              <span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1.5">və ya dövlət e-imza ilə birbaşa</span>
-              <div class="grid grid-cols-2 gap-2">
-                <button type="button" onclick="startAsanAuth('signup')" class="py-1.5 px-2.5 rounded-lg bg-black/40 hover:bg-black/70 border border-white/10 text-[11px] font-semibold text-slate-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                  <i class="fa-solid fa-signature text-teal-400"></i> ASAN İmza
-                </button>
-                <button type="button" onclick="openSimaModal()" class="py-1.5 px-2.5 rounded-lg bg-black/40 hover:bg-black/70 border border-white/10 text-[11px] font-semibold text-slate-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                  <i class="fa-solid fa-mobile-screen text-emerald-400"></i> SİMA İmza
-                </button>
+              <div id="login-recaptcha-warning" style="display: none; color: #ef4444; font-size: 0.72rem; margin-top: 2px;">
+                <i class="fa-solid fa-triangle-exclamation"></i> Zəhmət olmasa, robot olmadığınızı təsdiq edin!
               </div>
-            </div>
-          </form>
 
-          <!-- SIGN IN (LOGIN) FORM (With Demo Credentials Quick Fill) -->
-          <form id="login-form" onsubmit="handleLandingAuthSubmit(event, 'login')" class="space-y-3 hidden">
-            <!-- Google Fast Login Button -->
-            <button type="button" onclick="openGoogleAuthModal()" class="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold flex items-center justify-center gap-2.5 transition-all shadow-md cursor-pointer border-none mb-1">
-              <svg viewBox="0 0 24 24" width="18" height="18">
-                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-              </svg>
-              <span>Google ilə Hesaba Daxil Ol</span>
-            </button>
+              <button type="submit" class="w-full py-2.5 px-4 rounded-xl font-extrabold text-xs text-white bg-emerald-700 hover:bg-emerald-600 shadow-lg shadow-emerald-950/50 border border-emerald-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer mt-1">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <span>Şəxsi Kabinetə Daxil Ol</span>
+              </button>
 
-            <!-- Demo Credentials Banner -->
-            <div class="p-2.5 rounded-xl bg-emerald-950/80 border border-emerald-500/30 text-[11px] text-slate-200">
-              <div class="text-teal-300 font-bold mb-1 flex items-center gap-1">
-                <i class="fa-solid fa-key text-xs"></i> Təsdiqlənmiş Giriş Məlumatları (Tək Kliklə Seçin):
-              </div>
-              <div class="grid grid-cols-2 gap-1.5 mt-1.5">
-                <button type="button" onclick="fillDemoCredentials('investor')" class="py-1 px-2 rounded-md bg-emerald-800/70 hover:bg-emerald-700 text-teal-100 font-semibold text-[10px] text-left transition-all border border-emerald-400/30">
-                  🏢 <strong>İnvestor</strong><br>
-                  <span class="text-[9px] text-slate-300">investor@qarabaq-agro.az</span>
-                </button>
-                <button type="button" onclick="fillDemoCredentials('sahibkar')" class="py-1 px-2 rounded-md bg-teal-900/70 hover:bg-teal-800 text-teal-100 font-semibold text-[10px] text-left transition-all border border-teal-400/30">
-                  🚜 <strong>Sahibkar</strong><br>
-                  <span class="text-[9px] text-slate-300">sahibkar@qarabaq-agro.az</span>
-                </button>
-              </div>
-              <div class="text-[10px] text-slate-400 mt-1.5">
-                Şifrə: <code class="text-teal-300 font-mono">DemoPass2026!</code>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-[11px] font-medium text-slate-300 mb-1">E-poçt və ya VÖEN / FİN</label>
-              <div class="relative">
-                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
-                  <i class="fa-solid fa-envelope"></i>
-                </span>
-                <input type="text" id="login-voen" required value="investor@qarabaq-agro.az" placeholder="adiniz@example.az və ya VÖEN" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
-              </div>
-            </div>
-
-            <div>
-              <div class="flex items-center justify-between mb-1">
-                <label class="text-[11px] font-medium text-slate-300">Şifrə</label>
-                <a href="#" onclick="showNotification('Şifrənizi daxil edin'); return false;" class="text-[10px] text-teal-300 hover:underline">Şifrəni unutmusunuz?</a>
-              </div>
-              <div class="relative">
-                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
-                  <i class="fa-solid fa-lock"></i>
-                </span>
-                <input type="password" id="login-password" required value="DemoPass2026!" placeholder="••••••••••••" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
-              </div>
-            </div>
-
-            <!-- Google reCAPTCHA v2 Widget for Login -->
-            <div class="recaptcha-widget" id="login-recaptcha-box" style="margin: 8px 0; background: #ffffff; border-radius: 8px; border: 1px solid #d1d5db; padding: 6px 12px;">
-              <div class="rc-anchor" style="display: flex; align-items: center; justify-content: space-between;">
-                <div class="rc-checkbox-wrap" onclick="toggleRegisterRecaptcha('login')" style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
-                  <div class="rc-checkbox" id="rc-login-checkbox" style="width: 24px; height: 24px; border: 2px solid #c1c1c1; border-radius: 3px; background: #fff;"></div>
-                  <span class="rc-label" style="font-size: 0.82rem; color: #1e293b; font-weight: 600;">Mən robot deyiləm</span>
-                </div>
-                <div class="rc-brand" style="display: flex; flex-direction: column; align-items: center;">
-                  <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="width: 26px; height: 26px;">
-                  <div style="font-size: 0.6rem; color: #64748b; font-weight: bold;">reCAPTCHA</div>
+              <!-- ASAN / SİMA alternative -->
+              <div class="pt-1 text-center">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1.5">Dövlət İnteqrasiyası</span>
+                <div class="grid grid-cols-2 gap-2">
+                  <button type="button" onclick="startAsanAuth('login')" class="w-full py-2 px-2.5 rounded-lg bg-teal-900/40 hover:bg-teal-900/70 border border-teal-500/30 text-[11px] font-bold text-teal-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
+                    <i class="fa-solid fa-key text-teal-300"></i> ASAN Login
+                  </button>
+                  <button type="button" onclick="openSimaModal()" class="w-full py-2 px-2.5 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/30 text-[11px] font-bold text-emerald-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
+                    <i class="fa-solid fa-mobile-screen text-emerald-300"></i> SİMA İmza
+                  </button>
                 </div>
               </div>
-            </div>
-            <div id="login-recaptcha-warning" style="display: none; color: #ef4444; font-size: 0.72rem; margin-top: 2px;">
-              <i class="fa-solid fa-triangle-exclamation"></i> Zəhmət olmasa, robot olmadığınızı təsdiq edin!
-            </div>
+            </form>
 
-            <button type="submit" class="w-full py-2.5 px-4 rounded-xl font-extrabold text-xs text-white bg-emerald-700 hover:bg-emerald-600 shadow-lg shadow-emerald-950/50 border border-emerald-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer mt-1">
-              <i class="fa-solid fa-arrow-right-to-bracket"></i>
-              <span>Şəxsi Kabinetə Daxil Ol</span>
-            </button>
-
-            <!-- ASAN / SİMA alternative -->
-            <div class="pt-1 text-center">
-              <span class="text-[10px] text-slate-400 uppercase tracking-widest block mb-1.5">Dövlət İnteqrasiyası</span>
-              <div class="grid grid-cols-2 gap-2">
-                <button type="button" onclick="startAsanAuth('login')" class="w-full py-2 px-2.5 rounded-lg bg-teal-900/40 hover:bg-teal-900/70 border border-teal-500/30 text-[11px] font-bold text-teal-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                  <i class="fa-solid fa-key text-teal-300"></i> ASAN Login
-                </button>
-                <button type="button" onclick="openSimaModal()" class="w-full py-2 px-2.5 rounded-lg bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/30 text-[11px] font-bold text-emerald-200 flex items-center justify-center gap-1.5 transition-all cursor-pointer">
-                  <i class="fa-solid fa-mobile-screen text-emerald-300"></i> SİMA İmza
-                </button>
-              </div>
-            </div>
-          </form>
-
+          </div>
         </div>
+
       </div>
 
-    </div>
-
-    <!-- Bottom Bar: Status Ticker & Scene Navigator -->
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 border-t border-white/10 pt-4 pointer-events-auto bg-black/60 backdrop-blur-md px-5 py-3 rounded-2xl">
-      <div class="flex items-center gap-3">
-        <span class="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      <!-- Bottom Bar: Status Ticker & Scene Navigator -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 border-t border-white/10 pt-4 pointer-events-auto bg-black/60 backdrop-blur-md px-5 py-3 rounded-2xl">
+        <div class="flex items-center gap-3">
+          <span class="flex items-center gap-2 text-emerald-400 font-semibold text-xs">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            EKTİS Canlı Şəbəkə Əlaqəsi Aktivdir
           </span>
-          EKTİS Canlı Şəbəkə Əlaqəsi Aktivdir
-        </span>
-        <span class="text-slate-600">|</span>
-        <span class="text-slate-300 hidden md:inline">Kənd Təsərrüfatı Nazirliyi & Technocare QSC Müsabiqə Platforması</span>
-      </div>
-
-      <div class="flex items-center gap-4">
-        <!-- Scene dots -->
-        <div id="scene-dots" class="flex items-center gap-1.5">
-          <!-- Populated by JS -->
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-300 hidden md:inline">Kənd Təsərrüfatı Nazirliyi & Technocare QSC Müsabiqə Platforması</span>
         </div>
-        <button type="button" onclick="toggleTrailerOverlay()" title="Fona baxmaq" class="text-slate-300 hover:text-white flex items-center gap-1 text-[11px] font-bold ml-2 border-none bg-transparent cursor-pointer">
-          <i class="fa-solid fa-film text-teal-400"></i> Treyler Rejimi
+
+        <div class="flex items-center gap-4">
+          <!-- Scene dots -->
+          <div id="scene-dots" class="flex items-center gap-1.5">
+            <!-- Populated by JS -->
+          </div>
+          <button type="button" onclick="toggleTrailerOverlay()" title="Fona baxmaq" class="text-slate-300 hover:text-white flex items-center gap-1 text-[11px] font-bold ml-2 border-none bg-transparent cursor-pointer">
+            <i class="fa-solid fa-film text-teal-400"></i> Treyler Rejimi
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. FULLSCREEN CINEMATIC OVERLAY (ON DEMAND) -->
+    <div id="cinema-overlay" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex-col items-center justify-between p-8 transition-opacity">
+      <div class="w-full flex justify-between items-center text-white">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-teal-600 flex items-center justify-center font-black">Q</div>
+          <span class="font-bold tracking-widest text-sm uppercase">Qarabağ — İnvestisiya Panoraması</span>
+        </div>
+        <button type="button" onclick="toggleTrailerOverlay()" class="px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 text-xs font-bold flex items-center gap-2 border border-white/20 transition-all cursor-pointer">
+          <i class="fa-solid fa-xmark"></i> Pəncərəni Bağla və Qeydiyyata Qayıt
         </button>
+      </div>
+
+      <!-- Center Play/Replay Prompt -->
+      <div class="text-center">
+        <div class="text-xs font-semibold text-teal-400 tracking-widest uppercase mb-2">İşğaldan Azad Edilmiş Torpaqlar</div>
+        <h3 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6">QARABAĞ AQRAR DIRÇƏLİŞ</h3>
+        <div class="flex items-center justify-center gap-4">
+          <button type="button" onclick="restartTrailer()" class="px-6 py-3 rounded-xl bg-teal-400 text-slate-950 font-extrabold text-sm hover:brightness-110 flex items-center gap-2 shadow-xl shadow-teal-500/20 cursor-pointer border-none">
+            <i class="fa-solid fa-rotate-left"></i> Yenidən Başlat
+          </button>
+          <button type="button" onclick="focusAuthCard('signup'); toggleTrailerOverlay();" class="px-6 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-sm hover:bg-emerald-500 flex items-center gap-2 shadow-xl shadow-emerald-900/40 cursor-pointer border-none">
+            <i class="fa-solid fa-user-plus"></i> Sign Up / Qeydiyyat
+          </button>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400">
+        Kənd Təsərrüfatı Nazirliyi Müsabiqə İcmalı (Ağdam, Araz Vadisi, Zəngilan, Füzuli)
       </div>
     </div>
 
-  </main>
-
-  <!-- ========================================== -->
-  <!-- 4. FULLSCREEN CINEMATIC OVERLAY (ON DEMAND)-->
-  <!-- ========================================== -->
-  <div id="cinema-overlay" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex-col items-center justify-between p-8 transition-opacity">
-    <div class="w-full flex justify-between items-center text-white">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-lg bg-teal-600 flex items-center justify-center font-black">Q</div>
-        <span class="font-bold tracking-widest text-sm uppercase">Qarabağ — İnvestisiya Panoraması</span>
-      </div>
-      <button type="button" onclick="toggleTrailerOverlay()" class="px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 text-xs font-bold flex items-center gap-2 border border-white/20 transition-all cursor-pointer">
-        <i class="fa-solid fa-xmark"></i> Pəncərəni Bağla və Qeydiyyata Qayıt
-      </button>
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-emerald-950/90 text-teal-200 border border-teal-400/40 px-5 py-3 rounded-2xl shadow-2xl backdrop-blur-md text-xs font-semibold flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px]">
+      <i class="fa-solid fa-circle-check text-teal-400"></i>
+      <span id="toast-text">Məlumat</span>
     </div>
 
-    <!-- Center Play/Replay Prompt -->
-    <div class="text-center">
-      <div class="text-xs font-semibold text-teal-400 tracking-widest uppercase mb-2">İşğaldan Azad Edilmiş Torpaqlar</div>
-      <h3 class="text-4xl sm:text-6xl font-black tracking-tight text-white mb-6">QARABAĞ AQRAR DIRÇƏLİŞ</h3>
-      <div class="flex items-center justify-center gap-4">
-        <button type="button" onclick="restartTrailer()" class="px-6 py-3 rounded-xl bg-teal-400 text-slate-950 font-extrabold text-sm hover:brightness-110 flex items-center gap-2 shadow-xl shadow-teal-500/20 cursor-pointer border-none">
-          <i class="fa-solid fa-rotate-left"></i> Yenidən Başlat
-        </button>
-        <button type="button" onclick="focusAuthCard('signup'); toggleTrailerOverlay();" class="px-6 py-3 rounded-xl bg-emerald-600 text-white font-extrabold text-sm hover:bg-emerald-500 flex items-center gap-2 shadow-xl shadow-emerald-900/40 cursor-pointer border-none">
-          <i class="fa-solid fa-user-plus"></i> Sign Up / Qeydiyyat
-        </button>
-      </div>
-    </div>
+  </section>
 
-    <div class="text-xs text-slate-400">
-      Kənd Təsərrüfatı Nazirliyi Müsabiqə İcmalı (Ağdam, Araz Vadisi, Zəngilan, Füzuli)
-    </div>
-  </div>
 
-  <!-- ================= Google OAuth 2.0 Official Auth Modal ================= -->
+<!-- ================= Google OAuth 2.0 Official Auth Modal ================= -->
   <div class="modal-overlay" id="modal-google-auth" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center; backdrop-filter: blur(8px);">
     <div class="modal-content" style="max-width: 440px; width: 92%; border-radius: 20px; padding: 0; overflow: hidden; background: #ffffff; color: #1e293b; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
       <div style="padding: 20px 24px 16px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; background: #fafafa;">
@@ -617,13 +664,41 @@
     </div>
   </div>
 
-  <!-- Notification Toast -->
-  <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-emerald-950/90 text-teal-200 border border-teal-400/40 px-5 py-3 rounded-2xl shadow-2xl backdrop-blur-md text-xs font-semibold flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px]">
-    <i class="fa-solid fa-circle-check text-teal-400"></i>
-    <span id="toast-text">Məlumat</span>
+  
+
+
+  <!-- ================= ASAN İmza Təsdiq Dialoqu ================= -->
+  <div class="modal-overlay" id="modal-asan-auth" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center; backdrop-filter: blur(8px);">
+    <div class="modal-content" style="max-width: 420px; width: 92%; border-radius: 20px; text-align: center; padding: 28px 24px; background: #ffffff; color: #1e293b; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+      <div style="width: 56px; height: 56px; border-radius: 16px; background: #0284c7; color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.4);">
+        <i class="fa-solid fa-key"></i>
+      </div>
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: #0369a1; margin-bottom: 6px;">
+        ASAN İmza Doğrulama
+      </h3>
+      <p style="font-size: 0.85rem; color: #475569; margin-bottom: 14px; line-height: 1.5;">
+        Telefon nömrənizə yoxlama bildirişi göndərildi. Zəhmət olmasa, ekranda görünən yoxlama kodunu mobil cihazınızda təsdiq edin:
+      </p>
+
+      <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 12px; padding: 14px; margin-bottom: 16px;">
+        <div style="font-size: 0.76rem; color: #0284c7; font-weight: 600;">Yoxlama Kodu (Verification Code):</div>
+        <div style="font-size: 2rem; font-weight: 900; color: #0369a1; letter-spacing: 4px; margin: 4px 0;" id="asan-verification-code">8492</div>
+        <div style="font-size: 0.75rem; color: #64748b;">Qalan vaxt: <strong id="asan-countdown-timer" style="color: #0284c7;">00:30</strong></div>
+      </div>
+
+      <div style="display: flex; gap: 8px;">
+        <button type="button" onclick="completeAsanVerificationDirectly()" style="flex: 1; background: #0284c7; color: white; padding: 10px; border-radius: 10px; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer;">
+          <i class="fa-solid fa-check"></i> Təsdiq Edildi
+        </button>
+        <button type="button" onclick="closeAsanModal()" style="background: #e2e8f0; color: #334155; padding: 10px 16px; border-radius: 10px; font-weight: bold; font-size: 0.85rem; border: none; cursor: pointer;">
+          Ləğv Et
+        </button>
+      </div>
+    </div>
   </div>
 
-  <!-- Trailer Engine Script -->
+
+  <!-- Trailer Landing Engine Script -->
   <script src="js/trailer-landing.js"></script>
   <script>
     function fillDemoCredentials(type) {
@@ -632,11 +707,15 @@
       if (type === 'investor') {
         if (voenInput) voenInput.value = 'investor@qarabaq-agro.az';
         if (passInput) passInput.value = 'DemoPass2026!';
-        showNotification('İnvestor məlumatları dolduruldu (investor@qarabaq-agro.az)');
+        showNotification('🏢 İnvestor məlumatları dolduruldu (investor@qarabaq-agro.az)');
+      } else if (type === 'admin') {
+        if (voenInput) voenInput.value = 'admin@investarea.gov.az';
+        if (passInput) passInput.value = 'SuperAdmin2026!';
+        showNotification('🛡️ Admin məlumatları dolduruldu (admin@investarea.gov.az)');
       } else {
         if (voenInput) voenInput.value = 'sahibkar@qarabaq-agro.az';
         if (passInput) passInput.value = 'DemoPass2026!';
-        showNotification('Sahibkar məlumatları dolduruldu (sahibkar@qarabaq-agro.az)');
+        showNotification('🚜 Sahibkar məlumatları dolduruldu (sahibkar@qarabaq-agro.az)');
       }
     }
   </script>

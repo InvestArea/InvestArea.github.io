@@ -5972,7 +5972,7 @@ function logoutUser() {
   localStorage.removeItem("invest_area_admin_user");
   showToast("Hesabdan çıxış edildi. Giriş səhifəsinə yönləndirilirsiniz...", "info");
   setTimeout(() => {
-    window.location.href = "/";
+    window.location.href = "./index.html";
   }, 400);
 }
 
