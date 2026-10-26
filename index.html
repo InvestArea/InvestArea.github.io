@@ -673,12 +673,15 @@
               <!-- Quick Demo Fill Buttons -->
               <div class="p-2 rounded-xl bg-emerald-950/40 border border-emerald-500/20 text-[11px] mb-2">
                 <span class="text-[10px] text-teal-300 font-bold uppercase tracking-wider block mb-1">Demo Giriş Düymələri:</span>
-                <div class="grid grid-cols-2 gap-1.5">
-                  <button type="button" onclick="fillDemoCredentials('investor')" class="py-1 px-2 rounded-lg bg-teal-800/40 hover:bg-teal-700/60 text-teal-200 text-[10px] font-bold border border-teal-500/30 transition-all cursor-pointer">
+                <div class="grid grid-cols-3 gap-1.5">
+                  <button type="button" onclick="fillDemoCredentials('investor')" class="py-1.5 px-1.5 rounded-lg bg-teal-800/50 hover:bg-teal-700/70 text-teal-200 text-[10px] font-bold border border-teal-500/40 transition-all cursor-pointer text-center shadow-sm">
                     🏢 Demo İnvestor
                   </button>
-                  <button type="button" onclick="fillDemoCredentials('sahibkar')" class="py-1 px-2 rounded-lg bg-emerald-800/40 hover:bg-emerald-700/60 text-emerald-200 text-[10px] font-bold border border-emerald-500/30 transition-all cursor-pointer">
+                  <button type="button" onclick="fillDemoCredentials('sahibkar')" class="py-1.5 px-1.5 rounded-lg bg-emerald-800/50 hover:bg-emerald-700/70 text-emerald-200 text-[10px] font-bold border border-emerald-500/40 transition-all cursor-pointer text-center shadow-sm">
                     🚜 Demo Sahibkar
+                  </button>
+                  <button type="button" onclick="fillDemoCredentials('admin')" class="py-1.5 px-1.5 rounded-lg bg-amber-800/50 hover:bg-amber-700/70 text-amber-200 text-[10px] font-bold border border-amber-500/40 transition-all cursor-pointer text-center shadow-sm">
+                    🛡️ Demo Admin
                   </button>
                 </div>
               </div>
@@ -689,7 +692,7 @@
                   <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
                     <i class="fa-solid fa-envelope"></i>
                   </span>
-                  <input type="text" id="login-voen" required placeholder="adiniz@example.az və ya VÖEN" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                  <input type="text" id="login-voen" required value="investor@qarabaq-agro.az" placeholder="adiniz@example.az və ya VÖEN" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
                 </div>
               </div>
 
@@ -702,7 +705,7 @@
                   <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none text-xs">
                     <i class="fa-solid fa-lock"></i>
                   </span>
-                  <input type="password" id="login-password" required placeholder="••••••••••••" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
+                  <input type="password" id="login-password" required value="DemoPass2026!" placeholder="••••••••••••" class="input-field w-full pl-9 pr-3.5 py-2 rounded-xl text-xs placeholder:text-slate-500">
                 </div>
               </div>
 
@@ -3596,12 +3599,12 @@
         <!-- Email & Password -->
         <div class="flex flex-col gap-1">
           <label class="font-label-sm font-semibold text-on-surface">Elektron Poçt *</label>
-          <input type="email" id="auth-email" class="px-3 py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="adiniz@example.az" required/>
+          <input type="email" id="auth-email" value="investor@qarabaq-agro.az" class="px-3 py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="adiniz@example.az" required/>
         </div>
 
         <div class="flex flex-col gap-1">
           <label class="font-label-sm font-semibold text-on-surface">Şifrə *</label>
-          <input type="password" id="auth-password" class="px-3 py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="••••••••" required/>
+          <input type="password" id="auth-password" value="DemoPass2026!" class="px-3 py-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" placeholder="••••••••" required/>
         </div>
 
         <!-- Google reCAPTCHA v2 Box -->

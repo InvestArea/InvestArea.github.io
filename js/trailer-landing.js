@@ -258,8 +258,20 @@ function switchFormTab(tab) {
     loginForm.classList.remove('hidden');
     if (loginBtn) loginBtn.className = 'px-3 py-1 rounded-md bg-emerald-600 text-white transition-all shadow border-none cursor-pointer';
     if (signupBtn) signupBtn.className = 'px-3 py-1 rounded-md text-slate-400 hover:text-white transition-all border-none bg-transparent cursor-pointer';
+
+    // Auto-fill demo credentials on login tab switch if empty
+    const voenInput = document.getElementById('login-voen');
+    const passInput = document.getElementById('login-password');
+    if (voenInput && !voenInput.value) {
+      voenInput.value = 'investor@qarabaq-agro.az';
+    }
+    if (passInput && !passInput.value) {
+      passInput.value = 'DemoPass2026!';
+    }
+    verifyRecaptchaSilently('login');
   }
 }
+window.switchFormTab = switchFormTab;
 
 function focusAuthCard(mode) {
   switchFormTab(mode);
@@ -1011,16 +1023,57 @@ window.addEventListener('DOMContentLoaded', () => {
 
     playTrailer();
     initLandingSession();
+
+    // Auto-fill demo credentials on initial load so they are ready immediately
+    const initVoen = document.getElementById('login-voen');
+    const initPass = document.getElementById('login-password');
+    if (initVoen && !initVoen.value) initVoen.value = 'investor@qarabaq-agro.az';
+    if (initPass && !initPass.value) initPass.value = 'DemoPass2026!';
+    verifyRecaptchaSilently('login');
   }
 });
 
 
 function fillDemoCredentials(type) {
-  fillEGovCredentials(type);
-}
+  switchFormTab('login');
+  verifyRecaptchaSilently('login');
 
-function focusAuthCard(tab) {
-  switchAuthTab(tab || 'asan');
+  const voenInput = document.getElementById('login-voen');
+  const passInput = document.getElementById('login-password');
+  const modalEmail = document.getElementById('auth-email');
+  const modalPass = document.getElementById('auth-password');
+
+  if (type === 'sahibkar') {
+    const credUser = 'sahibkar@qarabaq-agro.az';
+    const credPass = 'DemoPass2026!';
+    if (voenInput) voenInput.value = credUser;
+    if (passInput) passInput.value = credPass;
+    if (modalEmail) modalEmail.value = credUser;
+    if (modalPass) modalPass.value = credPass;
+    showNotification('🚜 Sahibkar demo məlumatları avtomatik dolduruldu (' + credUser + ')');
+  } else if (type === 'admin') {
+    const credUser = 'admin@investarea.gov.az';
+    const credPass = 'SuperAdmin2026!';
+    if (voenInput) voenInput.value = credUser;
+    if (passInput) passInput.value = credPass;
+    if (modalEmail) modalEmail.value = credUser;
+    if (modalPass) modalPass.value = credPass;
+    showNotification('🛡️ Admin demo məlumatları avtomatik dolduruldu (' + credUser + ')');
+  } else {
+    // Default investor
+    const credUser = 'investor@qarabaq-agro.az';
+    const credPass = 'DemoPass2026!';
+    if (voenInput) voenInput.value = credUser;
+    if (passInput) passInput.value = credPass;
+    if (modalEmail) modalEmail.value = credUser;
+    if (modalPass) modalPass.value = credPass;
+    showNotification('🏢 İnvestor demo məlumatları avtomatik dolduruldu (' + credUser + ')');
+  }
+}
+window.fillDemoCredentials = fillDemoCredentials;
+
+function focusAuthCard(mode) {
+  switchFormTab(mode || 'signup');
   const card = document.getElementById('auth-fast-card');
   if (card) {
     card.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1030,6 +1083,7 @@ function focusAuthCard(tab) {
     }, 1500);
   }
 }
+window.focusAuthCard = focusAuthCard;
 
 function fillDemoSignup(type) {
   switchFormTab('signup');

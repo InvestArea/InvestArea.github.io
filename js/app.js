@@ -5414,6 +5414,13 @@ function renderUserSession(user) {
 
 function openAuthModal(tab = 'login') {
   switchAuthTab(tab);
+  if (tab === 'login') {
+    setDemoAuth('investor');
+    if (typeof verifyRecaptchaSilently === 'function') {
+      verifyRecaptchaSilently('auth');
+    }
+    recaptchaVerified.auth = true;
+  }
   const modal = document.getElementById("auth-modal");
   if (modal) {
     modal.classList.remove("hidden");
