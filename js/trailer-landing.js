@@ -23,11 +23,11 @@ function getApiEndpoint(path) {
 
 // 1. Authentic visual assets extracted from Qarabağ — Trailer.html
 const I = [
-  "/images/trailer-0.jpg", // 01 — Ağdam Aqrar-Sənaye Parkı
-  "/images/trailer-1.jpg", // 02 — Araz Vadisi İqtisadi Zonası
-  "/images/trailer-2.jpg", // 03 — Müasir Texnika & Ağıllı Suvarma
-  "/images/trailer-3.jpg", // 04 — Aqrar-Sənaye Kompleksi
-  "/images/trailer-4.jpg"  // 05 — Qarabağ Dirçəliş Panoraması
+  "images/trailer-0.jpg", // 01 — Ağdam Aqrar-Sənaye Parkı
+  "images/trailer-1.jpg", // 02 — Araz Vadisi İqtisadi Zonası
+  "images/trailer-2.jpg", // 03 — Müasir Texnika & Ağıllı Suvarma
+  "images/trailer-3.jpg", // 04 — Aqrar-Sənaye Kompleksi
+  "images/trailer-4.jpg"  // 05 — Qarabağ Dirçəliş Panoraması
 ];
 
 // 2. Trailer Scenes Configuration
@@ -217,9 +217,28 @@ function toggleTrailerOverlay() {
 
 // 6. Navigation and Portal Transitions
 function jumpToPortal(tabName) {
-  const target = tabName ? "/portal#" + tabName : "/portal";
-  window.location.href = target;
+  const portalRoot = document.getElementById('portal-root');
+  if (portalRoot) {
+    portalRoot.scrollIntoView({ behavior: 'smooth' });
+    if (tabName && typeof switchTab === 'function') {
+      switchTab(tabName);
+    }
+  } else {
+    const target = tabName ? "./index.html#" + tabName : "./index.html#map";
+    window.location.href = target;
+  }
 }
+window.jumpToPortal = jumpToPortal;
+
+function jumpToLanding() {
+  const gateway = document.getElementById('cinematic-gateway');
+  if (gateway) {
+    gateway.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    window.location.href = "./";
+  }
+}
+window.jumpToLanding = jumpToLanding;
 
 function switchFormTab(tab) {
   const signupForm = document.getElementById('signup-form');
@@ -529,7 +548,7 @@ async function completeAsanVerificationDirectly() {
         return;
       }
       showNotification(`ASAN İmza təsdiqləndi: ${data.user.fullName}`);
-      setTimeout(() => { window.location.href = "/portal#map"; }, 800);
+      setTimeout(() => { jumpToPortal('map'); }, 800);
       return;
     }
   } catch (err) {
@@ -568,7 +587,7 @@ async function completeAsanVerificationDirectly() {
     return;
   }
   showNotification(`ASAN İmza təsdiqləndi: ${fallbackUser.fullName} (Müraciətçi)`);
-  setTimeout(() => { window.location.href = "/portal#map"; }, 700);
+  setTimeout(() => { jumpToPortal('map'); }, 700);
 }
 
 // 10. SİMA Biometric Modal & Verification Handlers
@@ -636,7 +655,7 @@ async function completeSimaVerification() {
       localStorage.setItem('invest_area_user', JSON.stringify(data.user));
       showNotification(`SİMA Biometrik İmza təsdiqləndi: ${data.user.fullName}`);
       setTimeout(() => {
-        window.location.href = "/portal#map";
+        jumpToPortal('map');
       }, 800);
       return;
     }
@@ -664,10 +683,15 @@ async function completeSimaVerification() {
   };
   localStorage.setItem('invest_area_user', JSON.stringify(fallbackUser));
   showNotification(`SİMA Biometrik İmza təsdiqləndi: ${fallbackUser.fullName} (Müraciətçi)`);
-  setTimeout(() => { window.location.href = "/portal#map"; }, 800);
+  setTimeout(() => { jumpToPortal('map'); }, 800);
 }
 
 // 11. Full 2-Role Backend Synchronized Authentication with Strict reCAPTCHA Check
+async function handleLandingAuthSubmit(e, type) {
+  return handleAuthSubmit(e, type);
+}
+window.handleLandingAuthSubmit = handleLandingAuthSubmit;
+
 async function handleAuthSubmit(e, type) {
   e.preventDefault();
 
@@ -763,7 +787,7 @@ async function handleAuthSubmit(e, type) {
         const roleBadge = role === 'INVESTOR' ? 'İnvestor' : 'Sahibkar';
         showNotification(`Təbriklər, ${data.user.fullName}! Qeydiyyatınız tamamlandı. Rolunuz: ${roleBadge}.`);
         setTimeout(() => {
-          window.location.href = "/portal#map";
+          jumpToPortal('map');
         }, 1200);
       } else {
         showNotification(data.error || 'Qeydiyyat zamanı xəta baş verdi');
@@ -795,7 +819,7 @@ async function handleAuthSubmit(e, type) {
       } catch(e){}
       const roleBadge = role === 'INVESTOR' ? 'İnvestor' : 'Sahibkar';
       showNotification(`Təbriklər, ${fallbackUser.fullName}! Qeydiyyatınız tamamlandı. Rolunuz: ${roleBadge}.`);
-      setTimeout(() => { window.location.href = "/portal#map"; }, 1000);
+      setTimeout(() => { jumpToPortal('map'); }, 1000);
     }
   } else {
     // Login
@@ -841,7 +865,7 @@ async function handleAuthSubmit(e, type) {
 
         showNotification(`Xoş gəldiniz, ${data.user.fullName}! Şəxsi Kabinetə daxil oldunuz.`);
         setTimeout(() => {
-          window.location.href = "/portal#map";
+          jumpToPortal('map');
         }, 1000);
       } else {
         showNotification(data.message || 'Daxil edilmiş məlumatlar və ya şifrə yanlışdır!');
@@ -859,7 +883,7 @@ async function handleAuthSubmit(e, type) {
         if (matched && matched.user) {
           localStorage.setItem('invest_area_user', JSON.stringify(matched.user));
           showNotification(`Xoş gəldiniz, ${matched.user.fullName}! Şəxsi Kabinetə daxil oldunuz.`);
-          setTimeout(() => { window.location.href = "/portal#map"; }, 800);
+          setTimeout(() => { jumpToPortal('map'); }, 800);
           return;
         }
       } catch(e){}
@@ -915,7 +939,7 @@ async function handleAuthSubmit(e, type) {
         }
         localStorage.setItem('invest_area_user', JSON.stringify(fallbackUser));
         showNotification(`Xoş gəldiniz, ${fallbackUser.fullName}! Şəxsi Kabinetə daxil oldunuz.`);
-        setTimeout(() => { window.location.href = "/portal#map"; }, 800);
+        setTimeout(() => { jumpToPortal('map'); }, 800);
         return;
       }
 
@@ -1083,7 +1107,7 @@ function initLandingSession() {
           </button>
         </div>
         <div class="flex items-center gap-2 pt-2 border-t border-white/10">
-          <a href="/portal" class="flex-1 py-2 px-3 rounded-xl bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 text-slate-950 font-extrabold text-xs text-center no-underline shadow-lg shadow-teal-500/20 flex items-center justify-center gap-2 transition-all">
+          <a href="javascript:void(0)" onclick="jumpToPortal('map')" class="flex-1 py-2 px-3 rounded-xl bg-gradient-to-r from-teal-300 via-emerald-400 to-teal-200 hover:brightness-110 text-slate-950 font-extrabold text-xs text-center no-underline shadow-lg shadow-teal-500/20 flex items-center justify-center gap-2 transition-all">
             <span>🚀 Əsas Portala Keçid Edin</span>
             <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
