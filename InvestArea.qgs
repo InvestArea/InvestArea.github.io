@@ -1,0 +1,148 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="InvestAreaBacking - Qarabağ Aqrar İnvestisiya və Məşğulluq Layihəsi" saveUser="Suleiman Hajizadeh" saveUserFull="Suleiman Hajizadeh" version="3.34.0-Prizren">
+  <homePath path=""/>
+  <title>InvestAreaBacking - Qarabağ Aqrar İnvestisiya və Məşğulluq Layihəsi</title>
+  <autotransform>1</autotransform>
+  <evaluateDefaultValues>0</evaluateDefaultValues>
+  <trust>0</trust>
+  <projectCrs>
+    <spatialrefsys nativeFormat="Wkt">
+      <wkt>PROJCRS["WGS 84 / UTM zone 38N",BASEGEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],ID["EPSG",4326]],CONVERSION["UTM zone 38N",METHOD["Transverse Mercator",ID["EPSG",9807]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",45,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9996,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",500000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["(E)",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["(N)",north,ORDER[2],LENGTHUNIT["metre",1]],USAGE[SCOPE["Engineering survey, topographic mapping."],AREA["Between 42°E and 48°E, northern hemisphere."],BBOX[0,42,84,48]],ID["EPSG",32638]]</wkt>
+      <proj4>+proj=utm +zone=38 +datum=WGS84 +units=m +no_defs</proj4>
+      <srsid>3122</srsid>
+      <srid>32638</srid>
+      <authid>EPSG:32638</authid>
+      <description>WGS 84 / UTM zone 38N</description>
+      <projectionacronym>utm</projectionacronym>
+      <ellipsoidacronym>EPSG:7030</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties>
+      <Option/>
+    </customproperties>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="karabakh_parcels" name="Qarabağ Dövlət Torpaq Fondu &amp; Məşğulluq Sahələri" providerKey="ogr" source="./public/gis/karabakh_parcels.geojson"/>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="karabakh_infrastructure" name="Qarabağ İnfrastruktur və Yollar (Zəfər Yolu)" providerKey="ogr" source="./public/gis/karabakh_infrastructure.geojson"/>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="karabakh_waterways" name="Qarabağ Su Ehtiyatları və Anbarlar (Xudafərin/Sərsəng)" providerKey="ogr" source="./public/gis/karabakh_waterways.geojson"/>
+    <layer-tree-layer checked="Qt::Checked" expanded="1" id="karabakh_districts" name="Qarabağ İnzibati Sərhədləri (10 Rayon)" providerKey="ogr" source="./public/gis/karabakh_districts.geojson"/>
+    <layer-tree-layer checked="Qt::Checked" expanded="0" id="google_hybrid" name="Google Satellite Hybrid" providerKey="wms" source="type=xyz&amp;url=https://mt1.google.com/vt/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}"/>
+    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="esri_imagery" name="Esri World Imagery" providerKey="wms" source="type=xyz&amp;url=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"/>
+    <layer-tree-layer checked="Qt::Unchecked" expanded="0" id="osm_standard" name="OpenStreetMap Standard" providerKey="wms" source="type=xyz&amp;url=https://tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+    <custom-order enabled="0">
+      <item>karabakh_parcels</item>
+      <item>karabakh_infrastructure</item>
+      <item>karabakh_waterways</item>
+      <item>karabakh_districts</item>
+      <item>google_hybrid</item>
+      <item>esri_imagery</item>
+      <item>osm_standard</item>
+    </custom-order>
+  </layer-tree-group>
+  <projectlayers>
+    <!-- Google Satellite Hybrid -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="raster">
+      <id>google_hybrid</id>
+      <datasource>type=xyz&amp;url=https://mt1.google.com/vt/lyrs=y&amp;x={x}&amp;y={y}&amp;z={z}</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Google Satellite Hybrid</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <wkt>EPSG:3857</wkt>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo-Mercator</description>
+        </spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Esri Imagery -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="raster">
+      <id>esri_imagery</id>
+      <datasource>type=xyz&amp;url=https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Esri World Imagery</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <wkt>EPSG:3857</wkt>
+        </spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- OpenStreetMap -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" hasScaleBasedVisibilityFlag="0" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="raster">
+      <id>osm_standard</id>
+      <datasource>type=xyz&amp;url=https://tile.openstreetmap.org/{z}/{x}/{y}.png</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>OpenStreetMap Standard</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt">
+          <wkt>EPSG:3857</wkt>
+        </spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Azerbaijan Villages ADM3 Vector Layer -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" id="azerbaijan_villages_adm3" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="vector" wkbType="Polygon">
+      <id>azerbaijan_villages_adm3</id>
+      <datasource>./public/gis/azerbaijan_villages_adm3.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Azərbaycan Kənd Sərhədləri (HDX ADM3 &amp; İƏBT)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Karabakh Districts Vector -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" id="karabakh_districts" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="vector" wkbType="Polygon">
+      <id>karabakh_districts</id>
+      <datasource>./public/gis/karabakh_districts.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Qarabağ İnzibati Sərhədləri (10 Rayon)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Karabakh Infrastructure Vector -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Line" hasScaleBasedVisibilityFlag="0" id="karabakh_infrastructure" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="vector" wkbType="LineString">
+      <id>karabakh_infrastructure</id>
+      <datasource>./public/gis/karabakh_infrastructure.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Qarabağ İnfrastruktur və Yollar (Zəfər Yolu)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Karabakh Waterways Vector -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" id="karabakh_waterways" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="vector" wkbType="Polygon">
+      <id>karabakh_waterways</id>
+      <datasource>./public/gis/karabakh_waterways.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Qarabağ Su Ehtiyatları və Anbarlar (Xudafərin/Sərsəng)</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+      </srs>
+    </maplayer>
+
+    <!-- Karabakh Parcels Vector -->
+    <maplayer autoRefreshMode="Disabled" autoRefreshTime="0" geometry="Polygon" hasScaleBasedVisibilityFlag="0" id="karabakh_parcels" maxScale="0" minScale="1e+08" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" styleCategories="AllStyleCategories" type="vector" wkbType="Polygon">
+      <id>karabakh_parcels</id>
+      <datasource>./public/gis/karabakh_parcels.geojson</datasource>
+      <keywordList><value></value></keywordList>
+      <layername>Qarabağ Dövlət Torpaq Fondu &amp; Məşğulluq Sahələri</layername>
+      <srs>
+        <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+      </srs>
+    </maplayer>
+  </projectlayers>
+  <ProjectViewSettings UseProjectScales="0" rotation="0">
+    <Scales/>
+    <DefaultViewExtent xmax="47.60" xmin="45.60" ymax="40.50" ymin="38.80">
+      <spatialrefsys nativeFormat="Wkt"><wkt>EPSG:4326</wkt></spatialrefsys>
+    </DefaultViewExtent>
+  </ProjectViewSettings>
+</qgis>

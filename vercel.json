@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/portal", "destination": "https://investarea.github.io/portal.html", "permanent": true },
+    { "source": "/portal/(.*)", "destination": "https://investarea.github.io/portal.html", "permanent": true },
+    { "source": "/admin-parcels(.*)", "destination": "https://investarea.github.io/admin-parcels.html", "permanent": true },
+    { "source": "/admin-documents(.*)", "destination": "https://investarea.github.io/admin-documents.html", "permanent": true },
+    { "source": "/admin.html", "destination": "https://investarea.github.io/admin.html", "permanent": true },
+    { "source": "/admin", "destination": "https://investarea.github.io/admin.html", "permanent": true },
+    { "source": "/pitch-deck(.*)", "destination": "https://investarea.github.io/pitch-deck.html", "permanent": true },
+    { "source": "/presentation(.*)", "destination": "https://investarea.github.io/presentation.html", "permanent": true },
+    { "source": "/((?!api/).*)", "destination": "https://investarea.github.io/$1", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.js" }
+  ]
+}

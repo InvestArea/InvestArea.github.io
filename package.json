@@ -1,0 +1,27 @@
+{
+  "name": "investarea",
+  "version": "1.0.0",
+  "description": "İşğaldan azad edilmiş ərazilər üçün İnvestisiya Müsabiqəsi Portalı və EKTİS İnteqrasiya Prototipi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Build completed for Vercel')\""
+  },
+  "keywords": [
+    "karabakh",
+    "agriculture",
+    "investment",
+    "ektis",
+    "govtech"
+  ],
+  "author": "Hackathon Team",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/kv": "^3.0.0",
+    "bcrypt": "^6.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
