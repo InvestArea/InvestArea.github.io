@@ -14,6 +14,38 @@ function getApiEndpoint(path) {
   return path;
 }
 
+// ---------------------------------------------------------------------------
+// Security: Safe HTML Escaping (OWASP A03 Stored/Reflected XSS Defense)
+// ---------------------------------------------------------------------------
+function escapeHtml(str) {
+  if (str == null) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+function getAuthHeaders() {
+  const userStr = localStorage.getItem('invest_area_user');
+  let token = null;
+  if (userStr) {
+    try {
+      const u = JSON.parse(userStr);
+      token = u.token;
+    } catch (_) {}
+  }
+  const headers = { 'Content-Type': 'application/json' };
+  if (token) headers['Authorization'] = `Bearer ${token}`;
+  return headers;
+}
+
+async function adminFetch(url, options = {}) {
+  const headers = Object.assign(getAuthHeaders(), options.headers || {});
+  return fetch(url, { ...options, headers });
+}
+
 /**
  * Azərbaycan Respublikası Kənd Təsərrüfatı Nazirliyi
  * Qarabağ Aqro-İnvest İnzibatçı Paneli (Admin Client Logic)
