@@ -1,3 +1,12 @@
+---
+title: "Dövlət İnformasiya Sistemləri ilə İnteqrasiya Tələbləri"
+type: source
+tags: [ektis, avis, anama, emdx, api]
+date: 2026-10-28
+updated: 2026-10-28
+status: immutable
+---
+
 # 📜 Xammal Mənbə: Dövlət İnformasiya Sistemləri ilə İnteqrasiya Tələbləri (EKTİS, AVİS, ANAMA, ƏMDX)
 
 > **Sənəd Növü:** Dövlət Sistemlərarası İnteqrasiya və API Şlüzü Spesifikasiyası  

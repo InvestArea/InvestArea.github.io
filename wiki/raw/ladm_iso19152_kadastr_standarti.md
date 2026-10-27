@@ -1,3 +1,12 @@
+---
+title: "ISO 19152 LADM və FAO SOLA Modeli"
+type: source
+tags: [ladm, sola, cadastre, iso19152, standards]
+date: 2026-10-28
+updated: 2026-10-28
+status: immutable
+---
+
 # 📜 Xammal Mənbə: ISO 19152 LADM və FAO SOLA Torpaq İdarəetmə Modeli
 
 > **Sənəd Növü:** Beynəlxalq Kadastr və Verilənlər Bazası Arxitekturası  

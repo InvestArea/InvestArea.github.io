@@ -1,21 +1,20 @@
 ---
-title: "Laçın və Kəlbəcər Rayonları — Dağlıq Heyvandarlıq və Arıçılıq"
+title: "Laçın Rayonu — Zabux Vadisi, İntensiv Heyvandarlıq və Arıçılıq"
 type: entity
-tags: [district, mountain, zangezur, livestock, beekeeping]
-date: 2026-10-27
-updated: 2026-10-27
+tags: [district, mountain, zangezur, pastures, livestock, zabux]
+date: 2026-10-28
+updated: 2026-10-28
 status: verified
-sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
+sources: ["[[raw/karabakh_parceller_ve_kadastr_lotlari]]", "[[raw/karabakh_agro_geoinformation_data]]"]
 ---
 
-# 🏔️ Laçın və Kəlbəcər Rayonları
+# 🏔️ Laçın Rayonu
 
-Laçın və Kəlbəcər rayonları alp və subalp çəmənlikləri, bol bulaq və təmiz çay suları ilə zəngin yaylaq zonalarıdır. Relyef əsasən dağlıq olduğuna görə intensiv əkinçilikdən çox damazlıq heyvandarlıq, arıçılıq, dərman bitkiləri və ekoturizm üçün əvəzedilməzdir.
+Laçın rayonu Həkəri çayı vadisi və Şərqi Zəngəzur silsiləsində yerləşir. Münbit çəmənlikləri, bol sulu çayları və mülayim dağ iqlimi ilə damazlıq maldarlıq, qoyunçuluq və təmiz dağ balı istehsalı üçün strateji əhəmiyyət daşıyır.
 
 ---
 
-## 📊 Əsas Xarakteristika
-- **İqtisadi Rayon:** Şərqi Zəngəzur İqtisadi Rayonu
-- **Əsas Aqrar Təyinat:** Yaylaq və otlaq sahələri, arıçılıq fermaları, soyuq sulu balıqçılıq (forel).
-- **Müsabiqə Formatı:** Böyük sahəli mövsümi və daimi otlaq icarələri.
-- **Su Ehtiyatı:** Tərtərçay və Həkəri çaylarının yuxarı axarları.
+## 📊 Əsas Göstəricilər
+- **Model Kadastr Parseli:** `LCN-2026-0061` (Zabux kəndi — 320 ha, heyvandarlıq klasteri, təbii çay suyu, 850,000 AZN investisiya, bonitet: 75 bal, NDVI: 0.78).
+- **Təhlükəsizlik:** [[concepts/minatemizleme_tehlukesizlik_statusu|ANAMA Sertifikatı]] `AZ-ANM-2025/22`.
+- **Əlaqəli Rayonlar:** [[entities/kelbecer]], [[entities/qubadli]].

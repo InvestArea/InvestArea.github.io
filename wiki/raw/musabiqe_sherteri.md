@@ -1,3 +1,12 @@
+---
+title: "Aqrar İnvestisiya Müsabiqəsi Şərtləri"
+type: source
+tags: [decree236, regulations, competition, scoring]
+date: 2026-10-28
+updated: 2026-10-28
+status: immutable
+---
+
 # 📜 Xammal Mənbə: Qarabağ və Şərqi Zəngəzur Aqrar İnvestisiya Müsabiqəsi Şərtləri
 
 > **Sənəd Növü:** Rəsmi Normativ və Müsabiqə Qaydaları  
