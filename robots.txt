@@ -1,0 +1,58 @@
+# ========================================================
+# InvestArea Ecosystem — Official Robots.txt
+# Platform: Qarabağ və Şərqi Zəngəzur Rəqəmsal Aqrar İnvestisiya Portalı
+# Canonical Domain: https://investarea.github.io
+# ========================================================
+
+User-agent: *
+Allow: /
+Allow: /portal.html
+Allow: /portal/
+Allow: /register.html
+Allow: /pitch-deck.html
+Allow: /presentation.html
+Allow: /startup-pitch.html
+Allow: /admin.html
+Allow: /admin-documents.html
+Allow: /admin-parcels.html
+Allow: /gis/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /videos/
+Allow: /docs/
+
+# Explicit search engine crawler allowances
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /gis/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.webp$
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Canonical Sitemap and Host
+Sitemap: https://investarea.github.io/sitemap.xml
+Host: https://investarea.github.io

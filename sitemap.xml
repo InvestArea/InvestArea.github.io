@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- 1. Əsas Giriş və Qeydiyyat Qapısı (Root Landing Gate) -->
+  <url>
+    <loc>https://investarea.github.io/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://investarea.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://investarea.github.io/"/>
+    <image:image>
+      <image:loc>https://investarea.github.io/InvestArea_Cover_1080p.png</image:loc>
+      <image:title>InvestArea • Qarabağ və Şərqi Zəngəzur Aqrar İnvestisiya Portalı</image:title>
+      <image:caption>Qarabağ və Şərqi Zəngəzurda aqrar torpaq investisiya müsabiqələri, kadastr pasportu, interaktiv QGIS xəritəsi və elektron müraciət sistemi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://investarea.github.io/images/trailer-4.jpg</image:loc>
+      <image:title>Qarabağ Aqrar Torpaqları və Peyk NDVI Təsviri</image:title>
+    </image:image>
+  </url>
+
+  <!-- 2. Vahid Aqrar İnvestisiya Portalı (Main Interactive GIS Portal) -->
+  <url>
+    <loc>https://investarea.github.io/portal.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/portal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://investarea.github.io/portal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://investarea.github.io/portal.html"/>
+    <image:image>
+      <image:loc>https://investarea.github.io/img_kadastr.jpg</image:loc>
+      <image:title>Rəqəmsal Kadastr Pasportu və ANAMA Minatəmizləmə Sertifikatı</image:title>
+      <image:caption>Qarabağ kadastr parsellərinin bonitet balları, relyef xəritəsi və suvarma mənbələri</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://investarea.github.io/img_filter.jpg</image:loc>
+      <image:title>İnteraktiv GIS Aqrar Xəritəsi və Rayon Filtrləri</image:title>
+      <image:caption>Ağdam, Füzuli, Cəbrayıl, Zəngilan, Laçın, Kəlbəcər rayonları üzrə torpaq axtarışı</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2b. Portal Subfolder Redirect Route -->
+  <url>
+    <loc>https://investarea.github.io/portal/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/portal/"/>
+  </url>
+
+  <!-- 3. İnvestor və Sahibkar İdentifikasiya Mərkəzi -->
+  <url>
+    <loc>https://investarea.github.io/register.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/register.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://investarea.github.io/register.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://investarea.github.io/register.html"/>
+    <image:image>
+      <image:loc>https://investarea.github.io/img_asan.jpg</image:loc>
+      <image:title>SİMA Biometrik İmza, ASAN İmza və myGov Dövlət Girişi</image:title>
+      <image:caption>İnvestor və yerli fermerlərin rəqəmsal şəxsiyyət və VÖEN yoxlanışı</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Rəsmi Pitch Deck Slaydları (Prezident Fərmanı № 236) -->
+  <url>
+    <loc>https://investarea.github.io/pitch-deck.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/pitch-deck.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://investarea.github.io/pitch-deck.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://investarea.github.io/pitch-deck.html"/>
+  </url>
+
+  <!-- 5. Qarabağ Aqro-İnvest İnteraktiv Təqdimat Slaydları -->
+  <url>
+    <loc>https://investarea.github.io/presentation.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/presentation.html"/>
+  </url>
+
+  <!-- 6. Startup Pitch İnvestisiya Konsepsiyası -->
+  <url>
+    <loc>https://investarea.github.io/startup-pitch.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/startup-pitch.html"/>
+  </url>
+
+  <!-- 7. Dövlət Komissiyası Superuser İnzibati Paneli -->
+  <url>
+    <loc>https://investarea.github.io/admin.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/admin.html"/>
+  </url>
+
+  <!-- 8. Sənədlərin Yoxlanması və 9 Ekspert Komissiyası Paneli -->
+  <url>
+    <loc>https://investarea.github.io/admin-documents.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/admin-documents.html"/>
+  </url>
+
+  <!-- 9. Kadastr Parsellərinin İdarə Edilməsi və Sentinel-2 Monitorinqi -->
+  <url>
+    <loc>https://investarea.github.io/admin-parcels.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://investarea.github.io/admin-parcels.html"/>
+  </url>
+
+</urlset>

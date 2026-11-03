@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>InvestArea</ShortName>
+  <Description>Qarabağ və Şərqi Zəngəzur Aqrar Torpaq və İnvestisiya Müsabiqəsi Axtarışı</Description>
+  <Tags>aqrar investisiya qarabağ torpaq kadastr GIS ektis anama</Tags>
+  <Contact>info@investarea.github.io</Contact>
+  <Url type="text/html" template="https://investarea.github.io/portal.html?search={searchTerms}"/>
+  <Image height="16" width="16" type="image/png">https://investarea.github.io/images/pwa-icon-192.png</Image>
+  <Image height="64" width="64" type="image/png">https://investarea.github.io/images/pwa-icon-512.png</Image>
+  <Developer>InvestArea Komandası</Developer>
+  <Attribution>© 2026 InvestArea Ecosystem. Bütün hüquqlar qorunur.</Attribution>
+  <Language>az</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>
