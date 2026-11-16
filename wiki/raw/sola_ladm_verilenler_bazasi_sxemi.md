@@ -7,7 +7,7 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: LADM və FAO SOLA Verilənlər Bazası Cədvəlləri
+# Xammal Mənbə: LADM və FAO SOLA Verilənlər Bazası Cədvəlləri
 
 > **Sənəd Növü:** PostgreSQL / PostGIS DDL Sxemləri  
 > **İstinad:** `database/schema/01_azerbaijan_cadastre_ladm.sql` və `database/sola/`  

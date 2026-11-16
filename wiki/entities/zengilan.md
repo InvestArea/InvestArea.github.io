@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🌿 Zəngilan Rayonu
+# Zəngilan Rayonu
 
 Zəngilan Şərqi Zəngəzur İqtisadi Rayonunun aparıcı aqro-innovasiya zonasıdır. Bəsitçay və Həkəri çayları hövzəsində yerləşir. «Ağalı Ağıllı Kənd» konsepsiyası və genişmiqyaslı aqropark layihələri ilə regional liderdir.
 
 ---
 
-## 📊 Əsas Göstəricilər
+## Əsas Göstəricilər
 
 - **İqtisadi Rayon:** Şərqi Zəngəzur İqtisadi Rayonu
 - **Ümumi Aqrar Potensial:** ~24,000 ha
@@ -24,7 +24,7 @@ Zəngilan Şərqi Zəngəzur İqtisadi Rayonunun aparıcı aqro-innovasiya zonas
 
 ---
 
-## 🚜 Müsabiqə Lotları
+## Müsabiqə Lotları
 
 1. **Lot ZN-019 (Ağalı Aqro-Zolaq):**
    - **Sahə:** 220 ha

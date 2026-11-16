@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🍇 Füzuli Rayonu
+# Füzuli Rayonu
 
 Füzuli rayonu Araz çayı hövzəsi və Köndələnçay vadisi boyunca yerləşən mühüm kənd təsərrüfatı zonasıdır. Ərazinin iqlimi mülayim-isti yarımsəhra və quru çöl xarakterlidir, bu da taxılçılıq, pambıqçılıq, bağçılıq və istixana kompleksləri üçün optimal şərait yaradır.
 
 ---
 
-## 📊 Əsas Göstəricilər
+## Əsas Göstəricilər
 
 - **İqtisadi Rayon:** Qarabağ İqtisadi Rayonu
 - **Ümumi Aqrar Potensial:** ~52,000 ha əkin sahəsi
@@ -24,7 +24,7 @@ Füzuli rayonu Araz çayı hövzəsi və Köndələnçay vadisi boyunca yerləş
 
 ---
 
-## 🚜 Müsabiqəyə Çıxarılan Əsas Lotlar
+## Müsabiqəyə Çıxarılan Əsas Lotlar
 
 1. **Lot FZ-082 (Horadiz-Köndələnçay Ətrafı):**
    - **Sahə:** 280 ha
@@ -38,6 +38,6 @@ Füzuli rayonu Araz çayı hövzəsi və Köndələnçay vadisi boyunca yerləş
 
 ---
 
-## 🔗 Əlaqəli Səhifələr
+## Əlaqəli Səhifələr
 - Rayonlararası müqayisə: [[comparisons/agro_rayonlar_ve_lotlar_muqayisesi]]
 - İnteqrasiya: [[entities/ktn]], [[entities/anama]], [[entities/emdx]]

@@ -1,20 +1,20 @@
 ---
-title: "Aqro-AI Skorinq və 5 İllik ROI Maliyyə Modeli"
+title: "Aqronomik Analitika Skorinq və 5 İllik ROI Maliyyə Modeli"
 type: concept
-tags: [ai, scoring, roi, economics, gemini, validation]
+tags: [analytics, scoring, roi, economics, agrotech, validation]
 date: 2026-10-27
 updated: 2026-10-27
 status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[entities/ktn]]"]
 ---
 
-# 🤖 Aqro-AI və 100 Ballıq Skorinq Modeli
+# Aqronomik Analitika və 100 Ballıq Skorinq Modeli
 
-InvestArea müraciətlərin ilkin yoxlanışını və investisiya layihələrinin səmərəlilik təhlilini avtomatlaşdırmaq üçün süni intellekt (Gemini AI mühərriki) və aqronomik maliyyə alqoritmlərindən istifadə edir.
+InvestArea müraciətlərin ilkin yoxlanışını və investisiya layihələrinin səmərəlilik təhlilini avtomatlaşdırmaq üçün süni intellekt (analitik hesablama alqoritmləri) və aqronomik maliyyə alqoritmlərindən istifadə edir.
 
 ---
 
-## 🎯 100 Ballıq Skorinq Paylanması
+## 100 Ballıq Skorinq Paylanması
 
 1. **Maliyyə Qabiliyyəti (30 Bal):** Şirkətin dövriyyəsi, bank zəmanəti, AVİS vergi intizamı.
 2. **Texnologiya və Suya Qənaət (25 Bal):** Damlama və avtomatlaşdırılmış suvarma sistemləri.
@@ -24,5 +24,5 @@ InvestArea müraciətlərin ilkin yoxlanışını və investisiya layihələrini
 
 ---
 
-## 📈 5 İllik ROI Hesablaması
-Aqro-AI model hər bir bitki növü (taxıl, badam, nar, pambıq, yonca) üzrə hektar başına gəlirlilik, xərc və investisiyanın geri qayıtma müddətini (*Payback Period*) proqnozlaşdırır.
+## 5 İllik ROI Hesablaması
+Aqronomik Analitika model hər bir bitki növü (taxıl, badam, nar, pambıq, yonca) üzrə hektar başına gəlirlilik, xərc və investisiyanın geri qayıtma müddətini (*Payback Period*) proqnozlaşdırır.

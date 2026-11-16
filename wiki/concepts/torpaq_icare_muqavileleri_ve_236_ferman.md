@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[entities/emdx]]"]
 ---
 
-# ⚖️ 236 №-li Prezident Fərmanı və Aqrar İcarə Rejimi
+# 236 №-li Prezident Fərmanı və Aqrar İcarə Rejimi
 
 Azərbaycan Respublikası Prezidentinin 236 nömrəli Fərmanı işğaldan azad edilmiş ərazilərdə torpaqların idarə edilməsi, dövlət mülkiyyətinin qorunması və kənd təsərrüfatı torpaqlarının istifadəyə verilməsi qaydalarını müəyyən edir.
 
 ---
 
-## 📜 Fərmanın Əsas Maddələri və Şərtləri
+## Fərmanın Əsas Maddələri və Şərtləri
 
 1. **Dövlət Mülkiyyəti:**
    - Azad edilmiş ərazilərdə bütün torpaqlar dövlət mülkiyyətindədir və özəlləşdirilmir; yalnız investisiya müsabiqəsi əsasında **10 ildən 25 ilə qədər müddətə icarəyə** verilir.

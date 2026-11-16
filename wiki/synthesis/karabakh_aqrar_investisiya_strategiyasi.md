@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[raw/ladm_iso19152_kadastr_standarti]]", "[[comparisons/agro_rayonlar_ve_lotlar_muqayisesi]]"]
 ---
 
-# 🌐 Qarabağ və Şərqi Zəngəzurda Aqrar İnvestisiya Strategiyası
+# Qarabağ və Şərqi Zəngəzurda Aqrar İnvestisiya Strategiyası
 
 Bu sənəd InvestArea ekosistemində toplanmış hüquqi, geoməkan, aqronomik və maliyyə biliklərinin strateji sintezidir.
 
 ---
 
-## 🏛️ Əsas Strateji Sütunlar
+## Əsas Strateji Sütunlar
 
 1. **Torpaq Bazarında Şəffaflıq və Bərabərhüquqlu Rəqabət:**
    - Ənənəvi kağız əsaslı, qapalı müraciətlər ləğv edilir. Bütün proses [[concepts/ladm_iso19152|LADM ISO 19152]] beynəlxalq standartı əsasında qurulmuş açıq elektron portal vasitəsilə icra olunur.
@@ -27,5 +27,5 @@ Bu sənəd InvestArea ekosistemində toplanmış hüquqi, geoməkan, aqronomik v
 
 ---
 
-## 🚀 Nəticə və Gələcək Perspektiv
+## Nəticə və Gələcək Perspektiv
 InvestArea təkcə bir veb-portal deyil, Qarabağın dirçəlişində ərzaq təhlükəsizliyini, xarici valyuta axınını və yerli məşğulluğu təmin edən milli rəqəmsal infrastrukturdur.

@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[comparisons/agro_rayonlar_ve_lotlar_muqayisesi]]", "[[synthesis/karabakh_aqrar_investisiya_strategiyasi]]"]
 ---
 
-# 🌾 Qarabağın Ərzaq Təhlükəsizliyi və İxrac Potensialı
+# Qarabağın Ərzaq Təhlükəsizliyi və İxrac Potensialı
 
 Qarabağ və Şərqi Zəngəzurun münbit torpaqlarının dövriyyəyə cəlb edilməsi Azərbaycanın ərzaq müstəqilliyinin təmin edilməsində tarixi dönüş nöqtəsidir.
 
 ---
 
-## 📈 Makroiqtisadi Hədəflər
+## Makroiqtisadi Hədəflər
 
 1. **Ərzaqlıq Buğdada İdxaldan Asılılığın Azaldılması:**
    - Ağdam, Füzuli və Tərtər düzənliklərində tətbiq olunan intensiv pivot suvarma ilə hər hektardan 55-65 sentner məhsul gözlənilir. Bu, ölkənin ərzaqlıq buğda tələbatının əlavə 25-30%-nin yerli istehsal hesabına ödənilməsinə imkan verir.

@@ -8,7 +8,7 @@ status: verified
 sources: ["[[concepts/suvarma_ve_su_ehtiyatlari]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 💧 Suvarma Texnologiyalarının Texniki-İqtisadi Müqayisəsi
+# Suvarma Texnologiyalarının Texniki-İqtisadi Müqayisəsi
 
 InvestArea müsabiqə şərtlərində investorun seçə biləcəyi 3 əsas qənaətcil suvarma texnologiyasının göstəriciləri:
 
@@ -25,6 +25,6 @@ InvestArea müsabiqə şərtlərində investorun seçə biləcəyi 3 əsas qəna
 
 ---
 
-## 🚜 Tətbiq Qaydası
+## Tətbiq Qaydası
 - Meyvə bağlarında yalnız damlama sistemləri qəbul edilir.
 - Ağdam və Füzulinin 100 hektardan böyük taxıl sahələrində mərkəzi pivot sistemləri məcburidir.

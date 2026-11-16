@@ -1,11 +1,11 @@
-# 📜 InvestArea LLM Wiki — Xronoloji Əməliyyat Jurnalı (`log.md`)
+# InvestArea Bilik Bazası — Xronoloji Əməliyyat Jurnalı (`log.md`)
 
 > **Qeyd:** Bu fayl davamlı əlavə olunan (append-only) qeydiyyat jurnalidir. Hər bir əməliyyat (ingest, query, lint) standart prefiks ilə qeyd olunur.
 
 ---
 
-## [2026-10-27] init | LLM Wiki Arxitekturasının Qurulması
-- **Əməliyyat:** InvestArea layihəsi üçün davamlı və sintez olunan LLM Wiki infrastrukturunun yaradılması.
+## [2026-10-27] init | Bilik Bazası Arxitekturasının Qurulması
+- **Əməliyyat:** InvestArea layihəsi üçün davamlı və sintez olunan Bilik Bazası infrastrukturunun yaradılması.
 - **Yaradılan Strukturlar:**
   - `wiki/AGENTS.md` (Schema və idarəetmə qaydaları)
   - `wiki/index.md` (Məzmun kataloqu)
@@ -15,7 +15,7 @@
 
 ## [2026-10-27] ingest | musabiqe_sherteri.md
 - **Mənbə:** [[raw/musabiqe_sherteri]] (Azərbaycan Respublikası Prezidentinin 236 №-li Fərmanı)
-- **Təsir Sahələri:** [[concepts/agro_ai_ve_roi_skorinq]], [[entities/ktn]], [[synthesis/karabakh_aqrar_investisiya_strategiyasi]]
+- **Təsir Sahələri:** [[concepts/agro_analitika_ve_roi_skorinq]], [[entities/ktn]], [[synthesis/karabakh_aqrar_investisiya_strategiyasi]]
 - **Nəticə:** 100 ballıq qiymətləndirmə meyarları, 10% maliyyə təminatı tələbi və 2 illik investisiya öhdəliyi qaydaları çıxarıldı.
 
 ## [2026-10-27] ingest | ladm_iso19152_kadastr_standarti.md

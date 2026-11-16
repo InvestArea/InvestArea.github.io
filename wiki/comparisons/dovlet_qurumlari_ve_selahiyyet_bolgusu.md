@@ -8,7 +8,7 @@ status: verified
 sources: ["[[concepts/kollegial_sesverme_9_qurum]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🏛️ 9 Dövlət Qurumunun Səlahiyyət Bölgüsü
+# 9 Dövlət Qurumunun Səlahiyyət Bölgüsü
 
 InvestArea komissiyasını təşkil edən qurumların qiymətləndirmə çəkisi və yoxlama sahələri:
 

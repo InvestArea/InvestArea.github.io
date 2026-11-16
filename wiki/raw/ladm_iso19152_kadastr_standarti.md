@@ -7,7 +7,7 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: ISO 19152 LADM və FAO SOLA Torpaq İdarəetmə Modeli
+# Xammal Mənbə: ISO 19152 LADM və FAO SOLA Torpaq İdarəetmə Modeli
 
 > **Sənəd Növü:** Beynəlxalq Kadastr və Verilənlər Bazası Arxitekturası  
 > **Əsas İstinad:** ISO 19152:2012 Land Administration Domain Model (LADM) və FAO Solutions for Open Land Administration (SOLA)  

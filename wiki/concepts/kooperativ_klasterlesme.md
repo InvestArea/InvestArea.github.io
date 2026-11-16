@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/teqdimat_video_ve_ssenari]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🤝 İnvestor-Sahibkar Kooperativ Klasterləşməsi
+# İnvestor-Sahibkar Kooperativ Klasterləşməsi
 
 InvestArea platformasının ən unikal sosial-iqtisadi xüsusiyyətlərindən biri **Maliyyəçi İnvestor** ilə **Yerli Sahibkar / Fermer** arasında rəqəmsal tərəfdaşlıq klasteri yaratmaq imkanıdır.
 
 ---
 
-## 💡 Modelin Əsas Məntiqi
+## Modelin Əsas Məntiqi
 
 Çox vaxt yerli fermerlərin və keçmiş məcburi köçkünlərin torpaq becərmək təcrübəsi və texnikası olsa da, iri həcmli investisiya kapitalı (damlama suvarma, toxum, gübrə) çatışmır. Digər tərəfdən, iri maliyyə institutları və xarici investorlar kapital qoymaq istəsələr də, yerli idarəetmə təcrübəsinə malik deyillər.
 

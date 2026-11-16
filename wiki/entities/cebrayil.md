@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# ☀️ Cəbrayıl Rayonu
+# Cəbrayıl Rayonu
 
 Cəbrayıl rayonu Arazboyu düzənlikləri ilə zəngin olan, yüksək günəş radiasiyası və münbit allüvial-çəmən torpaqları ilə fərqlənən aqrar bölgədir.
 
 ---
 
-## 📊 Əsas Göstəricilər
+## Əsas Göstəricilər
 
 - **İqtisadi Rayon:** Şərqi Zəngəzur / Qarabağ kəsişməsi
 - **Ümumi Aqrar Potensial:** ~38,000 ha
@@ -24,7 +24,7 @@ Cəbrayıl rayonu Arazboyu düzənlikləri ilə zəngin olan, yüksək günəş 
 
 ---
 
-## 🚜 Müsabiqə Lotları
+## Müsabiqə Lotları
 
 1. **Lot CB-045 (Xudafərin Sahil Zolağı):**
    - **Sahə:** 350 ha

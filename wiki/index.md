@@ -1,19 +1,19 @@
-# 🗂️ InvestArea LLM Wiki — Əsas Məzmun Kataloqu (`index.md`)
+# InvestArea Bilik Bazası — Əsas Məzmun Kataloqu (`index.md`)
 
 > **Xoş gəlmisiniz!** Bu fayl InvestArea ekosistemi üzrə toplanmış, çarpaz əlaqələndirilmiş və daima yenilənən bütün rəsmi wiki səhifələrinin mərkəzi naviqatorudur.  
-> **İdarəedici:** LLM Agent & İstifadəçi | **Konvensiyalar:** [[wiki/AGENTS|AGENTS.md]]
+> **İdarəedici:** Mütəxəssis və Analitik Sistem | **Konvensiyalar:** [[wiki/AGENTS|AGENTS.md]]
 
 ---
 
-## 🏛️ Əsas İdarəetmə və Alətlər
-- [[wiki/AGENTS|AGENTS.md (Schema)]] — LLM Wiki-nin idarəetmə qaydaları, Ingest, Query və Lint prosedurları.
+## Əsas İdarəetmə və Alətlər
+- [[wiki/AGENTS|AGENTS.md (Sxem)]] — Bilik Bazasının idarəetmə qaydaları, Ingest, Query və Lint prosedurları.
 - [[wiki/log|log.md (Activity Log)]] — Bütün əməliyyatların xronoloji fəaliyyət jurnalı.
 - `wiki/tools/search.py` — Terminal üzərindən açarsöz və teq üzrə daxili axtarış mühərriki.
 - `wiki/tools/lint.py` — Bütövlük, qırıq linklər və ziddiyyətləri aşkar edən linter aləti.
 
 ---
 
-## 📚 1. Xammal Mənbələr (`raw/`)
+## 1. Xammal Mənbələr (`raw/`)
 - [[raw/musabiqe_sherteri|Müsabiqə Qaydaları və Şərtləri]] — 236 №-li Prezident Fərmanı, iştirakçı tələbləri və 100 ballıq meyarlar.
 - [[raw/ladm_iso19152_kadastr_standarti|ISO 19152 LADM & FAO SOLA]] — Torpaq kadastrı, hüquqlar (RRR) və PostgreSQL verilənlər bazası standartı.
 - [[raw/ektis_integrasiya_texniki_telebleri|Dövlət Sistemləri ilə İnteqrasiya]] — EKTİS fermer reyestri, AVİS vergi arayışları, ANAMA mina zonaları və ƏMDX kadastrı.
@@ -25,7 +25,7 @@
 
 ---
 
-## 📍 2. Subyektlər və Obyektlər (`entities/`)
+## 2. Subyektlər və Obyektlər (`entities/`)
 
 ### Rayonlar:
 - [[entities/agdam|Ağdam Rayonu]] — Düzənlik taxılçılıq mərkəzi, Xaçınçay suvarma şəbəkəsi və AGD-2026-0012 lotu (120 ha).
@@ -52,12 +52,12 @@
 
 ---
 
-## 💡 3. Anlayışlar və Metodologiyalar (`concepts/`)
+## 3. Anlayışlar və Metodologiyalar (`concepts/`)
 - [[concepts/torpaq_boniteti_ve_qiymetlendirme|Torpaq Boniteti]] — 100 ballıq münbitlik şkalası, torpaq tipləri və icarə qiymətləndirmə mexanizmi.
 - [[concepts/suvarma_ve_su_ehtiyatlari|Suvarma Şəbəkələri]] — Qarabağın su anbarları (Xudafərin, Sərsəng, Xaçınçay) və məcburi pivot/damlama tələbi.
 - [[concepts/minatemizleme_tehlukesizlik_statusu|Minatəmizləmə Statusu]] — `LEVEL_1_CLEARED`, `LEVEL_2_SURVEYED`, `LEVEL_3_RESTRICTED` təhlükəsizlik dərəcələri.
 - [[concepts/ladm_iso19152|LADM ISO 19152]] — Party, RRR, BAUnit və SpatialUnit beynəlxalq kadastr arxitekturası.
-- [[concepts/agro_ai_ve_roi_skorinq|Aqro-AI və ROI Skorinqi]] — Gemini AI dəstəkli 100 ballıq müraciət qiymətləndirməsi və 5 illik gəlirlilik analizi.
+- [[concepts/agro_analitika_ve_roi_skorinq|Aqronomik Analitika və ROI Skorinqi]] — Çoxtərəfli 100 ballıq müraciət qiymətləndirməsi və 5 illik gəlirlilik analizi.
 - [[concepts/sentinel2_ndvi_monitorinq|Sentinel-2 Peyk NDVI]] — Peyk vegetasiya indeksi ilə əkin sahələrinin kosmosdan fasiləsiz monitorinqi.
 - [[concepts/kibertehlukesizlik_ve_rbac|Kibertəhlükəsizlik və RBAC]] — HMAC-SHA256 JWT, rol iyerarxiyası, dövlət sistemlərinin qorunması.
 - [[concepts/kooperativ_klasterlesme|İnvestor-Sahibkar Klasteri]] — İri kapital və yerli fermer kooperasiyası, +10 bonus bal mexanizmi.
@@ -67,7 +67,7 @@
 
 ---
 
-## ⚖️ 4. Müqayisələr və Təhlillər (`comparisons/`)
+## 4. Müqayisələr və Təhlillər (`comparisons/`)
 - [[comparisons/agro_rayonlar_ve_lotlar_muqayisesi|Rayonlararası Müqayisə Matrisi]] — Qarabağ və Şərqi Zəngəzur rayonlarının təbii, su və torpaq şəraitinin yan-yana müqayisəsi.
 - [[comparisons/bitkiler_ve_aqrar_gelirlilik_roi|Bitkilər üzrə İqtisadi Səmərəlilik]] — Buğda, badam, üzüm, istixana pomidoru və yonca üzrə 5 illik maya dəyəri və mənfəət cədvəli.
 - [[comparisons/suvarma_texnologiyalari_damlama_pivot_yagis|Suvarma Texnologiyalarının Müqayisəsi]] — Damlama, pivot və yağışyağdırma texnologiyalarının xərc, relyef və səmərəlilik matrisi.
@@ -75,7 +75,7 @@
 
 ---
 
-## 🎯 5. Strateji Sintezlər (`synthesis/`)
+## 5. Strateji Sintezlər (`synthesis/`)
 - [[synthesis/karabakh_aqrar_investisiya_strategiyasi|Aqrar İnvestisiya Strategiyası]] — Milli ərzaq təhlükəsizliyi, rəqəmsal torpaq idarəçiliyi və dayanıqlı inkişaf baxışı.
 - [[synthesis/investor_yol_xeritesi_step_by_step|İnvestor üçün Addım-Addım Yol Xəritəsi]] — Qeydiyyatdan müsabiqəyə, icarə müqaviləsinə və ilk məhsul yığımına qədər bələdçi.
 - [[synthesis/qarabag_erzaq_tehlukesizliyi_ve_ixrac_potensiali|Ərzaq Təhlükəsizliyi və İxrac Potensialı]] — Ərzaqlıq buğda balansı, damazlıq heyvandarlıq və yüksək əlavə dəyərli ixracat.

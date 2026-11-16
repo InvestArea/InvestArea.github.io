@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🌾 Ağdam Rayonu
+# Ağdam Rayonu
 
 Ağdam Qarabağ İqtisadi Rayonunun ən böyük aqrar mərkəzlərindən biridir. Rayonun relyefi düzənlik və dağətəyi zonalardan ibarət olub, intensiv əkinçilik, taxılçılıq, üzümçülük və heyvandarlıq üçün yüksək münbitliyə malikdir.
 
 ---
 
-## 📊 Əsas Göstəricilər
+## Əsas Göstəricilər
 
 - **İqtisadi Rayon:** Qarabağ İqtisadi Rayonu
 - **Ümumi Aqrar Potensial:** ~65,000 ha əkinə yararlı sahə
@@ -24,7 +24,7 @@ Ağdam Qarabağ İqtisadi Rayonunun ən böyük aqrar mərkəzlərindən biridir
 
 ---
 
-## 🚜 Müsabiqəyə Çıxarılan Əsas Lotlar
+## Müsabiqəyə Çıxarılan Əsas Lotlar
 
 1. **Lot AG-104 (Qiyaslı Massivi):**
    - **Sahə:** 420 ha
@@ -38,6 +38,6 @@ Ağdam Qarabağ İqtisadi Rayonunun ən böyük aqrar mərkəzlərindən biridir
 
 ---
 
-## 🏛️ Dövlət İnteqrasiyası və Reyestr
+## Dövlət İnteqrasiyası və Reyestr
 - Bütün lotlar [[entities/emdx|ƏMDX Kadastr Bazası]] və [[entities/ktn|KTN EKTİS]] sistemində unikal LADM kodu ilə indekslənmişdir.
 - Müqayisəli analiz üçün bax: [[comparisons/agro_rayonlar_ve_lotlar_muqayisesi]].

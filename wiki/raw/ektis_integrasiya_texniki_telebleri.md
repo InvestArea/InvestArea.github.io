@@ -7,7 +7,7 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: Dövlət İnformasiya Sistemləri ilə İnteqrasiya Tələbləri (EKTİS, AVİS, ANAMA, ƏMDX)
+# Xammal Mənbə: Dövlət İnformasiya Sistemləri ilə İnteqrasiya Tələbləri (EKTİS, AVİS, ANAMA, ƏMDX)
 
 > **Sənəd Növü:** Dövlət Sistemlərarası İnteqrasiya və API Şlüzü Spesifikasiyası  
 > **Əsas Qurumlar:** KTN (EKTİS), DVX (AVİS), ANAMA, ƏMDX (Kadastr), myGov  

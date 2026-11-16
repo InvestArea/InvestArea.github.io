@@ -8,7 +8,7 @@ status: verified
 sources: ["[[entities/agdam]]", "[[entities/fuzuli]]", "[[entities/cebrayil]]", "[[entities/zengilan]]", "[[entities/lacin]]"]
 ---
 
-# 📊 Rayonlararası Aqrar və İnvestisiya Müqayisə Matrisi
+# Rayonlararası Aqrar və İnvestisiya Müqayisə Matrisi
 
 Qarabağ və Şərqi Zəngəzur rayonlarının təbii-iqlim, su təminatı və torpaq münbitliyi amilləri üzrə yan-yana (*side-by-side*) müqayisəsi:
 
@@ -24,9 +24,9 @@ Qarabağ və Şərqi Zəngəzur rayonlarının təbii-iqlim, su təminatı və t
 
 ---
 
-## 📌 İnvestisiya Seçimi Üçün Qərar Matrisi
+## İnvestisiya Seçimi Üçün Qərar Matrisi
 
-- **Maksimum Taxıl Məhsuldarlığı Axtaranlar:** 👉 [[entities/agdam|Ağdam Lot AG-104]] və [[entities/fuzuli|Füzuli Lot FZ-082]].
-- **Ağıllı Texnologiya və İxrac Yönümlü Bağçılıq:** 👉 [[entities/zengilan|Zəngilan Lot ZN-019]].
-- **Subtropik Bitki və Günəş Aqrovoltikası:** 👉 [[entities/cebrayil|Cəbrayıl Lot CB-045]].
-- **Heyvandarlıq və Arıçılıq Klasterləri:** 👉 [[entities/lacin|Laçın və Kəlbəcər otlaqları]].
+- **Maksimum Taxıl Məhsuldarlığı Axtaranlar:**  [[entities/agdam|Ağdam Lot AG-104]] və [[entities/fuzuli|Füzuli Lot FZ-082]].
+- **Ağıllı Texnologiya və İxrac Yönümlü Bağçılıq:**  [[entities/zengilan|Zəngilan Lot ZN-019]].
+- **Subtropik Bitki və Günəş Aqrovoltikası:**  [[entities/cebrayil|Cəbrayıl Lot CB-045]].
+- **Heyvandarlıq və Arıçılıq Klasterləri:**  [[entities/lacin|Laçın və Kəlbəcər otlaqları]].

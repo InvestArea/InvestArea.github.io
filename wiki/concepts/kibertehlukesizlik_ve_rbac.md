@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/pentest_tehlukesizlik_hesabati]]"]
 ---
 
-# 🛡️ Kibertəhlükəsizlik və Rol Əsaslı Giriş (RBAC)
+# Kibertəhlükəsizlik və Rol Əsaslı Giriş (RBAC)
 
 InvestArea dövlət və kommersiya sirri təşkil edən torpaq müsabiqəsi məlumatlarının toxunulmazlığını təmin etmək üçün qabaqcıl kiber-mühafizə standartlarına cavab verir.
 
 ---
 
-## 🔐 Nüvə Təhlükəsizlik Mexanizmləri
+## Nüvə Təhlükəsizlik Mexanizmləri
 
 1. **HMAC-SHA256 İmzalanmış JWT Tokenləri:**
    - Sessiya müddəti: 60 dəqiqə.

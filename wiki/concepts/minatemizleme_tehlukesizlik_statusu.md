@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/ektis_integrasiya_texniki_telebleri]]", "[[entities/anama]]"]
 ---
 
-# 🛡️ Minatəmizləmə Təhlükəsizlik Statusu
+# Minatəmizləmə Təhlükəsizlik Statusu
 
 İşğaldan azad edilmiş ərazilərdə aqrar fəaliyyətə yalnız [[entities/anama|ANAMA]] tərəfindən sertifikatlaşdırılmış torpaqlarda icazə verilir.
 
 ---
 
-## 🚦 Təhlükəsizlik Dərəcələri
+## Təhlükəsizlik Dərəcələri
 
 1. **`LEVEL_1_CLEARED` (Yaşıl Status):**
    - Mexaniki, itlə və əllə axtarış aparılıb, sahə 100% minadan təmizlənib.

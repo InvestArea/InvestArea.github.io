@@ -7,14 +7,14 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: Qarabağ və Şərqi Zəngəzur Rəsmi Kadastr Parselləri Reyestri
+# Xammal Mənbə: Qarabağ və Şərqi Zəngəzur Rəsmi Kadastr Parselləri Reyestri
 
 > **Mənbə:** `public/gis/karabakh_parcels.geojson`  
 > **Status:** İmmutable / Dəyişdirilməz Kadastr Məlumatları
 
 ---
 
-## 📋 10 Əsas Model Parselinin Texniki Parametrləri
+## 10 Əsas Model Parselinin Texniki Parametrləri
 
 | ID | Kadastr Nömrəsi | Rayon & Kənd | Sahə (ha) | Təyinat | Bonitet | Suvarma | Min. İnvestisiya (AZN) | NDVI | ANAMA Sertifikatı & Status | İş Yerləri (Daimi / Mövsümi) |
 |:---:|:---|:---|:---:|:---|:---:|:---|:---:|:---:|:---|:---:|

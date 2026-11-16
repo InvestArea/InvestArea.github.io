@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🧪 Torpaq Boniteti və Qiymətləndirmə
+# Torpaq Boniteti və Qiymətləndirmə
 
 Torpaq boniteti torpağın təbii münbitliyini, humus qatını, qida elementlərini və iqlim şəraitini nəzərə alan 100 ballıq müqayisəli qiymətləndirmə şkalasıdır.
 
 ---
 
-## 📈 Qarabağ və Şərqi Zəngəzur üzrə Bonitet Dərəcələri
+## Qarabağ və Şərqi Zəngəzur üzrə Bonitet Dərəcələri
 
 | Bal Aralığı | Münbitlik Dərəcəsi | Ən Uyğun Bitkilər | Xarakterik Rayonlar |
 | :---: | :---: | :--- | :--- |
@@ -25,5 +25,5 @@ Torpaq boniteti torpağın təbii münbitliyini, humus qatını, qida elementlə
 
 ---
 
-## 💡 İqtisadi Əhəmiyyəti
+## İqtisadi Əhəmiyyəti
 Torpaq boniteti müsabiqə zamanı **illik minimum icarə haqqını** və tələb olunan investisiya kapitalının həcmini tənzimləyir. Yüksək bonitetli sahələrdə dövlət tərəfindən yüksək məhsuldarlıqlı texnologiyaların tətbiqi məcburi şərtdir.

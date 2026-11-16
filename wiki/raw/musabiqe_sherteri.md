@@ -7,7 +7,7 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: Qarabağ və Şərqi Zəngəzur Aqrar İnvestisiya Müsabiqəsi Şərtləri
+# Xammal Mənbə: Qarabağ və Şərqi Zəngəzur Aqrar İnvestisiya Müsabiqəsi Şərtləri
 
 > **Sənəd Növü:** Rəsmi Normativ və Müsabiqə Qaydaları  
 > **Əsas İstinad:** Azərbaycan Respublikası Prezidentinin 236 №-li Fərmanı və Kənd Təsərrüfatı Nazirliyinin Əsasnaməsi  
@@ -25,7 +25,7 @@ status: immutable
 4. **EKTİS Qeydiyyatı:** Aqrar sahədə təcrübə və ya kənd təsərrüfatı texnikası reyestrində qeydiyyat üstünlük təşkil edir.
 
 ## 3. Qiymətləndirmə Meyarları (100 Ballıq Sistem)
-Müraciətlər 9 dövlət qurumu nümayəndəsindən ibarət kollegial komissiya və avtomatlaşdırılmış AI skorinq sistemi tərəfindən qiymətləndirilir:
+Müraciətlər 9 dövlət qurumu nümayəndəsindən ibarət kollegial komissiya və avtomatlaşdırılmış analitik skorinq sistemi tərəfindən qiymətləndirilir:
 - **İnvestisiya Həcmi və İqtisadi Səmərəlilik (30 Bal):** Hər hektara düşən kapital qoyuluşu və 5 illik ROI.
 - **Müasir Suvarma Texnologiyaları (25 Bal):** Damlama və ya yağışyağdırma sistemlərinin tətbiqi, su itkisinin minimuma endirilməsi.
 - **İş Yerlərinin Yaradılması (20 Bal):** Yerli əhalinin (xüsusilə keçmiş məcburi köçkünlərin) daimi işlə təmin olunması.

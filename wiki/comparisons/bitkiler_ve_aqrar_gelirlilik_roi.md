@@ -5,10 +5,10 @@ tags: [crops, roi, economics, agriculture, yield]
 date: 2026-10-28
 updated: 2026-10-28
 status: verified
-sources: ["[[concepts/agro_ai_ve_roi_skorinq]]", "[[raw/musabiqe_sherteri]]"]
+sources: ["[[concepts/agro_analitika_ve_roi_skorinq]]", "[[raw/musabiqe_sherteri]]"]
 ---
 
-# 🌾 Bitkilər üzrə İqtisadi Səmərəlilik və ROI Müqayisəsi
+# Bitkilər üzrə İqtisadi Səmərəlilik və ROI Müqayisəsi
 
 Qarabağ və Şərqi Zəngəzurda becərilməsi tövsiyə olunan əsas bitki növləri üzrə hektara düşən kapital qoyuluşu, dövlət subsidiyası və 5 illik maliyyə rentabelliyi:
 
@@ -24,6 +24,6 @@ Qarabağ və Şərqi Zəngəzurda becərilməsi tövsiyə olunan əsas bitki nö
 
 ---
 
-## 💡 Qərar Tövsiyəsi
+## Qərar Tövsiyəsi
 - **Tez geri qayıdan kapital:** Yem bitkiləri və buğda toxumçuluğu.
 - **Yüksək marjalı ixrac:** İntensiv badam və Hadrut/Tuğ üzümçülüyü.

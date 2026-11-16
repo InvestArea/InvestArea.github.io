@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[raw/teqdimat_video_ve_ssenari]]"]
 ---
 
-# 🏛️ 9 Dövlət Qurumunun Canlı Kollegial Səsverməsi
+# 9 Dövlət Qurumunun Canlı Kollegial Səsverməsi
 
 Müsabiqəyə daxil olan müraciətlər tək bir məmur və ya qurum tərəfindən deyil, 9 dövlət orqanının təyin olunmuş səlahiyyətli ekspertləri tərəfindən elektron kabinetdə kollegial qaydada qiymətləndirilir.
 
 ---
 
-## 👥 İştirakçı 9 Qurum
+## İştirakçı 9 Qurum
 1. **KTN:** Kənd Təsərrüfatı Nazirliyi (Aqronomik və məhsuldarlıq rəyi)
 2. **İN:** İqtisadiyyat Nazirliyi (İnvestisiya və maliyyə dayanıqlığı)
 3. **ƏMDX:** Əmlak Məsələləri Dövlət Xidməti (Kadastr və torpaq sərhədləri)

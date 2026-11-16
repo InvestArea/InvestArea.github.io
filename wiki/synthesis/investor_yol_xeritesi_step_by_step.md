@@ -8,14 +8,14 @@ status: verified
 sources: ["[[raw/musabiqe_sherteri]]", "[[concepts/elektron_muraciet_ve_izleme_wizard]]", "[[concepts/torpaq_icare_muqavileleri_ve_236_ferman]]"]
 ---
 
-# 🚀 İnvestor üçün Addım-Addım Yol Xəritəsi
+# İnvestor üçün Addım-Addım Yol Xəritəsi
 
 Bu bələdçi Qarabağ və Şərqi Zəngəzurda torpaq icarəyə götürmək və aqrar fəaliyyətə başlamaq istəyən yerli və xarici investorlar üçün tam hüquqi və əməliyyat xəritəsidir.
 
 ---
 
 ```
-[1. İdentifikasiya] ➔ [2. Lot Seçimi] ➔ [3. AI Skorinq] ➔ [4. Komissiya Səsverməsi] ➔ [5. İcarə Müqaviləsi] ➔ [6. Peyk Monitorinqi]
+[1. İdentifikasiya]  [2. Lot Seçimi]  [3. Analitik Skorinq]  [4. Komissiya Səsverməsi]  [5. İcarə Müqaviləsi]  [6. Peyk Monitorinqi]
 ```
 
 ### Mərhələ 1: Rəqəmsal Giriş və Hazırlıq
@@ -28,8 +28,8 @@ Bu bələdçi Qarabağ və Şərqi Zəngəzurda torpaq icarəyə götürmək və
 2. İstədiyiniz rayon ([[entities/agdam|Ağdam]], [[entities/fuzuli|Füzuli]], [[entities/zengilan|Zəngilan]] və s.) və suvarma filtrini seçin.
 3. Sahənin [[concepts/torpaq_boniteti_ve_qiymetlendirme|bonitet balını]], [[concepts/minatemizleme_tehlukesizlik_statusu|ANAMA təhlükəsizlik sertifikatını]] və topoqrafiyasını təhlil edin.
 
-### Mərhələ 3: Aqro-AI Skorinq və Müraciət Təqdimatı
-1. [[concepts/agro_ai_ve_roi_skorinq|Qarabağ Aqro-AI]] kalkulyatoru ilə 5 illik gəlirlilik və xərc simulyasiyasını aparın.
+### Mərhələ 3: Aqronomik Analitika Skorinq və Müraciət Təqdimatı
+1. [[concepts/agro_analitika_ve_roi_skorinq|Qarabağ Aqronomik Analitika]] kalkulyatoru ilə 5 illik gəlirlilik və xərc simulyasiyasını aparın.
 2. Biznes planı və suvarma layihəsini yükləyərək 50 AZN rüsumu ödəyin və müraciəti elektron imzalayın.
 3. Sistemdən `INV-2026-AGD-XXXX` unikal izləmə kodunu götürün.
 

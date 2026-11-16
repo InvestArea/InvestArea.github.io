@@ -8,7 +8,7 @@ status: verified
 sources: ["[[raw/karabakh_agro_geoinformation_data]]"]
 ---
 
-# 🛰️ Sentinel-2 Peyk NDVI Monitorinqi
+# Sentinel-2 Peyk NDVI Monitorinqi
 
 **NDVI (Normalized Difference Vegetation Index)** peykin qırmızı (Red) və yaxın infraqırmızı (NIR) spektrləri vasitəsilə torpaqdakı bitki örtüyünün biokütləsini, xlorofil miqdarını və inkişaf dinamikasını ölçən əsas göstəricidir.
 
@@ -16,7 +16,7 @@ $$\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$$
 
 ---
 
-## 📊 Şkala İzahı
+## Şkala İzahı
 
 - **0.70 – 0.90:** Yüksək intensiv və sağlam vegetasiya (meyvə bağları, suvarılan taxıl zəmiləri).
 - **0.40 – 0.69:** Orta vegetasiya (yeni cücərmiş əkinlər, təbii çəmənliklər).
@@ -25,5 +25,5 @@ $$\text{NDVI} = \frac{\text{NIR} - \text{Red}}{\text{NIR} + \text{Red}}$$
 
 ---
 
-## 🏛️ Dövlət Nəzarətində Rolu
+## Dövlət Nəzarətində Rolu
 InvestArea İnzibati Panelində Sentinel-2 peyk məlumatları inteqrasiya olunub. Bu, komissiyaya icarəyə verilmiş torpaqların təyinatı üzrə istifadə edilib-edilmədiyini, əkinin vaxtında aparıldığını və torpağın boş qalmadığını birbaşa kosmosdan izləməyə imkan verir.

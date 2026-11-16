@@ -7,7 +7,7 @@ updated: 2026-10-28
 status: immutable
 ---
 
-# 📜 Xammal Mənbə: Qarabağ CİS Coğrafi Verilənlər Bazası və QGIS Strukturu
+# Xammal Mənbə: Qarabağ CİS Coğrafi Verilənlər Bazası və QGIS Strukturu
 
 > **Sənəd Növü:** Məkan Məlumatları və QGIS Layihə Struktur Spesifikasiyası  
 > **Fayllar:** `InvestArea.qgs`, `InvestArea.qgz`, GeoJSON Layları  

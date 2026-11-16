@@ -8,13 +8,13 @@ status: verified
 sources: ["[[raw/ladm_iso19152_kadastr_standarti]]", "[[entities/emdx]]"]
 ---
 
-# 📐 ISO 19152 LADM və SOLA Standartı
+# ISO 19152 LADM və SOLA Standartı
 
 **LADM (Land Administration Domain Model)** torpaq inzibatçılığı, kadastr, torpaq mülkiyyəti və icarə hüquqlarının rəqəmsal təsviri üzrə beynəlxalq standartdır (ISO 19152).
 
 ---
 
-## 🏗️ Nüvə Model Birləşmələri
+## Nüvə Model Birləşmələri
 
 ```
 LA_Party (İnvestor / Dövlət) 
